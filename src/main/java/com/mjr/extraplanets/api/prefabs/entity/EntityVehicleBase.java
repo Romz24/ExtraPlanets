@@ -12,16 +12,7 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import io.netty.buffer.ByteBuf;
-import micdoodle8.mods.galacticraft.api.entity.IDockable;
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.TransformerHooks;
-import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
-import micdoodle8.mods.galacticraft.core.network.*;
-import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate.IEntityFullSync;
-import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
@@ -38,6 +29,17 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
+
+import micdoodle8.mods.galacticraft.api.entity.IDockable;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.TransformerHooks;
+import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
+import micdoodle8.mods.galacticraft.core.network.*;
+import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate.IEntityFullSync;
+import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
+import micdoodle8.mods.galacticraft.core.util.FluidUtil;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 
 public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
 	public final int tankCapacity = 1000;

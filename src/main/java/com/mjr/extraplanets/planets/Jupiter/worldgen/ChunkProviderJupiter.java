@@ -13,13 +13,14 @@ import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 
 public class ChunkProviderJupiter extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageJupiter villageGenerator = new MapGenVillageJupiter();

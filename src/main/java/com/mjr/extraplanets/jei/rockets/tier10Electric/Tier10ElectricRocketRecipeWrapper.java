@@ -6,10 +6,11 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-import net.minecraft.item.ItemStack;
 
 public class Tier10ElectricRocketRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 	@Nonnull

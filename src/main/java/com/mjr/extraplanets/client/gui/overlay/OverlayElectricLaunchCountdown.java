@@ -5,14 +5,15 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
+import micdoodle8.mods.galacticraft.core.util.ClientUtil;
+import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 
 @SideOnly(Side.CLIENT)
 public class OverlayElectricLaunchCountdown extends Overlay {

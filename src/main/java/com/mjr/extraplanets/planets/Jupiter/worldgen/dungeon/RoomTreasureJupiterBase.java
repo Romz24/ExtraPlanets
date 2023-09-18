@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import java.util.Random;
+
+import com.mjr.extraplanets.planets.Jupiter.worldgen.RoomBossJupiter;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-import java.util.Random;
-
-import com.mjr.extraplanets.planets.Jupiter.worldgen.RoomBossJupiter;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class RoomTreasureJupiterBase extends SizedPieceJupiter
 {

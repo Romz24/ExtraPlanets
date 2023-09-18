@@ -3,12 +3,13 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
 
 public class ModulePortableNASAWorkBench extends Module {
 

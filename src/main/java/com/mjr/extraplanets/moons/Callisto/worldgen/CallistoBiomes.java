@@ -9,7 +9,6 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoSaltSea;
 import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoShaleMountains;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,6 +16,8 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class CallistoBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase callisto = new BiomeGenCallisto(Config.CALLISTO_BIOME_ID).setBiomeName("Callisto").setHeight(new Height(0.125F, 0.05F));

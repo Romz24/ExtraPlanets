@@ -7,11 +7,12 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 
 public class WorldGenBigBlueTree extends WorldGenerator {
 

@@ -6,14 +6,15 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.item.ItemBasicMeta;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 public class ItemCannedFood extends ItemBasicMeta {
 

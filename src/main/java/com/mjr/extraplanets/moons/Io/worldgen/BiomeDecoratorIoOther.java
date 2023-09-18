@@ -4,12 +4,13 @@ import java.util.Random;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 
 public class BiomeDecoratorIoOther extends BiomeDecorator {
 	private World worldObj;

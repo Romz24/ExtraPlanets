@@ -8,13 +8,14 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.*;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import net.minecraft.client.Minecraft;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class CrystallizerRecipeCategory extends BlankRecipeCategory {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/crystallizer.png");

@@ -15,12 +15,14 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetHandler;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 
 @Sharable
 public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket> {

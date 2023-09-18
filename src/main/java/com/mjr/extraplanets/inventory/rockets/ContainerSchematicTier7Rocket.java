@@ -2,7 +2,6 @@ package com.mjr.extraplanets.inventory.rockets;
 
 import com.mjr.extraplanets.recipes.Tier7RocketRecipes;
 
-import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -14,6 +13,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 
 public class ContainerSchematicTier7Rocket extends Container {
 	public InventorySchematicTier7Rocket craftMatrix = new InventorySchematicTier7Rocket(this);

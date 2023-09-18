@@ -3,6 +3,14 @@ package com.mjr.extraplanets.tileEntities.machines;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fluids.*;
+import net.minecraftforge.fml.relauncher.Side;
+
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GCItems;
@@ -11,13 +19,6 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithIn
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumFacing;
-import net.minecraftforge.fluids.*;
-import net.minecraftforge.fml.relauncher.Side;
 
 public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 24000 * 2;

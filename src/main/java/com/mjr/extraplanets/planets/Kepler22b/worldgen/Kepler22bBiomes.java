@@ -6,7 +6,6 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.*;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -15,6 +14,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class Kepler22bBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains(Config.KEPLER22B_PLAINS_BIOME_ID).setBiomeName("Kepler22b Plains").setHeight(new Height(0.125F, 0.05F));

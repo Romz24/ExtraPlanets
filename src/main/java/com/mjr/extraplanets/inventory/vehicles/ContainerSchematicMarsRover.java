@@ -3,9 +3,6 @@ package com.mjr.extraplanets.inventory.vehicles;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
-import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -16,6 +13,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
+import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 
 public class ContainerSchematicMarsRover extends Container {
 	public InventoryMarsRover craftMatrix = new InventoryMarsRover(this);

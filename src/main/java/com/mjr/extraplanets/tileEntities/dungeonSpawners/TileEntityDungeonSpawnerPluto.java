@@ -6,12 +6,13 @@ import java.util.List;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 
 public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<EntityEvolvedSpacemanBoss> {
 	public TileEntityDungeonSpawnerPluto() {

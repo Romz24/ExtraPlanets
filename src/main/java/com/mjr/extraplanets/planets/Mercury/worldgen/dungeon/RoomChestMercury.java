@@ -2,11 +2,6 @@ package com.mjr.extraplanets.planets.Mercury.worldgen.dungeon;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.planets.venus.world.gen.dungeon.RoomChestVenus;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.BlockPos;
@@ -15,6 +10,11 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraftforge.common.ChestGenHooks;
+
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.planets.venus.world.gen.dungeon.RoomChestVenus;
 
 public class RoomChestMercury extends RoomEmptyMercury
 {

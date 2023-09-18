@@ -5,13 +5,13 @@ import java.util.Random;
 
 import com.mjr.extraplanets.planets.Mercury.worldgen.dungeon.*;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureStart;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 
 public class MapGenDungeonMercury extends MapGenDungeon {
 	private static boolean initialized;

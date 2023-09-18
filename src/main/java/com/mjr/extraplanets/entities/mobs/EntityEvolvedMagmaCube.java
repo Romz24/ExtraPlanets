@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.entities.mobs;
 
-import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.init.Items;
@@ -11,6 +9,8 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 
 public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreathable
 {

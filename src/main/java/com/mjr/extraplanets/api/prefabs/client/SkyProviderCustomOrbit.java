@@ -4,9 +4,6 @@ import java.util.Random;
 
 import org.lwjgl.opengl.GL11;
 
-import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.*;
@@ -16,6 +13,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.fml.client.FMLClientHandler;
+
+import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 
 public class SkyProviderCustomOrbit extends IRenderHandler {
 	private static final ResourceLocation moonTexture = new ResourceLocation("textures/environment/moon_phases.png");

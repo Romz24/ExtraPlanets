@@ -5,7 +5,6 @@ import com.mjr.extraplanets.client.gui.vehicles.GuiSchematicVenusRover;
 import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicVenusRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.api.recipe.SchematicPage;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -13,6 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.recipe.SchematicPage;
 
 public class SchematicVenusRover extends SchematicPage {
 	@Override

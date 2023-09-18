@@ -8,7 +8,6 @@ import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,6 +16,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class TitanBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase titan = new BiomeGenTitan(Config.TITAN_BIOME_ID).setBiomeName("Titan").setHeight(new Height(0.125F, 0.25F));

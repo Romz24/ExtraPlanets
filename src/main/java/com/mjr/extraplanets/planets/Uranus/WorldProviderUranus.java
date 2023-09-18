@@ -11,13 +11,14 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.WorldChunkManagerUranus;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 
 public class WorldProviderUranus extends WorldProviderRealisticSpace {
 

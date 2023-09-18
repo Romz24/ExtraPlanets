@@ -9,8 +9,6 @@ import com.mjr.extraplanets.tileEntities.machines.*;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 
-import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
@@ -19,6 +17,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 
 public class GuiHandler implements IGuiHandler {
 	@Override

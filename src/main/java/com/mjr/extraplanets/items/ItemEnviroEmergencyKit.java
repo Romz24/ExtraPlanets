@@ -4,11 +4,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.items.ISortableItem;
-import micdoodle8.mods.galacticraft.core.items.ItemDesc;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -19,6 +14,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
+
+import micdoodle8.mods.galacticraft.core.items.ISortableItem;
+import micdoodle8.mods.galacticraft.core.items.ItemDesc;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 
 public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 	private static final int SIZE = 4;

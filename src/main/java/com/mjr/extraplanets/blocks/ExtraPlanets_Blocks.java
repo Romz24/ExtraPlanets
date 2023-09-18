@@ -19,12 +19,13 @@ import com.mjr.mjrlegendslib.block.BlockBasicGravel;
 import com.mjr.mjrlegendslib.block.BlockBasicStairs;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 
 public class ExtraPlanets_Blocks {
 

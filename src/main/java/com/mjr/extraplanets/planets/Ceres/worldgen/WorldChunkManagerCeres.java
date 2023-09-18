@@ -1,7 +1,8 @@
 package com.mjr.extraplanets.planets.Ceres.worldgen;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.world.biome.BiomeGenBase;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 
 public class WorldChunkManagerCeres extends WorldChunkManagerSpace {
 

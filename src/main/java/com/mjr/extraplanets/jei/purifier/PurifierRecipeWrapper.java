@@ -6,9 +6,10 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
-import net.minecraft.item.ItemStack;
 
 public class PurifierRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 	@Nonnull

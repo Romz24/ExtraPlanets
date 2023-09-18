@@ -9,7 +9,6 @@ import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaSaltSea;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,6 +16,8 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class EuropaBiomes extends BiomeGenBaseGC {
 

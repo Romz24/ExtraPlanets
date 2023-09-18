@@ -10,12 +10,13 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 
 public class WorldProviderMercury extends WorldProviderRealisticSpace {
 
