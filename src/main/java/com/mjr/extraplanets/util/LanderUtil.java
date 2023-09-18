@@ -34,7 +34,7 @@ public class LanderUtil {
 				y = world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z)).getY() - 1;
 			for (int xx = -5; xx < 5; xx++) {
 				for (int zz = -5; zz < 5; zz++) {
-					for (int yy = 64; yy < 256; yy++) {
+					for (int yy = y; yy < 256; yy++) {
 						if (xx == -5 && (zz == -5 || zz == 3)) {
 							continue;
 						}
