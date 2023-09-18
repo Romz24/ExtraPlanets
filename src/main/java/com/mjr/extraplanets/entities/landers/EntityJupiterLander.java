@@ -9,6 +9,7 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
@@ -268,4 +269,10 @@ public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShif
 	public boolean canBeCollidedWith() {
 		return !this.isDead;
 	}
+
+	@Override
+	public void onStruckByLightning(EntityLightningBolt lightningBolt) {
+		return;
+	}
+
 }
