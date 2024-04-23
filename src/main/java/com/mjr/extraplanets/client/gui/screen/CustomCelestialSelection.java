@@ -17,13 +17,16 @@ import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry;
+import com.mjr.extraplanets.api.event.CustomCelestialGUIEvent;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.client.event.ClientCustomCelestialGUIEvent;
 import com.mjr.extraplanets.compatibility.PlanetProgressionCompatibility;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
@@ -67,8 +70,21 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	public CustomCelestialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
 		super(mapMode, possibleBodies, canCreateStations);
 		// Generate list of Galaxies from ParentGalaxyName from Registered Solar Systems
+		CustomCelestialGUIEvent.PreLoadingGalaxies preEvent = new CustomCelestialGUIEvent.PreLoadingGalaxies();
+		MinecraftForge.EVENT_BUS.post(preEvent);
+
 		for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			String name = system.getUnlocalizedParentGalaxyName();
+
+			if (preEvent.galaxiesUnlocalizedNamesToIgnore.contains(name))
+				continue;
+
+			if (preEvent.solarSystemUnlocalizedNamesToIgnore.contains(system.getUnlocalizedName()))
+				continue;
+
+			if (preEvent.solarSystemNamesToIgnore.contains(system.getName()))
+				continue;
+
 			if (!this.galaxies.contains(name))
 				this.galaxies.add(name);
 		}
@@ -83,20 +99,32 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void initGui() {
-		// Used to add only researched bodies from planet progressions
 		this.celestialBodyTicks.clear();
+		// Used to add only researched bodies from planet progressions & Event lists
+		CustomCelestialGUIEvent.PreLoadingCelestialBodies preEvent = new CustomCelestialGUIEvent.PreLoadingCelestialBodies();
+		MinecraftForge.EVENT_BUS.post(preEvent);
+
 		this.bodiesToRender.clear();
 		for (SolarSystem solarSystem : GalaxyRegistry.getRegisteredSolarSystems().values()) {
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystem.getUnlocalizedName()))
+				continue;
+			if (preEvent.bodyNamesToIgnore.contains(solarSystem.getName()))
+				continue;
+
 			if (solarSystem.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				this.bodiesToRender.add(solarSystem.getMainStar());
 				this.celestialBodyTicks.put(solarSystem.getMainStar(), 0);
 			}
 		}
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+				continue;
+			if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
+				continue;
+
 			if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
-					if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, planet)) {
-						this.celestialBodyTicks.put(planet, 0);
+					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, planet)) {
 						this.bodiesToRender.add(planet);
 					}
 				} else {
@@ -106,10 +134,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			}
 		}
 		for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(moon.getUnlocalizedName()))
+				continue;
+			if (preEvent.bodyNamesToIgnore.contains(moon.getName()))
+				continue;
+
 			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
-					if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, moon.getParentPlanet()) && PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, moon)) {
-						this.celestialBodyTicks.put(moon, 0);
+					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon.getParentPlanet()) && PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon)) {
 						this.bodiesToRender.add(moon);
 					}
 				} else {
@@ -121,10 +153,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 
 		for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(satellite.getUnlocalizedName()))
+				continue;
+			if (preEvent.bodyNamesToIgnore.contains(satellite.getName()))
+				continue;
+
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
-					if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, satellite.getParentPlanet())) {
-						this.celestialBodyTicks.put(satellite, 0);
+					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, satellite.getParentPlanet())) {
 						this.bodiesToRender.add(satellite);
 					}
 				} else {
@@ -153,16 +189,24 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	protected List<CelestialBody> getChildren(Object object) {
+		CustomCelestialGUIEvent.PreLoadingCelestialBodies preEvent = new CustomCelestialGUIEvent.PreLoadingCelestialBodies();
+		MinecraftForge.EVENT_BUS.post(preEvent);
+
 		List<CelestialBody> bodyList = Lists.newArrayList();
 
 		if (object instanceof Planet) {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
-				if (planet.equals(object))
+				if (planet.equals(object)) {
+					if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+						continue;
+					if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
+						continue;
+
 					if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Moon> moons = GalaxyRegistry.getMoonsForPlanet((Planet) object);
 						if (Loader.isModLoaded("planetprogression")) {
 							for (Moon moon : moons) {
-								if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, moon)) {
+								if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon)) {
 									bodyList.add(moon);
 								}
 							}
@@ -170,22 +214,35 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							bodyList.addAll(moons);
 						}
 					}
+				}
 			}
 		} else if (object instanceof SolarSystem) {
 			for (SolarSystem solarSystems : GalaxyRegistry.getRegisteredSolarSystems().values()) {
-				if (solarSystems.equals(object))
+				if (solarSystems.equals(object)) {
+					if (preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystems.getUnlocalizedName()))
+						continue;
+					if (preEvent.bodyNamesToIgnore.contains(solarSystems.getName()))
+						continue;
+
 					if (solarSystems.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Planet> planets = GalaxyRegistry.getPlanetsForSolarSystem((SolarSystem) object);
 						if (Loader.isModLoaded("planetprogression")) {
 							for (Planet planet : planets) {
-								if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().player, planet)) {
+								if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, planet)) {
 									bodyList.add(planet);
 								}
 							}
 						} else {
-							bodyList.addAll(planets);
+							for (Planet planet : planets) {
+								if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+									continue;
+								if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
+									continue;
+								bodyList.add(planet);
+							}
 						}
 					}
+				}
 			}
 		}
 
@@ -215,12 +272,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}
 				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}
@@ -472,7 +529,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							this.fontRendererObj.drawString(str, LHS + 7 + xOffset, LHS + 8 + i * 14 + yOffset, color);
 						}
 					}
-				} else if (!this.showGalaxies && Config.CUSTOM_GALAXIES) {
+				} else if (!this.showGalaxies && Config.CUSTOM_GALAXIES && this.galaxies.size() > 1) {
 					this.drawString(this.fontRendererObj, "+", LHS + 80, LHS + 16, 8087790);
 					this.drawString(this.fontRendererObj, "< " + TranslateUtilities.translate("gui.new_galaxies.name") + "!", LHS + 100, LHS + 16, 8087790);
 				}
@@ -1029,9 +1086,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.zoomTooltipPos = 0;
 		}
 		if (Loader.isModLoaded("planetprogression")) {
-			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS)- 20, ColorUtil.to32BitColor(255, 0, 0, 0));
+			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS) - 20, ColorUtil.to32BitColor(255, 0, 0, 0));
 			this.fontRendererObj.drawString("Important: Want to unlock/see more celestial bodies? Research them via PlanetProgressions Mod", LHS + 5, (height - LHS) - 15, RED);
 		}
+
+		ClientCustomCelestialGUIEvent.PostRendering preEvent = new ClientCustomCelestialGUIEvent.PostRendering(this);
+		MinecraftForge.EVENT_BUS.post(preEvent);
 	}
 
 	/*
@@ -1108,5 +1168,49 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			}
 		} else
 			super.mouseClicked(x, y, button);
+	}
+
+	public List<String> getGalaxies() {
+		return galaxies;
+	}
+
+	public String getCurrentGalaxyName() {
+		return currentGalaxyName;
+	}
+
+	public SolarSystem getCurrentGalaxyMainSystem() {
+		return currentGalaxyMainSystem;
+	}
+
+	public boolean isShowGalaxies() {
+		return showGalaxies;
+	}
+
+	public int getMousePosX() {
+		return mousePosX;
+	}
+
+	public int getMousePosY() {
+		return mousePosY;
+	}
+
+	public float getPartialTicks() {
+		return partialTicks;
+	}
+
+	public FontRenderer getFontRenderer() {
+		return fontRendererObj;
+	}
+
+	public static int getBlue() {
+		return BLUE;
+	}
+
+	public static int getBorderSize() {
+		return BORDER_SIZE;
+	}
+
+	public static int getBorderEdgeSize() {
+		return BORDER_EDGE_SIZE;
 	}
 }
