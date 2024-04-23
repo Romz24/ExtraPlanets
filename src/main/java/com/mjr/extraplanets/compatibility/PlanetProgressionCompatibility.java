@@ -14,7 +14,7 @@ public class PlanetProgressionCompatibility {
 
 	@SideOnly(Side.CLIENT)
 	@Optional.Method(modid = "planetprogression")
-	public static boolean isReasearched(EntityPlayerSP player, CelestialBody body) {
+	public static boolean isResearched(EntityPlayerSP player, CelestialBody body) {
 		return ResearchHooksSP.hasUnlockedCelestialBody(player, body);
 	}
 }
