@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.items.keys;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.item.IItemInvulnerable;
 
 import micdoodle8.mods.galacticraft.api.item.IKeyItem;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
@@ -14,7 +15,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemKeyT4 extends Item implements IKeyItem, ISortableItem {
+public class ItemKeyT4 extends Item implements IKeyItem, ISortableItem, IItemInvulnerable {
 	public ItemKeyT4(String name) {
 		super();
 		this.setMaxStackSize(1);

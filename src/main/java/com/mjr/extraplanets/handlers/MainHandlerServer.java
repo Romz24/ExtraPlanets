@@ -7,6 +7,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.item.IItemInvulnerable;
 import com.mjr.extraplanets.api.item.IModularArmor;
 import com.mjr.extraplanets.api.item.IPressureSuit;
 import com.mjr.extraplanets.api.item.IRadiationSuit;
@@ -50,6 +51,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
@@ -62,6 +64,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.CommandEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
@@ -705,6 +708,14 @@ public class MainHandlerServer {
 				PlayerUtilties.sendMessage(player, TextFormatting.DARK_AQUA + "Radiation Calculator:");
 				player.sendMessage(ForgeHooks.newChatWithLinks("https://www.mjrlegends.com/extraplanetsradiation.php"));
 			}
+		}
+	}
+	
+	@SubscribeEvent
+	public void onEntitySpawn(EntityJoinWorldEvent event) {
+		if (event.getEntity() instanceof EntityItem) {
+			if (((EntityItem)event.getEntity()).getItem().getItem() instanceof IItemInvulnerable)
+				event.getEntity().setEntityInvulnerable(true);
 		}
 	}
 }
