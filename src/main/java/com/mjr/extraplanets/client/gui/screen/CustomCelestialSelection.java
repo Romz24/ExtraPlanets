@@ -53,6 +53,8 @@ import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 
+	private List<CelestialBody> updatedBodiesToRender; // Make a temp list so we don't cause a rare chance of ConcurrentModificationException during rendering(GuiCelestialSelection#drawCircles) and updating bodiesToRender list.
+
 	// Galaxy System
 	private List<String> galaxies = new ArrayList<String>();
 	private String currentGalaxyName = "";
@@ -100,11 +102,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	@Override
 	public void initGui() {
 		this.celestialBodyTicks.clear();
+		this.updatedBodiesToRender = Lists.newArrayList();
+
 		// Used to add only researched bodies from planet progressions & Event lists
 		CustomCelestialGUIEvent.PreLoadingCelestialBodies preEvent = new CustomCelestialGUIEvent.PreLoadingCelestialBodies();
 		MinecraftForge.EVENT_BUS.post(preEvent);
 
-		this.bodiesToRender.clear();
 		for (SolarSystem solarSystem : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystem.getUnlocalizedName()))
 				continue;
@@ -112,8 +115,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				continue;
 
 			if (solarSystem.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
-				this.bodiesToRender.add(solarSystem.getMainStar());
 				this.celestialBodyTicks.put(solarSystem.getMainStar(), 0);
+				this.updatedBodiesToRender.add(solarSystem.getMainStar());
 			}
 		}
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
@@ -125,11 +128,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, planet)) {
-						this.bodiesToRender.add(planet);
+						this.updatedBodiesToRender.add(planet);
 					}
 				} else {
 					this.celestialBodyTicks.put(planet, 0);
-					this.bodiesToRender.add(planet);
+					this.updatedBodiesToRender.add(planet);
 				}
 			}
 		}
@@ -142,11 +145,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon.getParentPlanet()) && PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon)) {
-						this.bodiesToRender.add(moon);
+						this.updatedBodiesToRender.add(moon);
 					}
 				} else {
 					this.celestialBodyTicks.put(moon, 0);
-					this.bodiesToRender.add(moon);
+					this.updatedBodiesToRender.add(moon);
 				}
 			} else if (moon.getParentPlanet() == null)
 				MessageUtilities.fatalErrorMessageToLog(Constants.modID, "The moon " + moon.getUnlocalizedName() + " seems to have a null parent planet. Please check the log for other errors!");
@@ -161,11 +164,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, satellite.getParentPlanet())) {
-						this.bodiesToRender.add(satellite);
+						this.updatedBodiesToRender.add(satellite);
 					}
 				} else {
 					this.celestialBodyTicks.put(satellite, 0);
-					this.bodiesToRender.add(satellite);
+					this.updatedBodiesToRender.add(satellite);
 				}
 			}
 		}
@@ -1099,6 +1102,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void drawScreen(int mousePosX, int mousePosY, float partialTicks) {
+		if (this.updatedBodiesToRender != null && this.updatedBodiesToRender.size() != 0) {
+			this.bodiesToRender.clear();
+			this.bodiesToRender.addAll(this.updatedBodiesToRender);
+			this.updatedBodiesToRender.clear();
+		}
 		this.mousePosX = mousePosX;
 		this.mousePosY = mousePosY;
 		this.partialTicks = partialTicks;
