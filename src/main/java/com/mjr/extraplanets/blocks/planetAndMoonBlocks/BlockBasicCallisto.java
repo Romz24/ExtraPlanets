@@ -133,14 +133,14 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	public boolean isValueable(IBlockState state) {
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-		case DRIED_OIL:
-		case SHALE_OIL:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+			case DRIED_OIL:
+			case SHALE_OIL:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -192,12 +192,12 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-			return EnumSortCategoryBlock.ORE;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+				return EnumSortCategoryBlock.ORE;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

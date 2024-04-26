@@ -126,7 +126,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		float energyToTransfer = Math.min(Math.min(thisEnergy, energy), this.transferMax);
 
 		if (doTransfer) {
-			if(!itemStack.getTagCompound().hasKey("Unbreakable"))
+			if (!itemStack.getTagCompound().hasKey("Unbreakable"))
 				itemStack.getTagCompound().setBoolean("Unbreakable", true);
 			this.setElectricity(itemStack, thisEnergy - energyToTransfer);
 		}

@@ -184,14 +184,14 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 1:
-				return FluidUtil.isOilContainerAny(itemstack);
-			case 2:
-				return FluidUtil.isEmptyContainer(itemstack, GCItems.fuelCanister);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 1:
+					return FluidUtil.isOilContainerAny(itemstack);
+				case 2:
+					return FluidUtil.isEmptyContainer(itemstack, GCItems.fuelCanister);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -201,14 +201,14 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
-			case 1:
-				return FluidUtil.isEmptyContainer(itemstack);
-			case 2:
-				return FluidUtil.isFullContainer(itemstack);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				case 1:
+					return FluidUtil.isEmptyContainer(itemstack);
+				case 2:
+					return FluidUtil.isFullContainer(itemstack);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -217,11 +217,11 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 1:
-		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			case 0:
+				return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 1:
+			case 2:
+				return FluidUtil.isValidContainer(itemstack);
 		}
 
 		return false;

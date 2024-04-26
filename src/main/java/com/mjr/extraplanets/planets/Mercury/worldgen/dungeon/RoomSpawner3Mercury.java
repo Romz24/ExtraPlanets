@@ -119,11 +119,11 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 
 	private static String getMob(Random rand) {
 		switch (rand.nextInt(2)) {
-		case 0:
-	        return Constants.modID + "." + "EvolvedMagmaCube";
-		case 1:
-		default:
-			return "Ghast";
+			case 0:
+				return Constants.modID + "." + "EvolvedMagmaCube";
+			case 1:
+			default:
+				return "Ghast";
 		}
 	}
 }

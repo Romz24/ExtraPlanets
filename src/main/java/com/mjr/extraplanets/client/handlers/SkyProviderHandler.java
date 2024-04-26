@@ -164,9 +164,9 @@ public class SkyProviderHandler {
 					world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
 				}
 
-//				if (world.provider.getCloudRenderer() == null) {
-//					world.provider.setCloudRenderer(new CloudRenderer());
-//				}
+				// if (world.provider.getCloudRenderer() == null) {
+				// world.provider.setCloudRenderer(new CloudRenderer());
+				// }
 			}
 			// Moons
 			if (world.provider instanceof WorldProviderCallisto) {

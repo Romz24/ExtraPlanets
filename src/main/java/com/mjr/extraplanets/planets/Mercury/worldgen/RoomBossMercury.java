@@ -58,7 +58,7 @@ public class RoomBossMercury extends RoomBossMercuryBase {
 							}
 						}
 						if (placeBlock) {
-							if(j == 0 && random.nextInt(9) == 1)
+							if (j == 0 && random.nextInt(9) == 1)
 								this.setBlockState(world, Blocks.LAVA.getDefaultState(), i, j, k, chunkBox);
 							else
 								this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
@@ -69,11 +69,10 @@ public class RoomBossMercury extends RoomBossMercuryBase {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
 							this.setBlockState(world, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
 						} else {
-							if(random.nextInt(20) == 1) {
+							if (random.nextInt(20) == 1) {
 								this.setBlockState(world, Blocks.FLOWING_LAVA.getDefaultState(), i, j, k, chunkBox);
 								this.setBlockState(world, Blocks.FLOWING_LAVA.getDefaultState(), i, 0, k, chunkBox);
-							}
-							else
+							} else
 								this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
 					}

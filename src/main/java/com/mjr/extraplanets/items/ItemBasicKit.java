@@ -118,135 +118,135 @@ public class ItemBasicKit extends ItemBasicMeta {
 
 			// Basic Kit adding
 			switch (itemStack.getMetadata()) {
-			case 0:
-				if (gear == null) {
-					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
-				}
-				if (gear1 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
-				}
-				if (gear2 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
-				}
-				if (gear3 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
-				}
-				if (gear4 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
-				}
-				if (gear5 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
-				}
-				if (gear6 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
-				}
-				if (gear7 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
-				}
-				if (gear8 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
-				}
-				if (gear9 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
-				}
-				if (gear10 == null && this.tier >= 2) {
-					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
-				}
-				break;
-			case 1:
-				if (gear == null) {
-					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
-				}
-				if (gear1 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
-				}
-				if (gear2 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
-				}
-				if (gear3 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
-				}
-				if (gear4 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
-				}
-				break;
-			case 2:
-				if (gear4 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
-				}
-				if (gear5 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
-				}
-				if (gear6 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
-				}
-				if (gear7 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
-				}
-				if (gear8 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
-				}
-				if (gear9 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
-				}
-				if (gear10 == null && this.tier >= 2) {
-					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
-				}
-				break;
-			case 3:
-				if (gear == null) {
-					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
-				}
-				if (gear1 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
-				}
-				if (gear2 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
-				}
-				if (gear3 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
-				}
-				if (gear4 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
-				}
-				if (gear5 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
-				}
-				if (gear10 == null && this.tier >= 2) {
-					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
-				}
-				break;
-			case 4:
-				if (gear == null) {
-					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
-				}
-				if (gear1 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
-				}
-				if (gear2 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
-				}
-				if (gear3 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
-				}
-				break;
-			case 5:
-				if (gear6 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
-				}
-				if (gear7 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
-				}
-				if (gear8 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
-				}
-				if (gear9 == null) {
-					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
-				}
-				if (gear10 == null && this.tier >= 2) {
-					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
-				}
-				break;
+				case 0:
+					if (gear == null) {
+						stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
+					}
+					if (gear1 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
+					}
+					if (gear2 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
+					}
+					if (gear3 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
+					}
+					if (gear4 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
+					}
+					if (gear5 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
+					}
+					if (gear6 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
+					}
+					if (gear7 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
+					}
+					if (gear8 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
+					}
+					if (gear9 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
+					}
+					if (gear10 == null && this.tier >= 2) {
+						stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
+					}
+					break;
+				case 1:
+					if (gear == null) {
+						stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
+					}
+					if (gear1 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
+					}
+					if (gear2 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
+					}
+					if (gear3 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
+					}
+					if (gear4 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
+					}
+					break;
+				case 2:
+					if (gear4 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
+					}
+					if (gear5 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
+					}
+					if (gear6 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
+					}
+					if (gear7 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
+					}
+					if (gear8 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
+					}
+					if (gear9 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
+					}
+					if (gear10 == null && this.tier >= 2) {
+						stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
+					}
+					break;
+				case 3:
+					if (gear == null) {
+						stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
+					}
+					if (gear1 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
+					}
+					if (gear2 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
+					}
+					if (gear3 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
+					}
+					if (gear4 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
+					}
+					if (gear5 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
+					}
+					if (gear10 == null && this.tier >= 2) {
+						stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
+					}
+					break;
+				case 4:
+					if (gear == null) {
+						stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
+					}
+					if (gear1 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
+					}
+					if (gear2 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
+					}
+					if (gear3 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
+					}
+					break;
+				case 5:
+					if (gear6 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
+					}
+					if (gear7 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
+					}
+					if (gear8 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
+					}
+					if (gear9 == null) {
+						stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
+					}
+					if (gear10 == null && this.tier >= 2) {
+						stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
+					}
+					break;
 			}
 			itemStack.stackSize = 0;
 		}

@@ -53,12 +53,11 @@ public class ItemTools extends Item {
 
 	@Override
 	public ItemStack getContainerItem(ItemStack itemstack) {
-		if(itemstack.getUnlocalizedName().contains(names[0])) {
-			if(!itemstack.hasTagCompound())
+		if (itemstack.getUnlocalizedName().contains(names[0])) {
+			if (!itemstack.hasTagCompound())
 				itemstack.setTagCompound(new NBTTagCompound());
 			int nbtDamage = itemstack.getTagCompound().getInteger("damage") + 1;
-			if(nbtDamage < 100)
-			{
+			if (nbtDamage < 100) {
 				ItemStack copyItemStack = itemstack.copy();
 				copyItemStack.getTagCompound().setInteger("damage", nbtDamage);
 				return copyItemStack;
@@ -70,7 +69,7 @@ public class ItemTools extends Item {
 
 	@Override
 	public boolean hasContainerItem(ItemStack stack) {
-		if(stack.getUnlocalizedName().contains(names[0])) {
+		if (stack.getUnlocalizedName().contains(names[0])) {
 			return true;
 		}
 		return super.hasContainerItem(stack);
@@ -78,25 +77,24 @@ public class ItemTools extends Item {
 
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
-		if(stack.getUnlocalizedName().contains(names[0]))
+		if (stack.getUnlocalizedName().contains(names[0]))
 			return 1;
 		return super.getItemStackLimit(stack);
 	}
 
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
-		if(stack.getUnlocalizedName().contains(names[0])) {
-			if(stack.hasTagCompound() && stack.getTagCompound().getInteger("damage") > 0)
+		if (stack.getUnlocalizedName().contains(names[0])) {
+			if (stack.hasTagCompound() && stack.getTagCompound().getInteger("damage") > 0)
 				return true;
 		}
 		return super.showDurabilityBar(stack);
 	}
 
-
 	@Override
 	public double getDurabilityForDisplay(ItemStack stack) {
-		if(stack.getUnlocalizedName().contains(names[0])) {
-			if(stack.hasTagCompound())
+		if (stack.getUnlocalizedName().contains(names[0])) {
+			if (stack.hasTagCompound())
 				return stack.getTagCompound().getInteger("damage") / 100.0;
 		}
 		return super.getDurabilityForDisplay(stack);
@@ -104,12 +102,11 @@ public class ItemTools extends Item {
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-		if(stack.getUnlocalizedName().contains(names[0])) {
-			if(stack.hasTagCompound())
+		if (stack.getUnlocalizedName().contains(names[0])) {
+			if (stack.hasTagCompound())
 				tooltip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("item.tool.usage.name") + ": " + (100 - stack.getTagCompound().getInteger("damage")) + " / 100");
 		}
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
-
 
 }

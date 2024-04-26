@@ -129,16 +129,16 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		switch (meta) {
-		case 0:
-			return new TileEntityTier2LandingPadSingle();
-		case 1:
-			return new TileEntityTier3LandingPadSingle();
-		case 2:
-			return new TileEntityPoweredChargingPadSingle();
-		case 3:
-			return new TileEntityRocketChargingPadSingle();
-		default:
-			return null;
+			case 0:
+				return new TileEntityTier2LandingPadSingle();
+			case 1:
+				return new TileEntityTier3LandingPadSingle();
+			case 2:
+				return new TileEntityPoweredChargingPadSingle();
+			case 3:
+				return new TileEntityRocketChargingPadSingle();
+			default:
+				return null;
 		}
 	}
 

@@ -695,8 +695,8 @@ public class ExtraPlanets_Planets {
 			mats.add(new MaterialData("Quartz", AmountType.MEDIUM));
 		if (!ConfigManagerVenus.disableSiliconGen)
 			mats.add(new MaterialData("Silicon", AmountType.VERY_LOW));
-		//if (!ConfigManagerVenus.disableSolarGen)
-			mats.add(new MaterialData("Solar", AmountType.LOW));
+		// if (!ConfigManagerVenus.disableSolarGen)
+		mats.add(new MaterialData("Solar", AmountType.LOW));
 		mats.add(new MaterialData("Silicon", AmountType.VERY_LOW));
 		mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(VenusModule.planetVenus, mats);

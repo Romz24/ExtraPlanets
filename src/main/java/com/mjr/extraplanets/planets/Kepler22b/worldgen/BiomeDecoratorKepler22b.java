@@ -104,24 +104,24 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				if (generateHuts) {
 					if (random.nextInt(200) == 1) {
 						switch (random.nextInt(7)) {
-						case 1:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), world, random, this.chunkPos, 8);
-							break;
-						case 2:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), world, random, this.chunkPos, 8);
-							break;
-						case 3:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), world, random, this.chunkPos, 8);
-							break;
-						case 4:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), world, random, this.chunkPos, 8);
-							break;
-						case 5:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), world, random, this.chunkPos, 8);
-							break;
-						case 6:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), world, random, this.chunkPos, 8);
-							break;
+							case 1:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), world, random, this.chunkPos, 8);
+								break;
+							case 2:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), world, random, this.chunkPos, 8);
+								break;
+							case 3:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), world, random, this.chunkPos, 8);
+								break;
+							case 4:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), world, random, this.chunkPos, 8);
+								break;
+							case 5:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), world, random, this.chunkPos, 8);
+								break;
+							case 6:
+								WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), world, random, this.chunkPos, 8);
+								break;
 						}
 					}
 				}
@@ -131,16 +131,16 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (generateCandyCanes) {
 				if (Config.GENERATE_KEPLER22B_CANDY_CANES && random.nextInt(5) == 1) {
 					switch (random.nextInt(7)) {
-					default:
-					case 1:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), world, random, this.chunkPos, 8);
-						break;
-					case 2:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), world, random, this.chunkPos, 8);
-						break;
-					case 3:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), world, random, this.chunkPos, 8);
-						break;
+						default:
+						case 1:
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), world, random, this.chunkPos, 8);
+							break;
+						case 2:
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), world, random, this.chunkPos, 8);
+							break;
+						case 3:
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), world, random, this.chunkPos, 8);
+							break;
 					}
 				}
 				if (random.nextInt(2) == 1) {

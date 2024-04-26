@@ -14,112 +14,96 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
-public class EntranceCraterMercury extends SizedPieceMercury
-{
-    private final int range = 16;
+public class EntranceCraterMercury extends SizedPieceMercury {
+	private final int range = 16;
 
-    public EntranceCraterMercury()
-    {
-    }
+	public EntranceCraterMercury() {
+	}
 
-    public EntranceCraterMercury(World world, DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ)
-    {
-        super(configuration, rand.nextInt(4) + 6, 12, rand.nextInt(4) + 6, EnumFacing.Plane.HORIZONTAL.random(rand));
-        this.setCoordBaseMode(EnumFacing.SOUTH);
+	public EntranceCraterMercury(World world, DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ) {
+		super(configuration, rand.nextInt(4) + 6, 12, rand.nextInt(4) + 6, EnumFacing.Plane.HORIZONTAL.random(rand));
+		this.setCoordBaseMode(EnumFacing.SOUTH);
 
-        this.boundingBox = new StructureBoundingBox(blockPosX - range, configuration.getYPosition() + 11, blockPosZ - range, blockPosX + range, 150, blockPosZ + range);
-    }
+		this.boundingBox = new StructureBoundingBox(blockPosX - range, configuration.getYPosition() + 11, blockPosZ - range, blockPosX + range, 150, blockPosZ + range);
+	}
 
-    @Override
-    public boolean addComponentParts(World worldIn, Random randomIn, StructureBoundingBox structureBoundingBoxIn)
-    {
-        int maxLevel = 0;
+	@Override
+	public boolean addComponentParts(World worldIn, Random randomIn, StructureBoundingBox structureBoundingBoxIn) {
+		int maxLevel = 0;
 
-        for (int i = -range; i <= range; i++)
-        {
-            for (int k = -range; k <= range; k++)
-            {
-                int j = 150;
-                int x = this.getXWithOffset(i + range, k + range);
-                int z = this.getZWithOffset(i + range, k + range);
+		for (int i = -range; i <= range; i++) {
+			for (int k = -range; k <= range; k++) {
+				int j = 150;
+				int x = this.getXWithOffset(i + range, k + range);
+				int z = this.getZWithOffset(i + range, k + range);
 
-                while (j >= 0)
-                {
-                    j--;
+				while (j >= 0) {
+					j--;
 
-                    int y = this.getYWithOffset(j);
-                    BlockPos blockpos = new BlockPos(x, y, z);
-                    Block block = worldIn.getBlockState(blockpos).getBlock();
+					int y = this.getYWithOffset(j);
+					BlockPos blockpos = new BlockPos(x, y, z);
+					Block block = worldIn.getBlockState(blockpos).getBlock();
 
-                    if (Blocks.AIR != block)
-                    {
-                        break;
-                    }
-                }
+					if (Blocks.AIR != block) {
+						break;
+					}
+				}
 
-                maxLevel = Math.max(maxLevel, j + 3);
-            }
-        }
+				maxLevel = Math.max(maxLevel, j + 3);
+			}
+		}
 
-        Mirror mirror = Mirror.NONE;
-        Rotation rotation = Rotation.NONE;
-        if (this.getCoordBaseMode() != null)
-        {
-            switch (this.getCoordBaseMode())
-            {
-                case SOUTH:
-                    mirror = Mirror.LEFT_RIGHT;
-                    break;
-                case WEST:
-                    mirror = Mirror.LEFT_RIGHT;
-                    rotation = Rotation.CLOCKWISE_90;
-                    break;
-                case EAST:
-                    rotation = Rotation.CLOCKWISE_90;
-                    break;
-                default:
-                    break;
-            }
-        }
+		Mirror mirror = Mirror.NONE;
+		Rotation rotation = Rotation.NONE;
+		if (this.getCoordBaseMode() != null) {
+			switch (this.getCoordBaseMode()) {
+				case SOUTH:
+					mirror = Mirror.LEFT_RIGHT;
+					break;
+				case WEST:
+					mirror = Mirror.LEFT_RIGHT;
+					rotation = Rotation.CLOCKWISE_90;
+					break;
+				case EAST:
+					rotation = Rotation.CLOCKWISE_90;
+					break;
+				default:
+					break;
+			}
+		}
 
-        for (int i = -range; i < range; i++)
-        {
-            for (int k = -range; k < range; k++)
-            {
-                final double xDev = i / 20D;
-                final double zDev = k / 20D;
-                final double distance = xDev * xDev + zDev * zDev;
-                final int depth = (int) Math.abs(0.5 / (distance + .00001D));
-                int helper = 0;
-                for (int j = maxLevel; j > 1 && helper <= depth; j--)
-                {
-                    {
-                        BlockPos blockpos = new BlockPos(this.getXWithOffset(i + range, k + range), this.getYWithOffset(j), this.getZWithOffset(i + range, k + range));
-                        IBlockState state = Blocks.AIR.getDefaultState();
+		for (int i = -range; i < range; i++) {
+			for (int k = -range; k < range; k++) {
+				final double xDev = i / 20D;
+				final double zDev = k / 20D;
+				final double distance = xDev * xDev + zDev * zDev;
+				final int depth = (int) Math.abs(0.5 / (distance + .00001D));
+				int helper = 0;
+				for (int j = maxLevel; j > 1 && helper <= depth; j--) {
+					{
+						BlockPos blockpos = new BlockPos(this.getXWithOffset(i + range, k + range), this.getYWithOffset(j), this.getZWithOffset(i + range, k + range));
+						IBlockState state = Blocks.AIR.getDefaultState();
 
-                        if (mirror != Mirror.NONE)
-                        {
-                            state = state.withMirror(mirror);
-                        }
+						if (mirror != Mirror.NONE) {
+							state = state.withMirror(mirror);
+						}
 
-                        if (rotation != Rotation.NONE)
-                        {
-                            state = state.withRotation(rotation);
-                        }
+						if (rotation != Rotation.NONE) {
+							state = state.withRotation(rotation);
+						}
 
-                        worldIn.setBlockState(blockpos, state, 2);
-                        helper++;
-                    }
-                }
-            }
-        }
+						worldIn.setBlockState(blockpos, state, 2);
+						helper++;
+					}
+				}
+			}
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    @Override
-    public PieceMercury getNextPiece(DungeonStartMercury startPiece, Random rand)
-    {
-        return new RoomEntranceMercury(this.configuration, rand, this.boundingBox.minX + this.boundingBox.getXSize() / 2, this.boundingBox.minZ + this.boundingBox.getZSize() / 2);
-    }
+	@Override
+	public PieceMercury getNextPiece(DungeonStartMercury startPiece, Random rand) {
+		return new RoomEntranceMercury(this.configuration, rand, this.boundingBox.minX + this.boundingBox.getXSize() / 2, this.boundingBox.minZ + this.boundingBox.getZSize() / 2);
+	}
 }

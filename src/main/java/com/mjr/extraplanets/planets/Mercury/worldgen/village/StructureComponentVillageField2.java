@@ -57,12 +57,12 @@ public class StructureComponentVillageField2 extends StructureComponentVillage {
 
 	private Block getRandomCrop(Random par1Random) {
 		switch (par1Random.nextInt(5)) {
-		case 0:
-			return Blocks.CARROTS;
-		case 1:
-			return Blocks.POTATOES;
-		default:
-			return Blocks.WHEAT;
+			case 0:
+				return Blocks.CARROTS;
+			case 1:
+				return Blocks.POTATOES;
+			default:
+				return Blocks.WHEAT;
 		}
 	}
 

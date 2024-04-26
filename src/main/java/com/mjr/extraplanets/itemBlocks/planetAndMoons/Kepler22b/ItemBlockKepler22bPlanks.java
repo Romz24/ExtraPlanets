@@ -21,32 +21,32 @@ public class ItemBlockKepler22bPlanks extends ItemBlock {
 		String name = "";
 
 		switch (itemstack.getItemDamage()) {
-		case 0: {
-			name = "plank_maple_blue";
-			break;
-		}
-		case 1: {
-			name = "plank_maple_red";
-			break;
-		}
-		case 2: {
-			name = "plank_maple_purple";
-			break;
-		}
-		case 3: {
-			name = "plank_maple_yellow";
-			break;
-		}
-		case 4: {
-			name = "plank_maple_green";
-			break;
-		}
-		case 5: {
-			name = "plank_maple_brown";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "plank_maple_blue";
+				break;
+			}
+			case 1: {
+				name = "plank_maple_red";
+				break;
+			}
+			case 2: {
+				name = "plank_maple_purple";
+				break;
+			}
+			case 3: {
+				name = "plank_maple_yellow";
+				break;
+			}
+			case 4: {
+				name = "plank_maple_green";
+				break;
+			}
+			case 5: {
+				name = "plank_maple_brown";
+				break;
+			}
+			default:
+				name = "null";
 		}
 		return this.block.getUnlocalizedName() + "." + name;
 	}

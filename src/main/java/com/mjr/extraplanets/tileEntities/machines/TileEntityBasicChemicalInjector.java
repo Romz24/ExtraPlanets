@@ -159,14 +159,14 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
-			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 1:
+					return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+				case 2:
+					return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -176,12 +176,12 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
-			case 3:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				case 3:
+					return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -190,14 +190,14 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 1:
-			return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
-		case 2:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
-		case 3:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
+			case 0:
+				return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 1:
+				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+			case 2:
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+			case 3:
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
 		}
 
 		return false;

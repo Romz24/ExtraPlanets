@@ -48,7 +48,7 @@ public class ItemBasicItem extends Item {
 				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
 				String text = TranslateUtilities.translate("anti_radiation.desc");
-				if(text.contains("{PERCENT}"))
+				if (text.contains("{PERCENT}"))
 					text = text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
 				list.add(EnumColor.YELLOW + text);
 			}

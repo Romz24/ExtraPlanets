@@ -187,8 +187,7 @@ public class MainHandlerClient {
 				}
 				if (Config.RADIATION)
 					showRadiation = true;
-			}
-			else if (player.worldObj.provider instanceof WorldProviderMoon) {
+			} else if (player.worldObj.provider instanceof WorldProviderMoon) {
 				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 80;
 					showPressure = true;
@@ -223,7 +222,7 @@ public class MainHandlerClient {
 				}
 				if (Config.GC_RADIATION && Config.RADIATION)
 					showRadiation = true;
-			} else if(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider)player.worldObj.provider).getCelestialBody().getUnlocalizedName())) {
+			} else if (Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider) player.worldObj.provider).getCelestialBody().getUnlocalizedName())) {
 				showRadiation = true;
 			}
 			if ((pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false) && showPressure)
@@ -403,7 +402,7 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
-		if(event.getEntity().isInLava() || event.getEntity().isInWater())
+		if (event.getEntity().isInLava() || event.getEntity().isInWater())
 			return;
 		if (Config.CUSTOM_FOG) {
 			if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.JUPITER_ID) {

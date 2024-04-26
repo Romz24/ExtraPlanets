@@ -514,26 +514,26 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			return true;
 		}
 		switch (key) {
-		case 0: // Deccelerate
-			if (this.currentPowerCapacity < 10)
-				return false;
-			this.speed -= this.accel / 20D;
-			this.shouldClimb = true;
-			return true;
-		case 1: // Accelerate
-			if (this.currentPowerCapacity < 10)
-				return false;
-			this.speed += this.accel / 20D;
-			this.shouldClimb = true;
-			return true;
-		case 2: // Left
-			this.rotationYaw -= 0.5F * this.turnFactor;
-			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ + 0.5F));
-			return true;
-		case 3: // Right
-			this.rotationYaw += 0.5F * this.turnFactor;
-			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ - 0.5F));
-			return true;
+			case 0: // Deccelerate
+				if (this.currentPowerCapacity < 10)
+					return false;
+				this.speed -= this.accel / 20D;
+				this.shouldClimb = true;
+				return true;
+			case 1: // Accelerate
+				if (this.currentPowerCapacity < 10)
+					return false;
+				this.speed += this.accel / 20D;
+				this.shouldClimb = true;
+				return true;
+			case 2: // Left
+				this.rotationYaw -= 0.5F * this.turnFactor;
+				this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ + 0.5F));
+				return true;
+			case 3: // Right
+				this.rotationYaw += 0.5F * this.turnFactor;
+				this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ - 0.5F));
+				return true;
 		}
 		return false;
 	}

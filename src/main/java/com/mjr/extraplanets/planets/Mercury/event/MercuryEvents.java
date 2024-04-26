@@ -19,8 +19,7 @@ public class MercuryEvents {
 				if (event.getEntity() instanceof EntityGhast) {
 					event.setCanceled(true);
 					return;
-				}
-				else if (Config.MOB_SUFFOCATION)
+				} else if (Config.MOB_SUFFOCATION)
 					event.setCanceled(false);
 				else
 					event.setCanceled(true);
