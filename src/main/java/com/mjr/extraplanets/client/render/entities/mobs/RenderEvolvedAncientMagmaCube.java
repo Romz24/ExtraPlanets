@@ -23,6 +23,7 @@ public class RenderEvolvedAncientMagmaCube extends RenderLiving<EntityEvolvedAnc
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
+	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedAncientMagmaCube entity) {
 		return MAGMA_CUBE_TEXTURES;
 	}

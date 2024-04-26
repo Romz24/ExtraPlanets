@@ -159,7 +159,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public float getTransfer(ItemStack itemStack) {
 		return Math.min(this.transferMax, this.getMaxElectricityStored(itemStack) - this.getElectricityStored(itemStack));
 	}
-	
+
 	/**
 	 * Gets the energy stored in the item. Energy is stored using item NBT
 	 */

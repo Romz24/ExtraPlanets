@@ -133,7 +133,7 @@ public class ExtraPlanets_Items {
 	public static Item TIER_4_UNPREPARED_SPACE_SUIT_CHEST;
 	public static Item TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS;
 	public static Item TIER_4_UNPREPARED_SPACE_SUIT_BOOTS;
-	
+
 	public static Item ENVIRO_EMERGENCY_KIT;
 
 	public static Item WAFERS;
@@ -345,7 +345,7 @@ public class ExtraPlanets_Items {
 			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4_un_prepared_space_suit_chest");
 			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4_un_prepared_space_suit_legings");
 			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4_un_prepared_space_suit_boots");
-			
+
 			ENVIRO_EMERGENCY_KIT = new ItemEnviroEmergencyKit("enviro_emergency_kit");
 			MODULE_ITEMS = new ItemModuleItems("module_items");
 		}
@@ -559,7 +559,7 @@ public class ExtraPlanets_Items {
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			RegisterUtilities.registerItem(ENVIRO_EMERGENCY_KIT, ENVIRO_EMERGENCY_KIT.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(MODULE_ITEMS, MODULE_ITEMS.getUnlocalizedName().substring(5));
 		}

@@ -50,7 +50,7 @@ public class ItemTools extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-	
+
 	@Override
 	public ItemStack getContainerItem(ItemStack itemstack) {
 		if(itemstack.getUnlocalizedName().contains(names[0])) {
@@ -79,7 +79,7 @@ public class ItemTools extends Item {
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		if(stack.getUnlocalizedName().contains(names[0]))
-			return 1;		
+			return 1;
 		return super.getItemStackLimit(stack);
 	}
 
@@ -91,7 +91,7 @@ public class ItemTools extends Item {
 		}
 		return super.showDurabilityBar(stack);
 	}
-	
+
 
 	@Override
 	public double getDurabilityForDisplay(ItemStack stack) {
@@ -110,6 +110,6 @@ public class ItemTools extends Item {
 		}
 		super.addInformation(stack, playerIn, tooltip, advanced);
 	}
-	
-	
+
+
 }
