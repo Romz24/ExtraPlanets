@@ -6,9 +6,6 @@ import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
@@ -16,6 +13,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumFacing;
+
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 
 public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[2];

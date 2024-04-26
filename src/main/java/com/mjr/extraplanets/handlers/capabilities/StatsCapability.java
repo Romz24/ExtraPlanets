@@ -2,9 +2,10 @@ package com.mjr.extraplanets.handlers.capabilities;
 
 import java.lang.ref.WeakReference;
 
-import micdoodle8.mods.galacticraft.core.util.GCLog;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
+
+import micdoodle8.mods.galacticraft.core.util.GCLog;
 
 public class StatsCapability implements IStatsCapability {
 	public WeakReference<EntityPlayerMP> player;

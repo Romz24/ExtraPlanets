@@ -1,10 +1,11 @@
 package com.mjr.extraplanets.items.armor.bases;
 
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+
 import ic2.api.item.IElectricItem;
 import ic2.api.item.IElectricItemManager;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 
 /*
  * Interface between ExtraPlanets space suit items (batteries) and IC2.

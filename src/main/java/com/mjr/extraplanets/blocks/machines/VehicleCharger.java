@@ -4,15 +4,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
-import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
-import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
-import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
-import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
-import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties.MachineSidesModel;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -30,6 +21,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
+import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
+import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
+import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
+import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
+import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties.MachineSidesModel;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 
 public class VehicleCharger extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);

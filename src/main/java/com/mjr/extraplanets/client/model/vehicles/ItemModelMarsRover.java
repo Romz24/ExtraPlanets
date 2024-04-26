@@ -6,10 +6,11 @@ import javax.vecmath.Vector3f;
 
 import com.mjr.mjrlegendslib.client.model.ModelTransformWrapper;
 
-import micdoodle8.mods.galacticraft.core.Constants;
 import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraftforge.common.model.TRSRTransformation;
+
+import micdoodle8.mods.galacticraft.core.Constants;
 
 public class ItemModelMarsRover extends ModelTransformWrapper {
 	public ItemModelMarsRover(IBakedModel modelToWrap) {

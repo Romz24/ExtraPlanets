@@ -9,6 +9,10 @@ import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -17,9 +21,6 @@ import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
 
 public class GuiSolar extends GuiContainerGC {
 	private static final ResourceLocation solarGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solar.png");

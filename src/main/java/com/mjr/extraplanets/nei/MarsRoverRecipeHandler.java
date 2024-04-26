@@ -11,12 +11,13 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.api.stack.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class MarsRoverRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation marsRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/marsRoverbench.png");

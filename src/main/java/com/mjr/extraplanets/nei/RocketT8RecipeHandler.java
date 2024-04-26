@@ -7,13 +7,14 @@ import java.util.Set;
 
 import org.lwjgl.opengl.GL11;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.api.stack.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class RocketT8RecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/gui/schematic_rocket_T2.png");

@@ -1,10 +1,11 @@
 package com.mjr.extraplanets;
 
+import net.minecraft.util.ResourceLocation;
+
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import net.minecraft.util.ResourceLocation;
 
 public class ExtraPlanets_SolarSystems {
 

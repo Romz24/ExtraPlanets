@@ -2,8 +2,6 @@ package com.mjr.extraplanets.entities.mobs;
 
 import javax.annotation.Nullable;
 
-import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
@@ -18,6 +16,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 
 public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntityBreathable
 {

@@ -7,12 +7,13 @@ import java.util.List;
 import com.mjr.extraplanets.inventory.vehicles.InventoryMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 
 public class MarsRoverRecipes {
 	private static List<INasaWorkbenchRecipe> marsRoverRecipes = new ArrayList<INasaWorkbenchRecipe>();

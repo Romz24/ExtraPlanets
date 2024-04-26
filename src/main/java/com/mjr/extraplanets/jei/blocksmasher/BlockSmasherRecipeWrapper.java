@@ -5,10 +5,11 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
-import net.minecraft.item.ItemStack;
 
 @SuppressWarnings("deprecation")
 public class BlockSmasherRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {

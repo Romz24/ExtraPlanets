@@ -7,18 +7,18 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockGlowstoneTorch;
-import micdoodle8.mods.galacticraft.planets.asteroids.blocks.AsteroidBlocks;
-import micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBasicAsteroids;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockGlowstoneTorch;
+import micdoodle8.mods.galacticraft.planets.asteroids.blocks.AsteroidBlocks;
+import micdoodle8.mods.galacticraft.planets.asteroids.blocks.BlockBasicAsteroids;
+import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 
 public class WorldGenSatelliteTower extends WorldGenerator {
 

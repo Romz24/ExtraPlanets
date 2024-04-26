@@ -11,17 +11,17 @@ import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 
 public class ChunkProviderMercury extends ChunkProviderSingleBiomeSpace {
 	private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();

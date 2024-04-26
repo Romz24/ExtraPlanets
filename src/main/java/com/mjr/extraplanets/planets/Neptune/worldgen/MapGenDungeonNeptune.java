@@ -1,8 +1,9 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen;
 
+import net.minecraft.world.gen.structure.MapGenStructureIO;
+
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
 
 public class MapGenDungeonNeptune extends MapGenDungeon {
 	private static boolean initialized;

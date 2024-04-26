@@ -5,12 +5,13 @@ import com.mjr.extraplanets.ExtraPlanets_Achievements;
 import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
+
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 
 public class AchievementEventHandler {
 	@SubscribeEvent

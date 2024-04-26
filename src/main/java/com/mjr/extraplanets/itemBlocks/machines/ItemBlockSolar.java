@@ -2,13 +2,14 @@ package com.mjr.extraplanets.itemBlocks.machines;
 
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 
 public class ItemBlockSolar extends ItemBlockDesc {
 	public ItemBlockSolar(Block block) {

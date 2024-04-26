@@ -4,16 +4,17 @@ import java.util.List;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-import micdoodle8.mods.galacticraft.api.item.IKeyItem;
-import micdoodle8.mods.galacticraft.core.items.ISortableItem;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.item.IKeyItem;
+import micdoodle8.mods.galacticraft.core.items.ISortableItem;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 
 public class ItemKeyT6 extends Item implements IKeyItem, ISortableItem {
 	public ItemKeyT6(String name) {

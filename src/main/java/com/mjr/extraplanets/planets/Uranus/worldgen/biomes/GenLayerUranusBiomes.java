@@ -2,9 +2,10 @@ package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
-import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
+
+import micdoodle8.mods.miccore.IntCache;
 
 public class GenLayerUranusBiomes extends GenLayer {
 	private static final Biome[] biomes = new Biome[] { UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands };

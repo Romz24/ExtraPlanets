@@ -6,15 +6,6 @@ import java.util.Random;
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
-import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
-import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
-import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -36,6 +27,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
+import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
+import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 
 public class BlockBasicEris extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypeeris", EnumBlockBasic.class);

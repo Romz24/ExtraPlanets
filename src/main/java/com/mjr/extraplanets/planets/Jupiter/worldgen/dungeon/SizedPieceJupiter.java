@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public abstract class SizedPieceJupiter extends DirectionalPieceJupiter
 {

@@ -12,13 +12,14 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.BiomeProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.dungeon.RoomTreasureMercuryBase;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 
 public class WorldProviderMercury extends WorldProviderRealisticSpace {
 

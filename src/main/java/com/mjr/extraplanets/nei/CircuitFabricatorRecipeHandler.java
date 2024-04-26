@@ -8,13 +8,14 @@ import java.util.Set;
 
 import org.lwjgl.opengl.GL11;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.api.stack.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
 import micdoodle8.mods.galacticraft.core.Constants;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class CircuitFabricatorRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation circuitFabricatorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/circuitFabricator.png");

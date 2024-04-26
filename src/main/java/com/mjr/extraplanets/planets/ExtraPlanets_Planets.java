@@ -38,6 +38,14 @@ import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 import com.mjr.extraplanets.util.GCRegisterUtilities;
 
+import net.minecraft.entity.monster.*;
+import net.minecraft.entity.passive.EntityChicken;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome.SpawnListEntry;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -53,14 +61,6 @@ import micdoodle8.mods.galacticraft.planets.mars.ConfigManagerMars;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
-
-import net.minecraft.entity.monster.*;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome.SpawnListEntry;
 
 public class ExtraPlanets_Planets {
 	public static Planet MERCURY;

@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import com.mjr.extraplanets.Constants;
 
-import micdoodle8.mods.galacticraft.api.galaxies.*;
 import net.minecraft.util.ResourceLocation;
+
+import micdoodle8.mods.galacticraft.api.galaxies.*;
 
 public class GCRegisterUtilities {
 	public static Planet registerUnreachablePlanet(String name, SolarSystem system) {

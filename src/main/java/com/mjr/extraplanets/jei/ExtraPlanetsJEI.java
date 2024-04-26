@@ -53,12 +53,13 @@ import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeCategory;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeHandler;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeMaker;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.BlankModPlugin;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
-import net.minecraft.item.ItemStack;
 
 @JEIPlugin
 public class ExtraPlanetsJEI extends BlankModPlugin {

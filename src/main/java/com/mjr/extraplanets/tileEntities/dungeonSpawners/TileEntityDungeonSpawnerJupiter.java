@@ -5,14 +5,15 @@ import java.util.List;
 
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.util.SoundCategory;
+
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.util.SoundCategory;
 
 public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<EntityEvolvedFireBatBoss> {
 	public TileEntityDungeonSpawnerJupiter() {

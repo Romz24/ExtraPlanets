@@ -2,9 +2,10 @@ package com.mjr.extraplanets.blocks;
 
 import com.mjr.mjrlegendslib.block.BlockBasic;
 
-import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+
+import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 
 public class BlockBasicValuable extends BlockBasic implements IDetectableResource {
 
