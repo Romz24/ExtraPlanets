@@ -427,7 +427,6 @@ public class ExtraPlanets {
 		GalacticraftCore.proxy.registerFluidTexture(ExtraPlanets_Fluids.SALT_FLUID, new ResourceLocation(Constants.ASSET_PREFIX, "textures/misc/under_salt.png"));
 	}
 
-	@SuppressWarnings("deprecation")
 	private void registerNonMobEntities() {
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityNuclearBombPrimed.class, Constants.modID + "." + "NuclearBombPrimed", 150, 1, true);
@@ -466,7 +465,6 @@ public class ExtraPlanets {
 		RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityGeneralLander.class, "EntityGeneralLander", 150, 5, false);
 	}
 
-	@SuppressWarnings("deprecation")
 	private void registerCreatures() {
 		// Dungeon Bosses
 		if (Config.MERCURY) {
