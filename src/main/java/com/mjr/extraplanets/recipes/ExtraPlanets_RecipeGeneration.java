@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.recipes;
 
-import java.util.List;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -10,16 +8,17 @@ import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.mjrlegendslib.recipe.RecipeDumper;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusItems;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 @SuppressWarnings("deprecation")
 public class ExtraPlanets_RecipeGeneration {

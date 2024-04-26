@@ -1,7 +1,8 @@
 package com.mjr.extraplanets.moons.Rhea.worldgen;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.world.biome.Biome;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class RheaBiomes extends BiomeGenBaseGC {
 

@@ -2,12 +2,13 @@ package com.mjr.extraplanets.client.model;
 
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
 
 @SideOnly(Side.CLIENT)
 public class SpaceSuitJetPackFlame {

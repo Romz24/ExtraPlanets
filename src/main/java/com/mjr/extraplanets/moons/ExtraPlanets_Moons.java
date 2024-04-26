@@ -47,6 +47,9 @@ import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.util.GCRegisterUtilities;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome.SpawnListEntry;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -56,9 +59,6 @@ import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.entities.*;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome.SpawnListEntry;
 
 public class ExtraPlanets_Moons {
 

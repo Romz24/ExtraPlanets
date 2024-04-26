@@ -5,13 +5,14 @@ import java.util.HashMap;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.recipes.*;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.IAction;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 
 public class ActionAddNASATieredRocketRecipe implements IAction {
 	private final int tier;

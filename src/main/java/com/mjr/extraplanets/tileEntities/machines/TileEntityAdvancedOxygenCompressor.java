@@ -4,15 +4,16 @@ import java.util.EnumSet;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
 
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
+
 import micdoodle8.mods.galacticraft.api.item.IItemOxygenSupply;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.NonNullList;
 
 public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen {
 	public static final int TANK_TRANSFER_SPEED = 4;

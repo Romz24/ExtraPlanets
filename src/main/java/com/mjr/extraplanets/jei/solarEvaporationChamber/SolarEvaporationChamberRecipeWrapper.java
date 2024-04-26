@@ -2,9 +2,10 @@ package com.mjr.extraplanets.jei.solarEvaporationChamber;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import net.minecraft.item.ItemStack;
 
 public class SolarEvaporationChamberRecipeWrapper implements IRecipeWrapper {
 	@Nonnull

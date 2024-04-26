@@ -53,6 +53,8 @@ import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeCategory;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeMaker;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeWrapper;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
@@ -60,7 +62,6 @@ import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
-import net.minecraft.item.ItemStack;
 
 @JEIPlugin
 public class ExtraPlanetsJEI implements IModPlugin {

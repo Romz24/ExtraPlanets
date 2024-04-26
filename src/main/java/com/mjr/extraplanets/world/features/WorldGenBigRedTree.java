@@ -9,11 +9,12 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 
 public class WorldGenBigRedTree extends WorldGenerator {
 

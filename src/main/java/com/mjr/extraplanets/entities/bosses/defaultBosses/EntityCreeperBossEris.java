@@ -5,16 +5,6 @@ import java.util.Random;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
-import micdoodle8.mods.galacticraft.core.entities.EntityAIArrowAttack;
-import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.planets.mars.entities.EntityProjectileTNT;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -32,6 +22,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
+import micdoodle8.mods.galacticraft.core.entities.EntityAIArrowAttack;
+import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.planets.mars.entities.EntityProjectileTNT;
 
 public class EntityCreeperBossEris extends EntityBossBase implements IEntityBreathable, IRangedAttackMob {
 	protected long ticks = 0;

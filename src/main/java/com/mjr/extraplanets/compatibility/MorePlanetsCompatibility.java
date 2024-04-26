@@ -6,8 +6,9 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.item.ItemStack;
+
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 
 public class MorePlanetsCompatibility {
 	public static void init() {

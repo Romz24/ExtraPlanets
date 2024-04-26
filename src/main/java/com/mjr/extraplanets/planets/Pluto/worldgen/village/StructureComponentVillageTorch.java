@@ -3,8 +3,6 @@ package com.mjr.extraplanets.planets.Pluto.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockTorchBase;
 import net.minecraft.block.BlockColored;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
@@ -14,6 +12,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.template.TemplateManager;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTorchBase;
 
 public class StructureComponentVillageTorch extends StructureComponentVillage {
 	private int averageGroundLevel = -1;

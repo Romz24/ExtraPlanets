@@ -8,7 +8,6 @@ import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceSea;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,6 +16,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class TritonBiomes extends BiomeGenBaseGC {
 

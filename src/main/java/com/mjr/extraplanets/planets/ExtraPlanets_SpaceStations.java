@@ -24,6 +24,8 @@ import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
 import com.mjr.extraplanets.planets.venus.spacestation.TeleportTypeVenusOrbit;
 import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 
+import net.minecraft.util.ResourceLocation;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -31,7 +33,6 @@ import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
 import micdoodle8.mods.galacticraft.core.world.gen.BiomeOrbit;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
-import net.minecraft.util.ResourceLocation;
 
 public class ExtraPlanets_SpaceStations {
 

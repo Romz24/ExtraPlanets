@@ -7,13 +7,14 @@ import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
+
+import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
+import micdoodle8.mods.galacticraft.core.util.ClientUtil;
+import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 
 public class OverlayGeigerCounter extends Overlay {
 	private static Minecraft minecraft = MCUtilities.getClient();

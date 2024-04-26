@@ -8,16 +8,17 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockBasic;
-import micdoodle8.mods.galacticraft.core.blocks.BlockBasic.EnumBlockBasic;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockBasic;
+import micdoodle8.mods.galacticraft.core.blocks.BlockBasic.EnumBlockBasic;
+import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 
 public class WorldGenSpaceShip extends WorldGenerator {
 

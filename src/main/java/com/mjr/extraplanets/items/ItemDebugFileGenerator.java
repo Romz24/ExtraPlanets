@@ -10,8 +10,6 @@ import javax.annotation.Nullable;
 
 import com.mjr.mjrlegendslib.item.BasicItem;
 
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,6 +25,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 public class ItemDebugFileGenerator extends BasicItem {
 

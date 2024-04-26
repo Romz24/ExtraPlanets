@@ -9,17 +9,6 @@ import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
-import micdoodle8.mods.galacticraft.api.entity.IDockable;
-import micdoodle8.mods.galacticraft.api.entity.IFuelable;
-import micdoodle8.mods.galacticraft.api.entity.ILandable;
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
-import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
-import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
-import micdoodle8.mods.galacticraft.planets.mars.tile.TileEntityLaunchController;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,6 +21,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
+import micdoodle8.mods.galacticraft.api.entity.IDockable;
+import micdoodle8.mods.galacticraft.api.entity.IFuelable;
+import micdoodle8.mods.galacticraft.api.entity.ILandable;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
+import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
+import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
+import micdoodle8.mods.galacticraft.planets.mars.tile.TileEntityLaunchController;
 
 public class TileEntityTier3LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock, ICargoEntity {
 	public TileEntityTier3LandingPad() {

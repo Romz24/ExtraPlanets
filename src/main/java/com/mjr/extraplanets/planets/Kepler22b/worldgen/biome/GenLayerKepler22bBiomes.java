@@ -2,10 +2,11 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
-import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
+import micdoodle8.mods.miccore.IntCache;
 
 public class GenLayerKepler22bBiomes extends GenLayer {
 	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.KEPLER22B).toArray(new Biome[0]);

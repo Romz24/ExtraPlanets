@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Eris.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -15,6 +14,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.template.TemplateManager;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
 
 public class StructureComponentVillagePathGen extends StructureComponentVillageRoadPiece {
 	private int averageGroundLevel;

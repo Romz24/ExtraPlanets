@@ -3,9 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import com.mjr.extraplanets.blocks.machines.BasicSmasher;
 import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
 
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
@@ -14,6 +11,10 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
+
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
+import micdoodle8.mods.miccore.Annotations.NetworkedField;
 
 public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	public static final int PROCESS_TIME_REQUIRED = 50;

@@ -12,10 +12,6 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Rhea.worldgen.ChunkProviderRhea;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
@@ -23,6 +19,10 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 
 public class WorldProviderRhea extends WorldProviderRealisticMoon {
 	@Override

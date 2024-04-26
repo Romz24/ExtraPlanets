@@ -4,13 +4,6 @@ import com.mjr.extraplanets.api.block.IPowerable;
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
 import com.mjr.extraplanets.blocks.machines.VehicleCharger;
 
-import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
-import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
-import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -19,6 +12,14 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+
+import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
+import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
+import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
+import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 
 public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory implements ISidedInventory, ILandingPadAttachable, IMachineSides {
 	public IPowerable attachedPowerable;

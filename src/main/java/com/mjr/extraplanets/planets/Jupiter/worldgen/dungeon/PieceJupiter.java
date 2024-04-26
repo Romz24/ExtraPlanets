@@ -1,12 +1,12 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
+import java.util.Random;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.template.TemplateManager;
-
-import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 

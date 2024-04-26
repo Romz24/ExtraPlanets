@@ -1,18 +1,18 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen.dungeon;
 
+import java.util.List;
+import java.util.Random;
+
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.planets.Mercury.worldgen.RoomBossMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.RoomTreasureMercury;
-
-import micdoodle8.mods.galacticraft.core.util.GCLog;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-import java.util.List;
-import java.util.Random;
+import micdoodle8.mods.galacticraft.core.util.GCLog;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class DungeonStartMercury extends EntranceCraterMercury
 {

@@ -8,7 +8,6 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenWaterSea;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -17,6 +16,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class UranusBiomes extends BiomeGenBaseGC {
 

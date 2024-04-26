@@ -57,11 +57,6 @@ import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
 import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
-import micdoodle8.mods.galacticraft.core.client.SkyProviderOrbit;
-import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -71,6 +66,11 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
+import micdoodle8.mods.galacticraft.core.client.SkyProviderOrbit;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 
 public class SkyProviderHandler {
 	@SideOnly(Side.CLIENT)

@@ -10,8 +10,9 @@ import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompresso
 import com.mjr.extraplanets.tileEntities.machines.*;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import net.minecraft.block.Block;
+
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 
 public class ExtraPlanets_Machines {
 	// Machines

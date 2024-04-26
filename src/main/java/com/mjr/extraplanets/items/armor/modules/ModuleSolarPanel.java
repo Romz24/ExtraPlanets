@@ -8,13 +8,13 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
 
 public class ModuleSolarPanel extends Module {
 

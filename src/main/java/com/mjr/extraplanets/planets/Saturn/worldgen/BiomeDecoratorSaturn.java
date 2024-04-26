@@ -10,15 +10,16 @@ import com.mjr.extraplanets.world.features.WorldGenNuclearPile;
 import com.mjr.extraplanets.world.features.WorldGenSlimeTree;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
-import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 
 public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 

@@ -7,10 +7,11 @@ import java.util.List;
 import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier10ElectricRocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+
+import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
+import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 
 public class Tier10ElectricRocketRecipes {
 	private static List<INasaWorkbenchRecipe> tier10ElectricRocketRecipes = new ArrayList<INasaWorkbenchRecipe>();

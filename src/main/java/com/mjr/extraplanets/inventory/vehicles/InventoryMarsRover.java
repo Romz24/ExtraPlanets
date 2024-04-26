@@ -1,12 +1,13 @@
 package com.mjr.extraplanets.inventory.vehicles;
 
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
+
+import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 
 public class InventoryMarsRover implements IInventoryDefaults {
 	private final NonNullList<ItemStack> stackList;

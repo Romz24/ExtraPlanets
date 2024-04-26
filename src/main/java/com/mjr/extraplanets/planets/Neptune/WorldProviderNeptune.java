@@ -12,15 +12,16 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 
 public class WorldProviderNeptune extends WorldProviderRealisticSpace {
 

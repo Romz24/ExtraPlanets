@@ -13,16 +13,7 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import io.netty.buffer.ByteBuf;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.TransformerHooks;
-import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
-import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
-import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
-import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
-import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate.IEntityFullSync;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple;
-import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
@@ -47,6 +38,17 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.TransformerHooks;
+import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
+import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
+import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
+import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
+import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate.IEntityFullSync;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 
 public abstract class EntityPoweredVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IPoweredDockable, IControllableEntity, IEntityFullSync {
 	private static final DataParameter<Integer> CURRENT_DAMAGE = EntityDataManager.createKey(EntityPoweredVehicleBase.class, DataSerializers.VARINT);

@@ -4,10 +4,6 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDecrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
@@ -20,6 +16,11 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fml.relauncher.Side;
+
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
+import micdoodle8.mods.galacticraft.core.util.FluidUtil;
+import micdoodle8.mods.miccore.Annotations.NetworkedField;
 
 public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	private final int tankCapacity = 20000;

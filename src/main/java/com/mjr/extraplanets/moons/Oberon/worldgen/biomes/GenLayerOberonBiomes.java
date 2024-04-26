@@ -2,10 +2,11 @@ package com.mjr.extraplanets.moons.Oberon.worldgen.biomes;
 
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
-import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
+import micdoodle8.mods.miccore.IntCache;
 
 public class GenLayerOberonBiomes extends GenLayer {
 	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Moons.OBERON).toArray(new Biome[0]);

@@ -9,13 +9,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
-import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.entities.EntityHangingSchematic;
-import micdoodle8.mods.galacticraft.core.items.ISortableItem;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -29,6 +22,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
+import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
+import micdoodle8.mods.galacticraft.core.entities.EntityHangingSchematic;
+import micdoodle8.mods.galacticraft.core.items.ISortableItem;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 
 public class ItemSchematicTier5Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
