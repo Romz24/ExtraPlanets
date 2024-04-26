@@ -128,6 +128,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, planet)) {
+						this.celestialBodyTicks.put(planet, 0);
 						this.updatedBodiesToRender.add(planet);
 					}
 				} else {
@@ -145,6 +146,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon.getParentPlanet()) && PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, moon)) {
+						this.celestialBodyTicks.put(moon, 0);
 						this.updatedBodiesToRender.add(moon);
 					}
 				} else {
@@ -164,6 +166,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 				if (Loader.isModLoaded("planetprogression")) {
 					if (PlanetProgressionCompatibility.isResearched(Minecraft.getMinecraft().player, satellite.getParentPlanet())) {
+						this.celestialBodyTicks.put(satellite, 0);
 						this.updatedBodiesToRender.add(satellite);
 					}
 				} else {
