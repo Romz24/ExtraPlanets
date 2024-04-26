@@ -88,7 +88,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		ItemStack item = this.containingItems[slot];
 		FluidStack stack = FluidUtil.getFluidContained(item);
