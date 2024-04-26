@@ -183,7 +183,7 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.CERES_ORBIT;
 	}
-	
+
 	@Override
     @SideOnly(Side.CLIENT)
     public void setSpinDeltaPerTick(float angle)
@@ -199,18 +199,18 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
 		return skyProvider.spinAngle;
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void createSkyProvider()
     {
         this.setSkyRenderer(new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true, getSunSize()));
         this.setSpinDeltaPerTick(this.getSpinManager().getSpinRate());
-        
+
         if (this.getCloudRenderer() == null)
             this.setCloudRenderer(new CloudRenderer());
     }
-    
+
     public static float getSunSize() {
     	return 17.5F * (1.0F / ExtraPlanets_Planets.CERES.getRelativeDistanceFromCenter().unScaledDistance);
     }

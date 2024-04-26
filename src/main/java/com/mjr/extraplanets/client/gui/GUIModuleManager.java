@@ -45,7 +45,7 @@ public class GUIModuleManager extends GuiContainerGC {
 
 	private GuiButton buttonActiveState;
 	@SuppressWarnings("unused")
-	private GuiButton buttonInstall;	
+	private GuiButton buttonInstall;
 	@SuppressWarnings("unused")
 	private GuiButton buttonUninstall;
 

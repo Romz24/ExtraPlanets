@@ -273,9 +273,9 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		RegisterUtilities.registerEventHandler(new Config());
-		
+
 		ExtraPlanets_Planets.registerMaterialsForGCPlanets();
-		
+
 		// Register Modules
 		ExtraPlanets_Modules.init();
 
@@ -381,7 +381,7 @@ public class ExtraPlanets {
 			for(String current : Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
 				entries.add(current);
 			}
-			
+
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				if(planet.getUnlocalizedName().contains("overworld") || planet.atmosphere.isBreathable())
 					continue;

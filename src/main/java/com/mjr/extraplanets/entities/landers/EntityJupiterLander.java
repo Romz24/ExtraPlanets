@@ -272,11 +272,11 @@ public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShif
 	public boolean canBeCollidedWith() {
 		return !this.isDead;
 	}
-	
-	@Override 
+
+	@Override
 	public void onStruckByLightning(EntityLightningBolt lightningBolt)
     {
         return;
     }
-	
+
 }

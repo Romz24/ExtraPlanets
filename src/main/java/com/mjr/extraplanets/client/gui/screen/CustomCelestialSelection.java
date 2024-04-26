@@ -215,12 +215,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {	
+					if(body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}
 				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {	
+					if(body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}

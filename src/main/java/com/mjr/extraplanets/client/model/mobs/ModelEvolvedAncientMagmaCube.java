@@ -38,6 +38,7 @@ public class ModelEvolvedAncientMagmaCube extends ModelBase {
 	/**
 	 * Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
 	 */
+	@Override
 	public void setLivingAnimations(EntityLivingBase entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTickTime) {
 		EntityEvolvedAncientMagmaCube EntityEvolvedAncientMagmaCube = (EntityEvolvedAncientMagmaCube) entitylivingbaseIn;
 		float f = EntityEvolvedAncientMagmaCube.prevSquishFactor + (EntityEvolvedAncientMagmaCube.squishFactor - EntityEvolvedAncientMagmaCube.prevSquishFactor) * partialTickTime;
@@ -54,6 +55,7 @@ public class ModelEvolvedAncientMagmaCube extends ModelBase {
 	/**
 	 * Sets the models various rotation angles then renders the model.
 	 */
+	@Override
 	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entityIn);
 		this.core.render(scale);

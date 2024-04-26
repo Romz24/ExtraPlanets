@@ -58,7 +58,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	private static final double SMALL_FEATURE_FILTER_MOD = 8;
 
 	private List<MapGenBaseMeta> worldGenerators;
-	
+
 	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled) {
 		this(par1World, seed, mapFeaturesEnabled, false);
 	}

@@ -415,7 +415,7 @@ public class ExtraPlanets_Moons {
 			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetus_rocket_gui.png"));
 		}
 	}
-	
+
 	public static boolean isExtraPlanetsMoon(CelestialBody body) {
 		if (body == TRITON || body == CALLISTO || body == EUROPA || body == GANYMEDE || body == IO || body == DEIMOS || body == PHOBOS || body == IAPETUS || body == RHEA || body == TITAN || body == OBERON || body == TITANIA)
 			return true;
