@@ -208,11 +208,11 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 		// final Block[] ids = new Block[32768 * 2];
 		// final byte[] meta = new byte[32768 * 2];
 		this.generateTerrain(chunkX, chunkZ, primer);
-		if(!this.enableCratersAfterBiomeReplace)
+		if (!this.enableCratersAfterBiomeReplace)
 			this.createCraters(chunkX, chunkZ, primer);
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, chunkX * 16, chunkZ * 16, 16, 16);
 		this.replaceBiomeBlocks(chunkX, chunkZ, primer, this.biomesForGeneration);
-		if(this.enableCratersAfterBiomeReplace)
+		if (this.enableCratersAfterBiomeReplace)
 			this.createCraters(chunkX, chunkZ, primer);
 
 		if (this.worldGenerators == null) {

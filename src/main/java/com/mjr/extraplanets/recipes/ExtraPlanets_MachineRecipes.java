@@ -90,8 +90,8 @@ public class ExtraPlanets_MachineRecipes {
 	}
 
 	public static boolean isBlockSmasherOutputKnown(ItemStack output) {
-		for(ItemStack item : blockSmasherSlotValidOutputItems) {
-			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
+		for (ItemStack item : blockSmasherSlotValidOutputItems) {
+			if (item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
 				return true;
 		}
 		return false;
@@ -170,8 +170,8 @@ public class ExtraPlanets_MachineRecipes {
 	}
 
 	public static boolean isSolarEvaporationChamberOutputKnown(ItemStack output) {
-		for(ItemStack item : solarEvaporationChamberSlotValidOutputItems) {
-			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
+		for (ItemStack item : solarEvaporationChamberSlotValidOutputItems) {
+			if (item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
 				return true;
 		}
 		return false;

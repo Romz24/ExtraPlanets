@@ -53,14 +53,14 @@ public class ExtraPlanetsUtli {
 	}
 
 	public static boolean isClassAvailable(final String className) {
-        try {
-            final Class<?> clazz = Class.forName(className);
-            return clazz != null;
-        } catch (final ClassNotFoundException e) {
-            return false;
-        } catch (final Throwable e) {
-            MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Unknown error when checking for class existing");
-            return false;
-        }
-    }
+		try {
+			final Class<?> clazz = Class.forName(className);
+			return clazz != null;
+		} catch (final ClassNotFoundException e) {
+			return false;
+		} catch (final Throwable e) {
+			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Unknown error when checking for class existing");
+			return false;
+		}
+	}
 }

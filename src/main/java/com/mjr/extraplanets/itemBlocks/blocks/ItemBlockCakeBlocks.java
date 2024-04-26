@@ -21,40 +21,40 @@ public class ItemBlockCakeBlocks extends ItemBlock {
 		String name = "";
 
 		switch (itemStack.getItemDamage()) {
-		case 0: {
-			name = "cake_block";
-			break;
-		}
-		case 1: {
-			name = "cake_block_red_velvet";
-			break;
-		}
-		case 2: {
-			name = "cake_block_chocolate";
-			break;
-		}
-		case 3: {
-			name = "white_icing_red_dots";
-			break;
-		}
-		case 4: {
-			name = "white_icing_green_dots";
-			break;
-		}
-		case 5: {
-			name = "white_icing_pink_dots";
-			break;
-		}
-		case 6: {
-			name = "white_icing_orange_dots";
-			break;
-		}
-		case 7: {
-			name = "cookie_rocks";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "cake_block";
+				break;
+			}
+			case 1: {
+				name = "cake_block_red_velvet";
+				break;
+			}
+			case 2: {
+				name = "cake_block_chocolate";
+				break;
+			}
+			case 3: {
+				name = "white_icing_red_dots";
+				break;
+			}
+			case 4: {
+				name = "white_icing_green_dots";
+				break;
+			}
+			case 5: {
+				name = "white_icing_pink_dots";
+				break;
+			}
+			case 6: {
+				name = "white_icing_orange_dots";
+				break;
+			}
+			case 7: {
+				name = "cookie_rocks";
+				break;
+			}
+			default:
+				name = "null";
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + name;

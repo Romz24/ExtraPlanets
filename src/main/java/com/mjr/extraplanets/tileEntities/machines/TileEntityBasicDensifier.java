@@ -52,7 +52,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-        return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
+		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -61,7 +61,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
 			return (T) new FluidHandlerWrapper(this, facing);
 		}
-        return super.getCapability(capability, facing);
+		return super.getCapability(capability, facing);
 	}
 
 	@Override
@@ -271,9 +271,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		if(this.producingStack == null && nbt.hasKey("producingStack")) {
-	        final ItemStack itemStack = new ItemStack((NBTTagCompound) nbt.getTag("producingStack"));
-	        this.producingStack = itemStack;
+		if (this.producingStack == null && nbt.hasKey("producingStack")) {
+			final ItemStack itemStack = new ItemStack((NBTTagCompound) nbt.getTag("producingStack"));
+			this.producingStack = itemStack;
 		}
 
 		if (nbt.hasKey("inputTank")) {
@@ -285,7 +285,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		if(this.producingStack != null)
+		if (this.producingStack != null)
 			nbt.setTag("producingStack", this.producingStack.serializeNBT());
 
 		if (this.inputTank.getFluid() != null) {
@@ -308,12 +308,12 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemStack);
-			case 2:
-				return true;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemStack);
+				case 2:
+					return true;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -323,14 +323,14 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
-			case 1:
-				return true;
-			case 2:
-				return itemStack == new ItemStack(Items.BUCKET);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
+				case 1:
+					return true;
+				case 2:
+					return itemStack == new ItemStack(Items.BUCKET);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -339,12 +339,12 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
-		case 0:
-			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
-		case 1:
-			return true;
-		case 2:
-			return FluidUtil.isValidContainer(itemStack);
+			case 0:
+				return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
+			case 1:
+				return true;
+			case 2:
+				return FluidUtil.isValidContainer(itemStack);
 		}
 
 		return false;

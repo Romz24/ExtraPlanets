@@ -89,7 +89,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 					BlockPos posAt = pos.add(y == 2 ? x : 0, y, y == 2 ? z : 0);
 					IBlockState bs = world.getBlockState(posAt);
 
-                    if (bs.getMaterial() != Material.AIR && !bs.getBlock().isReplaceable(world, pos)){
+					if (bs.getMaterial() != Material.AIR && !bs.getBlock().isReplaceable(world, pos)) {
 						return false;
 					}
 				}
@@ -173,10 +173,10 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	@Override
 	public String getShiftDescription(int meta) {
 		switch (meta) {
-		case HYBRID_METADATA:
-			return TranslateUtilities.translate("tile.solar_hybrid.description");
-		case ULTIMATE_METADATA:
-			return TranslateUtilities.translate("tile.solar_ultimate.description");
+			case HYBRID_METADATA:
+				return TranslateUtilities.translate("tile.solar_hybrid.description");
+			case ULTIMATE_METADATA:
+				return TranslateUtilities.translate("tile.solar_ultimate.description");
 		}
 		return "";
 	}
@@ -205,7 +205,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-        return state.getValue(FACING).getHorizontalIndex() + state.getValue(TYPE).getMeta() * 4;
+		return state.getValue(FACING).getHorizontalIndex() + state.getValue(TYPE).getMeta() * 4;
 	}
 
 	@Override

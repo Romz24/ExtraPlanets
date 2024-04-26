@@ -77,13 +77,13 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			String name = system.getUnlocalizedParentGalaxyName();
 
-			if(preEvent.galaxiesUnlocalizedNamesToIgnore.contains(name))
+			if (preEvent.galaxiesUnlocalizedNamesToIgnore.contains(name))
 				continue;
 
-			if(preEvent.solarSystemUnlocalizedNamesToIgnore.contains(system.getUnlocalizedName()))
+			if (preEvent.solarSystemUnlocalizedNamesToIgnore.contains(system.getUnlocalizedName()))
 				continue;
 
-			if(preEvent.solarSystemNamesToIgnore.contains(system.getName()))
+			if (preEvent.solarSystemNamesToIgnore.contains(system.getName()))
 				continue;
 
 			if (!this.galaxies.contains(name))
@@ -107,9 +107,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		MinecraftForge.EVENT_BUS.post(preEvent);
 
 		for (SolarSystem solarSystem : GalaxyRegistry.getRegisteredSolarSystems().values()) {
-			if(preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystem.getUnlocalizedName()))
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystem.getUnlocalizedName()))
 				continue;
-			if(preEvent.bodyNamesToIgnore.contains(solarSystem.getName()))
+			if (preEvent.bodyNamesToIgnore.contains(solarSystem.getName()))
 				continue;
 
 			if (solarSystem.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -117,9 +117,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			}
 		}
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
-			if(preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
 				continue;
-			if(preEvent.bodyNamesToIgnore.contains(planet.getName()))
+			if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
 				continue;
 
 			if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -133,9 +133,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			}
 		}
 		for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
-			if(preEvent.bodyUnlocalizedNamesToIgnore.contains(moon.getUnlocalizedName()))
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(moon.getUnlocalizedName()))
 				continue;
-			if(preEvent.bodyNamesToIgnore.contains(moon.getName()))
+			if (preEvent.bodyNamesToIgnore.contains(moon.getName()))
 				continue;
 
 			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -151,9 +151,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 
 		for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
-			if(preEvent.bodyUnlocalizedNamesToIgnore.contains(satellite.getUnlocalizedName()))
+			if (preEvent.bodyUnlocalizedNamesToIgnore.contains(satellite.getUnlocalizedName()))
 				continue;
-			if(preEvent.bodyNamesToIgnore.contains(satellite.getName()))
+			if (preEvent.bodyNamesToIgnore.contains(satellite.getName()))
 				continue;
 
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -184,9 +184,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		if (object instanceof Planet) {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				if (planet.equals(object)) {
-					if(preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+					if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
 						continue;
-					if(preEvent.bodyNamesToIgnore.contains(planet.getName()))
+					if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
 						continue;
 
 					if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -206,9 +206,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		} else if (object instanceof SolarSystem) {
 			for (SolarSystem solarSystems : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 				if (solarSystems.equals(object)) {
-					if(preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystems.getUnlocalizedName()))
+					if (preEvent.bodyUnlocalizedNamesToIgnore.contains(solarSystems.getUnlocalizedName()))
 						continue;
-					if(preEvent.bodyNamesToIgnore.contains(solarSystems.getName()))
+					if (preEvent.bodyNamesToIgnore.contains(solarSystems.getName()))
 						continue;
 
 					if (solarSystems.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
@@ -220,10 +220,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								}
 							}
 						} else {
-							for(Planet planet : planets) {
-								if(preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
+							for (Planet planet : planets) {
+								if (preEvent.bodyUnlocalizedNamesToIgnore.contains(planet.getUnlocalizedName()))
 									continue;
-								if(preEvent.bodyNamesToIgnore.contains(planet.getName()))
+								if (preEvent.bodyNamesToIgnore.contains(planet.getName()))
 									continue;
 								bodyList.add(planet);
 							}
@@ -259,12 +259,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
 					}
 				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
 					}
@@ -1086,7 +1086,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void drawScreen(int mousePosX, int mousePosY, float partialTicks) {
-		if(this.updatedBodiesToRender != null && this.updatedBodiesToRender.size() != 0) {
+		if (this.updatedBodiesToRender != null && this.updatedBodiesToRender.size() != 0) {
 			this.bodiesToRender.clear();
 			this.bodiesToRender.addAll(this.updatedBodiesToRender);
 			this.updatedBodiesToRender.clear();

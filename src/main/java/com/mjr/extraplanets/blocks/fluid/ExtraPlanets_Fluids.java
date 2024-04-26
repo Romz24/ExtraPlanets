@@ -142,10 +142,9 @@ public class ExtraPlanets_Fluids {
 		GLOWSTONE = new FluidBlockEP(GLOWSTONE_FLUID, "glowstone", GLOWSTONE_MATERIAL).setLightLevel(1.0F);
 		MAGMA = new FluidBlockEP(MAGMA_FLUID, "magma", MAGMA_MATERIAL) {
 			@Override
-			public String getUnlocalizedName()
-		    {
-		        return "tile.magma_block";
-		    }
+			public String getUnlocalizedName() {
+				return "tile.magma_block";
+			}
 		};
 		NITROGEN = new FluidBlockEP(NITROGEN_FLUID, "nitrogen", NITROGEN_MATERIAL);
 		FROZEN_WATER = new FluidBlockEP(FROZEN_WATER_FLUID, "frozen_water", FROZEN_WATER_MATERIAL);

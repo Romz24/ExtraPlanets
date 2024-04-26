@@ -127,7 +127,7 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	@Override
 	public int damageDropped(IBlockState state) {
 		int incomingMeta = state.getValue(VARIANT).getMetadata();
-		switch(incomingMeta) {
+		switch (incomingMeta) {
 			case 0:
 			default:
 				return BlockKepler22bMapleTreeSapling.EnumType.MAPLE_GREEN.getMetadata();

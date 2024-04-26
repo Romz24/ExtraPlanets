@@ -43,6 +43,7 @@ import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
 import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
+
 @Optional.Interface(modid = "redstoneflux", iface = "cofh.redstoneflux.api.IEnergyContainerItem")
 @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem")
 @Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem")
@@ -132,7 +133,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		float energyToTransfer = Math.min(Math.min(thisEnergy, energy), this.transferMax);
 
 		if (doTransfer) {
-			if(!itemStack.getTagCompound().hasKey("Unbreakable"))
+			if (!itemStack.getTagCompound().hasKey("Unbreakable"))
 				itemStack.getTagCompound().setBoolean("Unbreakable", true);
 			this.setElectricity(itemStack, thisEnergy - energyToTransfer);
 		}

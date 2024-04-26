@@ -126,15 +126,15 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	public boolean isValueable(IBlockState state) {
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-		case ORE_PALLADIUM:
-		case ORE_NICKEL:
-		case ORE_RED_GEM:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+			case ORE_PALLADIUM:
+			case ORE_NICKEL:
+			case ORE_RED_GEM:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -200,20 +200,20 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-		case 11:
-			return EnumSortCategoryBlock.ORE;
-		case 8:
-		case 12:
-		case 13:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
-		case 10:
-		case 9:
-			return EnumSortCategoryBlock.BRICKS;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 11:
+				return EnumSortCategoryBlock.ORE;
+			case 8:
+			case 12:
+			case 13:
+				return EnumSortCategoryBlock.INGOT_BLOCK;
+			case 10:
+			case 9:
+				return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

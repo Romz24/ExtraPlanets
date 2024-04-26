@@ -82,7 +82,8 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 			return 40.0F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
 			return 6.0F;
-		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_MAGNESIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_MAGNESIUM
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
 			return 3.0F;
 		return super.getExplosionResistance(world, pos, exploder, explosion);
 	}
@@ -91,7 +92,8 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
-		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_MAGNESIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_MAGNESIUM
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
 			return 5.0F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
 			return 4.0F;
@@ -134,14 +136,14 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
 
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-		case ORE_MAGNESIUM:
-		case ORE_SLIME:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+			case ORE_MAGNESIUM:
+			case ORE_SLIME:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -183,8 +185,8 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
-	        return new ItemStack(Item.getItemFromBlock(this), 1, 12);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
+			return new ItemStack(Item.getItemFromBlock(this), 1, 12);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
@@ -214,17 +216,17 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 12:
-			return EnumSortCategoryBlock.ORE;
-		case 7:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
-		case 8:
-		case 9:
-			return EnumSortCategoryBlock.BRICKS;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 12:
+				return EnumSortCategoryBlock.ORE;
+			case 7:
+				return EnumSortCategoryBlock.INGOT_BLOCK;
+			case 8:
+			case 9:
+				return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

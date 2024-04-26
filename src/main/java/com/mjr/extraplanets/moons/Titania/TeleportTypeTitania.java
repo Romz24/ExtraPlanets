@@ -66,7 +66,7 @@ public class TeleportTypeTitania implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.TITANIA_BLOCKS.getDefaultState().withProperty(BlockBasicTitania.BASIC_TYPE, BlockBasicTitania.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.TITANIA_BLOCKS.getDefaultState().withProperty(BlockBasicTitania.BASIC_TYPE, BlockBasicTitania.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}

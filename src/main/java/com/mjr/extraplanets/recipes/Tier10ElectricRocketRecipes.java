@@ -46,8 +46,8 @@ public class Tier10ElectricRocketRecipes {
 	}
 
 	public static void registerRocketCraftingRecipe() {
-		for(int i = 0; i < 4; i++) {
-			for(int j = 0; j < 4; j++) {
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
 				HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 				input.put(1, new ItemStack(ExtraPlanets_Items.TIER_10_NOSE_CONE)); // Cone
 				// Body

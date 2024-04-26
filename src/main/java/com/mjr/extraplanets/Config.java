@@ -486,9 +486,9 @@ public class Config {
 
 		JUPITER_CLOUDS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
 		JUPITER_CLOUDS_SPEED = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
-		if(JUPITER_CLOUDS_SPEED > 5)
+		if (JUPITER_CLOUDS_SPEED > 5)
 			JUPITER_CLOUDS_SPEED = 5;
-		else if(JUPITER_CLOUDS_SPEED < 1)
+		else if (JUPITER_CLOUDS_SPEED < 1)
 			JUPITER_CLOUDS_SPEED = 1;
 
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
@@ -935,9 +935,9 @@ public class Config {
 
 	public static void updateOtherModRadiationValues() {
 		OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.clear();
-		for(String line : OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
+		for (String line : OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
 			String[] parts = line.split(":");
-			if(Integer.parseInt(parts[1]) != 0)
+			if (Integer.parseInt(parts[1]) != 0)
 				OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.put(parts[0], Integer.parseInt(parts[1]));
 		}
 	}

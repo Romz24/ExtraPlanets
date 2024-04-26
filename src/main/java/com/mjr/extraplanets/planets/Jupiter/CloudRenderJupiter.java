@@ -55,14 +55,14 @@ public class CloudRenderJupiter extends IRenderHandler {
 				GlStateManager.colorMask(false, false, false, false);
 			} else {
 				switch (2) {
-				case 0:
-					GlStateManager.colorMask(false, true, true, true);
-					break;
-				case 1:
-					GlStateManager.colorMask(true, false, false, true);
-					break;
-				case 2:
-					GlStateManager.colorMask(true, true, true, true);
+					case 0:
+						GlStateManager.colorMask(false, true, true, true);
+						break;
+					case 1:
+						GlStateManager.colorMask(true, false, false, true);
+						break;
+					case 2:
+						GlStateManager.colorMask(true, true, true, true);
 				}
 			}
 

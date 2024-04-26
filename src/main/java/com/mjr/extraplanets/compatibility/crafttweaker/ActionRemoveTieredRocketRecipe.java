@@ -14,27 +14,27 @@ public class ActionRemoveTieredRocketRecipe implements IAction {
 	@Override
 	public void apply() {
 		switch (tier) {
-		case 4:
-			Tier4RocketRecipes.removeAllTier4RocketRecipes();
-			break;
-		case 5:
-			Tier5RocketRecipes.removeAllTier5RocketRecipes();
-			break;
-		case 6:
-			Tier6RocketRecipes.removeAllTier6RocketRecipes();
-			break;
-		case 7:
-			Tier7RocketRecipes.removeAllTier7RocketRecipes();
-			break;
-		case 8:
-			Tier8RocketRecipes.removeAllTier8RocketRecipes();
-			break;
-		case 9:
-			Tier9RocketRecipes.removeAllTier9RocketRecipes();
-			break;
-		case 10:
-			Tier10RocketRecipes.removeAllTier10RocketRecipes();
-			break;
+			case 4:
+				Tier4RocketRecipes.removeAllTier4RocketRecipes();
+				break;
+			case 5:
+				Tier5RocketRecipes.removeAllTier5RocketRecipes();
+				break;
+			case 6:
+				Tier6RocketRecipes.removeAllTier6RocketRecipes();
+				break;
+			case 7:
+				Tier7RocketRecipes.removeAllTier7RocketRecipes();
+				break;
+			case 8:
+				Tier8RocketRecipes.removeAllTier8RocketRecipes();
+				break;
+			case 9:
+				Tier9RocketRecipes.removeAllTier9RocketRecipes();
+				break;
+			case 10:
+				Tier10RocketRecipes.removeAllTier10RocketRecipes();
+				break;
 
 		}
 	}

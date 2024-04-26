@@ -141,45 +141,45 @@ public class PacketSimpleEP extends PacketSimpleBase {
 		}
 
 		switch (this.type) {
-		case C_OPEN_PARACHEST_GUI:
-			switch ((Integer) this.data.get(1)) {
-			case 0:
-				if (playerBaseClient.getRidingEntity() instanceof EntityVehicleBase) {
-					MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(playerBaseClient.inventory, (EntityVehicleBase) playerBaseClient.getRidingEntity(), ((EntityVehicleBase) playerBaseClient.getRidingEntity()).getType()));
-					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
-				} else if (playerBaseClient.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-					MCUtilities.getClient()
-							.displayGuiScreen(new GuiPoweredVehicleBase(playerBaseClient.inventory, (EntityPoweredVehicleBase) playerBaseClient.getRidingEntity(), ((EntityPoweredVehicleBase) playerBaseClient.getRidingEntity()).getType()));
-					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+			case C_OPEN_PARACHEST_GUI:
+				switch ((Integer) this.data.get(1)) {
+					case 0:
+						if (playerBaseClient.getRidingEntity() instanceof EntityVehicleBase) {
+							MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(playerBaseClient.inventory, (EntityVehicleBase) playerBaseClient.getRidingEntity(), ((EntityVehicleBase) playerBaseClient.getRidingEntity()).getType()));
+							playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+						} else if (playerBaseClient.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+							MCUtilities.getClient()
+									.displayGuiScreen(new GuiPoweredVehicleBase(playerBaseClient.inventory, (EntityPoweredVehicleBase) playerBaseClient.getRidingEntity(), ((EntityPoweredVehicleBase) playerBaseClient.getRidingEntity()).getType()));
+							playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+						}
+						break;
 				}
 				break;
-			}
-			break;
-		case C_UPDATE_SOLAR_RADIATION_LEVEL:
-			stats.setRadiationLevel((double) this.data.get(0));
-			break;
-		case C_DISPLAY_ROCKET_CONTROLS:
-			PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name"));
-			PlayerUtilties.sendMessage(playerBaseClient,
-					GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name"));
-			PlayerUtilties.sendMessage(playerBaseClient,
-					GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name"));
-			PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name"));
-			break;
-		case C_OPEN_MODULE_MANANGER_GUI:
-			switch ((Integer) this.data.get(1)) {
-			case 0:
-				MCUtilities.getClient().displayGuiScreen(new GUIModuleManager(playerBaseClient.inventory));
-				playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+			case C_UPDATE_SOLAR_RADIATION_LEVEL:
+				stats.setRadiationLevel((double) this.data.get(0));
 				break;
-			}
-			break;
-		case C_MOVE_PLAYER:
-			BlockPos pos = (BlockPos) this.data.get(0);
-			playerBaseClient.setPosition(pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
-			break;
-		default:
-			break;
+			case C_DISPLAY_ROCKET_CONTROLS:
+				PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name"));
+				PlayerUtilties.sendMessage(playerBaseClient,
+						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name"));
+				PlayerUtilties.sendMessage(playerBaseClient,
+						GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name"));
+				PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name"));
+				break;
+			case C_OPEN_MODULE_MANANGER_GUI:
+				switch ((Integer) this.data.get(1)) {
+					case 0:
+						MCUtilities.getClient().displayGuiScreen(new GUIModuleManager(playerBaseClient.inventory));
+						playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+						break;
+				}
+				break;
+			case C_MOVE_PLAYER:
+				BlockPos pos = (BlockPos) this.data.get(0);
+				playerBaseClient.setPosition(pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -194,175 +194,175 @@ public class PacketSimpleEP extends PacketSimpleBase {
 		GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
 		switch (this.type) {
-		case S_OPEN_FUEL_GUI:
-			if (playerBase.getRidingEntity() instanceof EntityVehicleBase) {
-				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) playerBase.getRidingEntity(), ((EntityVehicleBase) playerBase.getRidingEntity()).getType());
-			}
-			break;
-		case S_OPEN_POWER_GUI:
-			if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) playerBase.getRidingEntity(), ((EntityPoweredVehicleBase) playerBase.getRidingEntity()).getType());
-			} else if (playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
-				playerBase.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
-			}
-			break;
-		case S_IGNITE_ROCKET:
-			if (!playerBase.world.isRemote && !playerBase.isDead && playerBase.getRidingEntity() != null && !playerBase.getRidingEntity().isDead && playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
-				final EntityElectricRocketBase ship = (EntityElectricRocketBase) playerBase.getRidingEntity();
+			case S_OPEN_FUEL_GUI:
+				if (playerBase.getRidingEntity() instanceof EntityVehicleBase) {
+					ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) playerBase.getRidingEntity(), ((EntityVehicleBase) playerBase.getRidingEntity()).getType());
+				}
+				break;
+			case S_OPEN_POWER_GUI:
+				if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+					ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) playerBase.getRidingEntity(), ((EntityPoweredVehicleBase) playerBase.getRidingEntity()).getType());
+				} else if (playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
+					playerBase.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
+				}
+				break;
+			case S_IGNITE_ROCKET:
+				if (!playerBase.world.isRemote && !playerBase.isDead && playerBase.getRidingEntity() != null && !playerBase.getRidingEntity().isDead && playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
+					final EntityElectricRocketBase ship = (EntityElectricRocketBase) playerBase.getRidingEntity();
 
-				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
-					if (ship.hasValidPower()) {
-						ItemStack stack2 = GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
+					if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
+						if (ship.hasValidPower()) {
+							ItemStack stack2 = GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
 
-						if (stack2 != null && stack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
-							ship.igniteCheckingCooldown();
-							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
-						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
-							PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.noparachute"));
+							if (stack2 != null && stack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
+								ship.igniteCheckingCooldown();
+								GCPlayerStats.get(playerBase).setLaunchAttempts(0);
+							} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
+								PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.noparachute"));
+								stats.setChatCooldown(250);
+								GCPlayerStats.get(playerBase).setLaunchAttempts(1);
+							}
+						} else if (stats.getChatCooldown() == 0) {
+							PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.nofuel"));
 							stats.setChatCooldown(250);
-							GCPlayerStats.get(playerBase).setLaunchAttempts(1);
 						}
-					} else if (stats.getChatCooldown() == 0) {
-						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.nofuel"));
-						stats.setChatCooldown(250);
 					}
 				}
-			}
-			break;
-		case S_UPDATE_JETPACK:
-			if ((int) this.data.get(0) == 1) {
-				ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
-				NBTTagCompound tag = new NBTTagCompound();
-				if (playerBase.getRidingEntity() instanceof EntityLanderBase || playerBase.getRidingEntity() instanceof EntityElectricRocketBase || playerBase.getRidingEntity() instanceof EntitySpaceshipBase) {
+				break;
+			case S_UPDATE_JETPACK:
+				if ((int) this.data.get(0) == 1) {
+					ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
+					NBTTagCompound tag = new NBTTagCompound();
+					if (playerBase.getRidingEntity() instanceof EntityLanderBase || playerBase.getRidingEntity() instanceof EntityElectricRocketBase || playerBase.getRidingEntity() instanceof EntitySpaceshipBase) {
+						tag.setBoolean("active", false);
+						jetpack.setTagCompound(tag);
+					} else {
+						tag.setBoolean("active", true);
+						jetpack.setTagCompound(tag);
+					}
+				} else if ((int) this.data.get(0) == 0) {
+					ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
+					NBTTagCompound tag = new NBTTagCompound();
 					tag.setBoolean("active", false);
 					jetpack.setTagCompound(tag);
-				} else {
-					tag.setBoolean("active", true);
-					jetpack.setTagCompound(tag);
 				}
-			} else if ((int) this.data.get(0) == 0) {
-				ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
-				NBTTagCompound tag = new NBTTagCompound();
-				tag.setBoolean("active", false);
-				jetpack.setTagCompound(tag);
-			}
-			break;
-		case S_OPEN_MODULE_MANANGER_GUI:
-			ExtraPlanetsUtli.openModuleManagerGUI(playerBase);
-			break;
-		case S_UNINSTALL_MODULE:
-			Module uninstallModule = null;
-			for (Module temp : ExtraPlanets_Modules.getModules()) {
-				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
-					uninstallModule = temp;
-			}
-			if (uninstallModule != null) {
-				ItemStack stack = playerBase.inventory.armorInventory.get(3);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
-					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = playerBase.inventory.armorInventory.get(2);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
-					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = playerBase.inventory.armorInventory.get(1);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
-					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = playerBase.inventory.armorInventory.get(0);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
-					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-			}
-			break;
-		case S_INSTALL_MODULE:
-			Module installModule = null;
-			for (Module temp : ExtraPlanets_Modules.getModules()) {
-				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
-					installModule = temp;
-			}
-			if (installModule != null) {
-				boolean missingArmour = true;
-				boolean meetRequirements = true;
-				boolean alreadyHas = false;
-				ItemStack stack = playerBase.inventory.armorInventory.get(3);
-				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
-					if (stack.getItem() instanceof IModularArmor) {
-						missingArmour = false;
-						if (!ModuleHelper.hasModule(stack, installModule))
-							if (playerBase.capabilities.isCreativeMode)
-								ModuleHelper.addModule(stack, installModule);
-							else
-								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-						else
-							alreadyHas = true;
-					} else
-						meetRequirements = false;
+				break;
+			case S_OPEN_MODULE_MANANGER_GUI:
+				ExtraPlanetsUtli.openModuleManagerGUI(playerBase);
+				break;
+			case S_UNINSTALL_MODULE:
+				Module uninstallModule = null;
+				for (Module temp : ExtraPlanets_Modules.getModules()) {
+					if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+						uninstallModule = temp;
 				}
-				stack = playerBase.inventory.armorInventory.get(2);
-				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
-					if (stack.getItem() instanceof IModularArmor) {
-						missingArmour = false;
-						if (!ModuleHelper.hasModule(stack, installModule))
-							if (playerBase.capabilities.isCreativeMode)
-								ModuleHelper.addModule(stack, installModule);
+				if (uninstallModule != null) {
+					ItemStack stack = playerBase.inventory.armorInventory.get(3);
+					if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
+						ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+					stack = playerBase.inventory.armorInventory.get(2);
+					if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
+						ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+					stack = playerBase.inventory.armorInventory.get(1);
+					if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
+						ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+					stack = playerBase.inventory.armorInventory.get(0);
+					if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
+						ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+				}
+				break;
+			case S_INSTALL_MODULE:
+				Module installModule = null;
+				for (Module temp : ExtraPlanets_Modules.getModules()) {
+					if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+						installModule = temp;
+				}
+				if (installModule != null) {
+					boolean missingArmour = true;
+					boolean meetRequirements = true;
+					boolean alreadyHas = false;
+					ItemStack stack = playerBase.inventory.armorInventory.get(3);
+					if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+						if (stack.getItem() instanceof IModularArmor) {
+							missingArmour = false;
+							if (!ModuleHelper.hasModule(stack, installModule))
+								if (playerBase.capabilities.isCreativeMode)
+									ModuleHelper.addModule(stack, installModule);
+								else
+									meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 							else
-								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-						else
-							alreadyHas = true;
+								alreadyHas = true;
+						} else
+							meetRequirements = false;
+					}
+					stack = playerBase.inventory.armorInventory.get(2);
+					if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+						if (stack.getItem() instanceof IModularArmor) {
+							missingArmour = false;
+							if (!ModuleHelper.hasModule(stack, installModule))
+								if (playerBase.capabilities.isCreativeMode)
+									ModuleHelper.addModule(stack, installModule);
+								else
+									meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+							else
+								alreadyHas = true;
 
-					} else
-						meetRequirements = false;
-				}
-				stack = playerBase.inventory.armorInventory.get(1);
-				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
-					if (stack.getItem() instanceof IModularArmor) {
-						missingArmour = false;
-						if (!ModuleHelper.hasModule(stack, installModule))
-							if (playerBase.capabilities.isCreativeMode)
-								ModuleHelper.addModule(stack, installModule);
+						} else
+							meetRequirements = false;
+					}
+					stack = playerBase.inventory.armorInventory.get(1);
+					if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+						if (stack.getItem() instanceof IModularArmor) {
+							missingArmour = false;
+							if (!ModuleHelper.hasModule(stack, installModule))
+								if (playerBase.capabilities.isCreativeMode)
+									ModuleHelper.addModule(stack, installModule);
+								else
+									meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 							else
-								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-						else
-							alreadyHas = true;
+								alreadyHas = true;
 
-					} else
-						meetRequirements = false;
-				}
-				stack = playerBase.inventory.armorInventory.get(0);
-				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
-					if (stack.getItem() instanceof IModularArmor) {
-						missingArmour = false;
-						if (!ModuleHelper.hasModule(stack, installModule))
-							if (playerBase.capabilities.isCreativeMode)
-								ModuleHelper.addModule(stack, installModule);
+						} else
+							meetRequirements = false;
+					}
+					stack = playerBase.inventory.armorInventory.get(0);
+					if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+						if (stack.getItem() instanceof IModularArmor) {
+							missingArmour = false;
+							if (!ModuleHelper.hasModule(stack, installModule))
+								if (playerBase.capabilities.isCreativeMode)
+									ModuleHelper.addModule(stack, installModule);
+								else
+									meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 							else
-								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-						else
-							alreadyHas = true;
+								alreadyHas = true;
 
-					} else
-						meetRequirements = false;
+						} else
+							meetRequirements = false;
+					}
+					if (missingArmour)
+						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_armour.name"));
+					else if (!meetRequirements && !alreadyHas)
+						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_requirements.name"));
+					else if (alreadyHas)
+						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.already_installed.name"));
+					else
+						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.installed.name"));
 				}
-				if (missingArmour)
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_armour.name"));
-				else if (!meetRequirements && !alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_requirements.name"));
-				else if (alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.already_installed.name"));
-				else
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.installed.name"));
-			}
-			break;
-		case S_UPDATE_MODULE_STATE:
-			Module installModule2 = null;
-			for (Module temp : ExtraPlanets_Modules.getModules()) {
-				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
-					installModule2 = temp;
-			}
-			if (installModule2 != null) {
-				ItemStack temp = playerBase.inventory.armorInventory.get(installModule2.getSlotType());
-				ModuleHelper.updateModuleActiveState(temp, installModule2, !installModule2.isActive());
-			}
-			break;
-		default:
-			break;
+				break;
+			case S_UPDATE_MODULE_STATE:
+				Module installModule2 = null;
+				for (Module temp : ExtraPlanets_Modules.getModules()) {
+					if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+						installModule2 = temp;
+				}
+				if (installModule2 != null) {
+					ItemStack temp = playerBase.inventory.armorInventory.get(installModule2.getSlotType());
+					ModuleHelper.updateModuleActiveState(temp, installModule2, !installModule2.isActive());
+				}
+				break;
+			default:
+				break;
 		}
 	}
 

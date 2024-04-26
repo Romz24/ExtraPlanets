@@ -145,14 +145,14 @@ public class ModuleHelper {
 		if (!(item.getItem() instanceof IModularArmor))
 			return;
 		int slot = player.inventory.getFirstEmptyStack();
-		if(slot == -1) {
+		if (slot == -1) {
 			PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.module.inventory_full.name"));
 			return;
 		}
 		removeModule(item, module);
 		for (int i = 0; i < module.getRequirements().size(); i++) {
 			ItemStack itemStack = module.getRequirements().get(i).copy();
-			if(slot == -1) {
+			if (slot == -1) {
 				player.entityDropItem(itemStack, 0f);
 				return;
 			}

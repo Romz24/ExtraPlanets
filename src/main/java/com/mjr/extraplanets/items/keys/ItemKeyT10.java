@@ -64,5 +64,4 @@ public class ItemKeyT10 extends Item implements IKeyItem, ISortableItem, IItemIn
 		return EnumSortCategoryItem.GENERAL;
 	}
 
-
 }

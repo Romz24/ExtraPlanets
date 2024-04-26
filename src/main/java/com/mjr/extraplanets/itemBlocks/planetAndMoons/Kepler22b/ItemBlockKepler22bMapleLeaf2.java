@@ -21,24 +21,24 @@ public class ItemBlockKepler22bMapleLeaf2 extends ItemBlock {
 		String name = "";
 
 		switch (itemStack.getItemDamage()) {
-		case 0: {
-			name = "green_maple_leaf";
-			break;
-		}
-		case 1: {
-			name = "brown_maple_leaf";
-			break;
-		}
-		case 8: {
-			name = "green_maple_leaf";
-			break;
-		}
-		case 9: {
-			name = "brown_maple_leaf";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "green_maple_leaf";
+				break;
+			}
+			case 1: {
+				name = "brown_maple_leaf";
+				break;
+			}
+			case 8: {
+				name = "green_maple_leaf";
+				break;
+			}
+			case 9: {
+				name = "brown_maple_leaf";
+				break;
+			}
+			default:
+				name = "null";
 		}
 
 		return this.block.getUnlocalizedName() + "." + name;

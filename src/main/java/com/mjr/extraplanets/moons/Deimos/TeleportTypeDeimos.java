@@ -66,7 +66,7 @@ public class TeleportTypeDeimos implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.DEIMOS_BLOCKS.getDefaultState().withProperty(BlockBasicDeimos.BASIC_TYPE, BlockBasicDeimos.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.DEIMOS_BLOCKS.getDefaultState().withProperty(BlockBasicDeimos.BASIC_TYPE, BlockBasicDeimos.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}

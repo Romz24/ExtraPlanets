@@ -126,10 +126,10 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	@Override
 	public String getShiftDescription(int meta) {
 		switch (meta) {
-		case OXYGEN_COMPRESSOR_METADATA:
-			return TranslateUtilities.translate("tile.oxygen_compressor.description");
-		case OXYGEN_DECOMPRESSOR_METADATA:
-			return TranslateUtilities.translate("tile.oxygen_decompressor.description");
+			case OXYGEN_COMPRESSOR_METADATA:
+				return TranslateUtilities.translate("tile.oxygen_compressor.description");
+			case OXYGEN_DECOMPRESSOR_METADATA:
+				return TranslateUtilities.translate("tile.oxygen_decompressor.description");
 		}
 		return "";
 	}

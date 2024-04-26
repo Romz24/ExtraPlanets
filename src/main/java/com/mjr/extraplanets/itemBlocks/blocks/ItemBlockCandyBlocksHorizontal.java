@@ -21,48 +21,48 @@ public class ItemBlockCandyBlocksHorizontal extends ItemBlock {
 		String name = "";
 
 		switch (itemStack.getItemDamage()) {
-		case 0: {
-			name = "candy_cane_red_horizontal";
-			break;
-		}
-		case 1: {
-			name = "candy_cane_green_horizontal";
-			break;
-		}
-		case 2: {
-			name = "candy_cane_blue_horizontal";
-			break;
-		}
-		case 3: {
-			name = "candy_cane_orange_horizontal";
-			break;
-		}
-		case 4: {
-			name = "candy_cane_magenta_horizontal";
-			break;
-		}
-		case 5: {
-			name = "candy_cane_pink_horizontal";
-			break;
-		}
-		case 6: {
-			name = "candy_cane_lime_horizontal";
-			break;
-		}
-		case 7: {
-			name = "candy_cane_purple_horizontal";
-			break;
-		}
-		case 8: {
-			name = "candy_cane_brown_horizontal";
-			break;
-		}
-		case 9: {
-			name = "candy_cane_black_horizontal";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "candy_cane_red_horizontal";
+				break;
+			}
+			case 1: {
+				name = "candy_cane_green_horizontal";
+				break;
+			}
+			case 2: {
+				name = "candy_cane_blue_horizontal";
+				break;
+			}
+			case 3: {
+				name = "candy_cane_orange_horizontal";
+				break;
+			}
+			case 4: {
+				name = "candy_cane_magenta_horizontal";
+				break;
+			}
+			case 5: {
+				name = "candy_cane_pink_horizontal";
+				break;
+			}
+			case 6: {
+				name = "candy_cane_lime_horizontal";
+				break;
+			}
+			case 7: {
+				name = "candy_cane_purple_horizontal";
+				break;
+			}
+			case 8: {
+				name = "candy_cane_brown_horizontal";
+				break;
+			}
+			case 9: {
+				name = "candy_cane_black_horizontal";
+				break;
+			}
+			default:
+				name = "null";
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + name;

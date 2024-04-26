@@ -133,16 +133,16 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemStack);
-			case 1:
-				for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems) {
-					if (test.isItemEqual(itemStack)) {
-						return true;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemStack);
+				case 1:
+					for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems) {
+						if (test.isItemEqual(itemStack)) {
+							return true;
+						}
 					}
-				}
-			default:
-				return false;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -152,12 +152,12 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
-			case 2:
-				return ExtraPlanets_MachineRecipes.isBlockSmasherOutputKnown(itemStack);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
+				case 2:
+					return ExtraPlanets_MachineRecipes.isBlockSmasherOutputKnown(itemStack);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -166,16 +166,16 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
-		case 0:
-			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
-		case 1:
-			for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems) {
-				if (test.isItemEqual(itemStack)) {
-					return true;
+			case 0:
+				return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
+			case 1:
+				for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems) {
+					if (test.isItemEqual(itemStack)) {
+						return true;
+					}
 				}
-			}
-		case 2:
-			return ExtraPlanets_MachineRecipes.isBlockSmasherOutputKnown(itemStack);
+			case 2:
+				return ExtraPlanets_MachineRecipes.isBlockSmasherOutputKnown(itemStack);
 		}
 
 		return false;

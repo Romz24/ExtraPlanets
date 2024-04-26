@@ -252,34 +252,34 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 	@Override
 	public EnumFacing getElectricInputDirection() {
 		switch (this.getSide(MachineSide.ELECTRIC_IN)) {
-		case RIGHT:
-			return getFront().rotateYCCW();
-		case REAR:
-			return getFront().getOpposite();
-		case TOP:
-			return EnumFacing.UP;
-		case BOTTOM:
-			return EnumFacing.DOWN;
-		case LEFT:
-		default:
-			return getFront().rotateY();
+			case RIGHT:
+				return getFront().rotateYCCW();
+			case REAR:
+				return getFront().getOpposite();
+			case TOP:
+				return EnumFacing.UP;
+			case BOTTOM:
+				return EnumFacing.DOWN;
+			case LEFT:
+			default:
+				return getFront().rotateY();
 		}
 	}
 
 	@Override
 	public EnumFacing getPipeInputDirection() {
 		switch (this.getSide(MachineSide.PIPE_IN)) {
-		case RIGHT:
-		default:
-			return getFront().rotateYCCW();
-		case REAR:
-			return getFront().getOpposite();
-		case TOP:
-			return EnumFacing.UP;
-		case BOTTOM:
-			return EnumFacing.DOWN;
-		case LEFT:
-			return getFront().rotateY();
+			case RIGHT:
+			default:
+				return getFront().rotateYCCW();
+			case REAR:
+				return getFront().getOpposite();
+			case TOP:
+				return EnumFacing.UP;
+			case BOTTOM:
+				return EnumFacing.DOWN;
+			case LEFT:
+				return getFront().rotateY();
 		}
 	}
 

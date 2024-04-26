@@ -114,12 +114,12 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 	public boolean isValueable(IBlockState state) {
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -171,10 +171,10 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 3:
-		case 4:
-		case 5:
-			return EnumSortCategoryBlock.ORE;
+			case 3:
+			case 4:
+			case 5:
+				return EnumSortCategoryBlock.ORE;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

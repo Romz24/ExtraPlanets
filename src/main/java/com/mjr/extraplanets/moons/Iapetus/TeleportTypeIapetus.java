@@ -66,7 +66,7 @@ public class TeleportTypeIapetus implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.IAPETUS_BLOCKS.getDefaultState().withProperty(BlockBasicIapetus.BASIC_TYPE, BlockBasicIapetus.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.IAPETUS_BLOCKS.getDefaultState().withProperty(BlockBasicIapetus.BASIC_TYPE, BlockBasicIapetus.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}

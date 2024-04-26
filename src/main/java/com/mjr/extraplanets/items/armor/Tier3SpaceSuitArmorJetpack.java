@@ -104,7 +104,7 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
-		if(models.get(armorSlot) == null)
+		if (models.get(armorSlot) == null)
 			models.put(armorSlot, new ArmorSpaceSuitModel(armorSlot));
 		ModelBiped armorModel = models.get(armorSlot);
 		if (itemStack.getItem() instanceof Tier3SpaceSuitArmorJetpack) {

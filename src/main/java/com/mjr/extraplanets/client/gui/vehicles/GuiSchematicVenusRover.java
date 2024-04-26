@@ -37,12 +37,12 @@ public class GuiSchematicVenusRover extends GuiPositionedContainer implements IS
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		if (par1GuiButton.enabled) {
 			switch (par1GuiButton.id) {
-			case 0:
-				SchematicRegistry.flipToLastPage(this, this.pageIndex);
-				break;
-			case 1:
-				SchematicRegistry.flipToNextPage(this, this.pageIndex);
-				break;
+				case 0:
+					SchematicRegistry.flipToLastPage(this, this.pageIndex);
+					break;
+				case 1:
+					SchematicRegistry.flipToNextPage(this, this.pageIndex);
+					break;
 			}
 		}
 	}

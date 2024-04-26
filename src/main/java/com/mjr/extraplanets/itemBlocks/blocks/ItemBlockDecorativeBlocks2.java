@@ -21,32 +21,32 @@ public class ItemBlockDecorativeBlocks2 extends ItemBlock {
 		String name = "";
 
 		switch (itemStack.getItemDamage()) {
-		case 0: {
-			name = "white_block";
-			break;
-		}
-		case 1: {
-			name = "red_block";
-			break;
-		}
-		case 2: {
-			name = "blue_block";
-			break;
-		}
-		case 3: {
-			name = "light_blue_block";
-			break;
-		}
-		case 4: {
-			name = "yellow_block";
-			break;
-		}
-		case 5: {
-			name = "green_block";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "white_block";
+				break;
+			}
+			case 1: {
+				name = "red_block";
+				break;
+			}
+			case 2: {
+				name = "blue_block";
+				break;
+			}
+			case 3: {
+				name = "light_blue_block";
+				break;
+			}
+			case 4: {
+				name = "yellow_block";
+				break;
+			}
+			case 5: {
+				name = "green_block";
+				break;
+			}
+			default:
+				name = "null";
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + name;

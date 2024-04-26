@@ -57,7 +57,7 @@ public class TeleportTypeMercury implements ITeleportType {
 				}
 
 				EntityMercuryLander lander = new EntityMercuryLander(player);
-	            lander.setPosition(player.posX, player.posY, player.posZ);
+				lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					boolean previous = CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
@@ -66,7 +66,7 @@ public class TeleportTypeMercury implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}

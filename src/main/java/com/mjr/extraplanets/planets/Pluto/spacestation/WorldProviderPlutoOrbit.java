@@ -140,7 +140,6 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 		return Config.PLUTO_ID;
 	}
 
-
 	@Override
 	public int getYCoordToTeleportToPlanet() {
 		return Constants.SPACE_STATION_LOWER_Y_LIMIT;
@@ -192,10 +191,9 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 	}
 
 	@Override
-    @SideOnly(Side.CLIENT)
-    public void setSpinDeltaPerTick(float angle)
-    {
-		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit)this.getSkyRenderer());
+	@SideOnly(Side.CLIENT)
+	public void setSpinDeltaPerTick(float angle) {
+		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
 		if (skyProvider != null)
 			skyProvider.spinDeltaPerTick = angle;
 	}
@@ -205,20 +203,19 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 	public float getSkyRotation() {
 		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
 		return skyProvider.spinAngle;
-    }
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void createSkyProvider()
-    {
-        this.setSkyRenderer(new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true, getSunSize()));
-        this.setSpinDeltaPerTick(this.getSpinManager().getSpinRate());
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void createSkyProvider() {
+		this.setSkyRenderer(new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true, getSunSize()));
+		this.setSpinDeltaPerTick(this.getSpinManager().getSpinRate());
 
-        if (this.getCloudRenderer() == null)
-            this.setCloudRenderer(new CloudRenderer());
-    }
+		if (this.getCloudRenderer() == null)
+			this.setCloudRenderer(new CloudRenderer());
+	}
 
-    public static float getSunSize() {
-    	return 17.5F * (1.0F / ExtraPlanets_Planets.PLUTO.getRelativeDistanceFromCenter().unScaledDistance);
-    }
+	public static float getSunSize() {
+		return 17.5F * (1.0F / ExtraPlanets_Planets.PLUTO.getRelativeDistanceFromCenter().unScaledDistance);
+	}
 }

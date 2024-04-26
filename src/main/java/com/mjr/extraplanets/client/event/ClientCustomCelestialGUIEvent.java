@@ -11,6 +11,7 @@ public class ClientCustomCelestialGUIEvent extends Event {
 
 	public static class PostRendering extends ClientCustomCelestialGUIEvent {
 		public CustomCelestialSelection instance;
+
 		public PostRendering(CustomCelestialSelection instance) {
 			this.instance = instance;
 		}

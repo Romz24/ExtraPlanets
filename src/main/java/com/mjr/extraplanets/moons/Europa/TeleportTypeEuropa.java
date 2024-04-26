@@ -66,7 +66,7 @@ public class TeleportTypeEuropa implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState().withProperty(BlockBasicEuropa.BASIC_TYPE, BlockBasicEuropa.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState().withProperty(BlockBasicEuropa.BASIC_TYPE, BlockBasicEuropa.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}

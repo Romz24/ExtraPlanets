@@ -601,7 +601,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
-		//registerItem(DEBUG_WORLD_FILE_GEN_ITEM, DEBUG_WORLD_FILE_GEN_ITEM.getUnlocalizedName().substring(5));
+		// registerItem(DEBUG_WORLD_FILE_GEN_ITEM, DEBUG_WORLD_FILE_GEN_ITEM.getUnlocalizedName().substring(5));
 		registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
 		registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));

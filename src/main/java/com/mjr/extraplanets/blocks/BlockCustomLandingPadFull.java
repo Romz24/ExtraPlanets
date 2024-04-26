@@ -122,16 +122,16 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	@Override
 	public TileEntity createTileEntity(World world, IBlockState state) {
 		switch (getMetaFromState(state)) {
-		case 0:
-			return new TileEntityTier2LandingPad();
-		case 1:
-			return new TileEntityTier3LandingPad();
-		case 2:
-			return new TileEntityPoweredChargingPad();
-		case 3:
-			return new TileEntityRocketChargingPad();
-		default:
-			return null;
+			case 0:
+				return new TileEntityTier2LandingPad();
+			case 1:
+				return new TileEntityTier3LandingPad();
+			case 2:
+				return new TileEntityPoweredChargingPad();
+			case 3:
+				return new TileEntityRocketChargingPad();
+			default:
+				return null;
 		}
 	}
 

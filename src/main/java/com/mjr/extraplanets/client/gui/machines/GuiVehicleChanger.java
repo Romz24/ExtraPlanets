@@ -40,9 +40,9 @@ public class GuiVehicleChanger extends GuiContainerGC {
 	@Override
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		switch (par1GuiButton.id) {
-		case 0:
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.tileEntity.getWorld()), new Object[] { this.tileEntity.getPos(), 0 }));
-			break;
+			case 0:
+				GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.tileEntity.getWorld()), new Object[] { this.tileEntity.getPos(), 0 }));
+				break;
 		}
 	}
 

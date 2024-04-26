@@ -50,31 +50,31 @@ public class ItemCannedFood extends ItemBasicMeta {
 
 	public int getHealAmount(ItemStack itemStack) {
 		switch (itemStack.getItemDamage()) {
-		case 0:
-			return 16;
-		case 1:
-			return 4;
-		case 2:
-			return 4;
-		case 3:
-			return 12;
-		default:
-			return 0;
+			case 0:
+				return 16;
+			case 1:
+				return 4;
+			case 2:
+				return 4;
+			case 3:
+				return 12;
+			default:
+				return 0;
 		}
 	}
 
 	public float getSaturationModifier(ItemStack itemStack) {
 		switch (itemStack.getItemDamage()) {
-		case 0:
-			return 0.8F;
-		case 1:
-			return 0.1F;
-		case 2:
-			return 0.1F;
-		case 3:
-			return 0.6F;
-		default:
-			return 0.0F;
+			case 0:
+				return 0.8F;
+			case 1:
+				return 0.1F;
+			case 2:
+				return 0.1F;
+			case 3:
+				return 0.6F;
+			default:
+				return 0.0F;
 		}
 	}
 
