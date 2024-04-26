@@ -59,26 +59,23 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 				ItemStack newGear = getContents(i);
 				if (newGear.getItem() instanceof ItemArmor) {
 					ItemArmor armor = ((ItemArmor) newGear.getItem());
-					if(armor.getEquipmentSlot() == EntityEquipmentSlot.HEAD) {
-						if(player.inventory.armorItemInSlot(3) == ItemStack.EMPTY) {
+					if (armor.getEquipmentSlot() == EntityEquipmentSlot.HEAD) {
+						if (player.inventory.armorItemInSlot(3) == ItemStack.EMPTY) {
 							player.inventory.armorInventory.set(3, newGear);
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.CHEST) {
-						if(player.inventory.armorItemInSlot(2) == ItemStack.EMPTY) {
+					} else if (armor.getEquipmentSlot() == EntityEquipmentSlot.CHEST) {
+						if (player.inventory.armorItemInSlot(2) == ItemStack.EMPTY) {
 							player.inventory.armorInventory.set(2, newGear);
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.LEGS) {
-						if(player.inventory.armorItemInSlot(1) == ItemStack.EMPTY) {
+					} else if (armor.getEquipmentSlot() == EntityEquipmentSlot.LEGS) {
+						if (player.inventory.armorItemInSlot(1) == ItemStack.EMPTY) {
 							player.inventory.armorInventory.set(1, newGear);
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.FEET) {
-						if(player.inventory.armorItemInSlot(0) == ItemStack.EMPTY) {
+					} else if (armor.getEquipmentSlot() == EntityEquipmentSlot.FEET) {
+						if (player.inventory.armorItemInSlot(0) == ItemStack.EMPTY) {
 							player.inventory.armorInventory.set(0, newGear);
 							continue;
 						}
@@ -95,16 +92,16 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 
 	public static ItemStack getContents(int slot) {
 		switch (slot) {
-		case 0:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_HELMET);
-		case 1:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_CHEST);
-		case 2:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_LEGINGS);
-		case 3:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_BOOTS);
-		default:
-			return null;
+			case 0:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_HELMET);
+			case 1:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_CHEST);
+			case 2:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_LEGINGS);
+			case 3:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_BOOTS);
+			default:
+				return null;
 		}
 	}
 

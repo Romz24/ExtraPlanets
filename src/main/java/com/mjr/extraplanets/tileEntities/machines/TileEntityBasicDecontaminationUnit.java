@@ -73,8 +73,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 							stats.setRadiationLevel(stats.getRadiationLevel() - level);
 							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 									+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-							PlayerUtilties.sendMessage(player,
-									"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
+							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
+									+ (int) stats.getRadiationLevel() + "/100");
 						}
 					}
 				} else if (this.ticks % 40 == 0)
@@ -272,12 +272,12 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	public void setDisabled(int index, boolean disabled) {
 		if (this.disableCooldown == 0) {
 			switch (index) {
-			case 0:
-				this.disabled = disabled;
-				this.disableCooldown = 10;
-				break;
-			default:
-				break;
+				case 0:
+					this.disabled = disabled;
+					this.disableCooldown = 10;
+					break;
+				default:
+					break;
 			}
 		}
 	}
@@ -285,10 +285,10 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	@Override
 	public boolean getDisabled(int index) {
 		switch (index) {
-		case 0:
-			return this.disabled;
-		default:
-			break;
+			case 0:
+				return this.disabled;
+			default:
+				break;
 		}
 
 		return true;

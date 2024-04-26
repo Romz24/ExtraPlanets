@@ -24,18 +24,18 @@ public class ItemBlockCustomLandingPad extends ItemBlockDesc {
 		String name = "";
 
 		switch (itemStack.getItemDamage()) {
-		case 0:
-			name = "tier2LandingPad";
-			break;
-		case 1:
-			name = "tier3LandingPad";
-			break;
-		case 2:
-			name = "poweredChargingPad";
-			break;
-		case 3:
-			name = "rocketPoweredChargingPad";
-			break;
+			case 0:
+				name = "tier2LandingPad";
+				break;
+			case 1:
+				name = "tier3LandingPad";
+				break;
+			case 2:
+				name = "poweredChargingPad";
+				break;
+			case 3:
+				name = "rocketPoweredChargingPad";
+				break;
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + name;

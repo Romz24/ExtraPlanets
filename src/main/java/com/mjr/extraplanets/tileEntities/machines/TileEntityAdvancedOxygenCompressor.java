@@ -159,14 +159,14 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return itemstack.getItemDamage() > 1;
-			case 1:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 2:
-				return itemstack.getItemDamage() < itemstack.getItem().getMaxDamage();
-			default:
-				return false;
+				case 0:
+					return itemstack.getItemDamage() > 1;
+				case 1:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 2:
+					return itemstack.getItemDamage() < itemstack.getItem().getMaxDamage();
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -175,26 +175,26 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 	@Override
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		switch (slotID) {
-		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank && itemstack.getItemDamage() == 0;
-		case 1:
-			return ItemElectricBase.isElectricItemEmpty(itemstack);
-		case 2:
-			return FluidUtil.isEmptyContainer(itemstack);
-		default:
-			return false;
+			case 0:
+				return itemstack.getItem() instanceof ItemOxygenTank && itemstack.getItemDamage() == 0;
+			case 1:
+				return ItemElectricBase.isElectricItemEmpty(itemstack);
+			case 2:
+				return FluidUtil.isEmptyContainer(itemstack);
+			default:
+				return false;
 		}
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank;
-		case 1:
-			return ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 2:
-			return itemstack.getItem() instanceof IItemOxygenSupply;
+			case 0:
+				return itemstack.getItem() instanceof ItemOxygenTank;
+			case 1:
+				return ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 2:
+				return itemstack.getItem() instanceof IItemOxygenSupply;
 		}
 
 		return false;

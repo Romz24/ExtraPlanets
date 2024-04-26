@@ -20,18 +20,18 @@ public class ContainerElectricRocketInventory extends Container {
 		par2IInventory.openInventory(player);
 
 		switch (rocketType.getInventorySpace() - 2) {
-		case 0:
-			this.addSlotsNoInventory();
-			break;
-		case 18:
-			this.addSlotsWithInventory(rocketType.getInventorySpace());
-			break;
-		case 36:
-			this.addSlotsWithInventory(rocketType.getInventorySpace());
-			break;
-		case 54:
-			this.addSlotsWithInventory(rocketType.getInventorySpace());
-			break;
+			case 0:
+				this.addSlotsNoInventory();
+				break;
+			case 18:
+				this.addSlotsWithInventory(rocketType.getInventorySpace());
+				break;
+			case 36:
+				this.addSlotsWithInventory(rocketType.getInventorySpace());
+				break;
+			case 54:
+				this.addSlotsWithInventory(rocketType.getInventorySpace());
+				break;
 		}
 	}
 

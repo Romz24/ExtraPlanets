@@ -390,8 +390,8 @@ public class MainHandlerServer {
 					checkPressure(event, player, 100, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT, list);
-			} else if(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider)player.world.provider).getCelestialBody().getUnlocalizedName())) {
-				checkRadiation(event, player, Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.get(((IGalacticraftWorldProvider)player.world.provider).getCelestialBody().getUnlocalizedName()), list);
+			} else if (Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider) player.world.provider).getCelestialBody().getUnlocalizedName())) {
+				checkRadiation(event, player, Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.get(((IGalacticraftWorldProvider) player.world.provider).getCelestialBody().getUnlocalizedName()), list);
 			}
 
 		}
@@ -473,7 +473,7 @@ public class MainHandlerServer {
 			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
 
 		for (String line : list) {
-			if(line.length() == 0 || !line.contains(":"))
+			if (line.length() == 0 || !line.contains(":"))
 				continue;
 			if (line.substring(0, line.lastIndexOf(':')).equalsIgnoreCase(testItem.getItem().getRegistryName().toString()))
 				return Integer.parseInt(line.substring(line.lastIndexOf(':') + 1));

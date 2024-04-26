@@ -58,24 +58,24 @@ public class GUIModuleManager extends GuiContainerGC {
 	@Override
 	protected void actionPerformed(GuiButton button) {
 		switch (button.id) {
-		case 0:
-			if (this.selectedModule == null)
-				return;
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_MODULE_STATE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
-			Minecraft.getMinecraft().player.closeScreen();
-			break;
-		case 1:
-			if (this.selectedInstallModule == null)
-				return;
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
-			Minecraft.getMinecraft().player.closeScreen();
-			break;
-		case 2:
-			if (this.selectedModule == null)
-				return;
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
-			Minecraft.getMinecraft().player.closeScreen();
-			break;
+			case 0:
+				if (this.selectedModule == null)
+					return;
+				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_MODULE_STATE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
+				Minecraft.getMinecraft().player.closeScreen();
+				break;
+			case 1:
+				if (this.selectedInstallModule == null)
+					return;
+				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
+				Minecraft.getMinecraft().player.closeScreen();
+				break;
+			case 2:
+				if (this.selectedModule == null)
+					return;
+				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
+				Minecraft.getMinecraft().player.closeScreen();
+				break;
 		}
 	}
 

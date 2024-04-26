@@ -156,14 +156,14 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
-			case 2:
-				return itemstack.getItem() == Items.BUCKET;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 1:
+					return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+				case 2:
+					return itemstack.getItem() == Items.BUCKET;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -173,12 +173,12 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
-			case 2:
-				return FluidUtil.isValidContainer(itemstack);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				case 2:
+					return FluidUtil.isValidContainer(itemstack);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -187,11 +187,11 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 1:
-		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			case 0:
+				return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 1:
+			case 2:
+				return FluidUtil.isValidContainer(itemstack);
 		}
 
 		return false;

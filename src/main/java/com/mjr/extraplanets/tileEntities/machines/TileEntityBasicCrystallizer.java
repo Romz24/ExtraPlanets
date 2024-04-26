@@ -45,7 +45,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	@Override
 	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-        return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
+		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -54,7 +54,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
 			return (T) new FluidHandlerWrapper(this, facing);
 		}
-        return super.getCapability(capability, facing);
+		return super.getCapability(capability, facing);
 	}
 
 	@Override
@@ -206,12 +206,12 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 2:
-				return true;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 2:
+					return true;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -221,14 +221,14 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
-			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
-			case 2:
-				return itemstack == new ItemStack(Items.BUCKET);
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				case 1:
+					return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+				case 2:
+					return itemstack == new ItemStack(Items.BUCKET);
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -237,12 +237,12 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 1:
-			return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
-		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			case 0:
+				return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 1:
+				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+			case 2:
+				return FluidUtil.isValidContainer(itemstack);
 		}
 
 		return false;

@@ -705,93 +705,93 @@ public class WorldGenBasicHideout extends WorldGenerator {
 					MessageUtilities.debugMessageToLog(Constants.modID, "Chest " + randomChests);
 				TileEntityChest chest;
 				switch (randomChests) {
-				case 1:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 1));
+					case 1:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 1));
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 2:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 4));
+						break;
+					case 2:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 4));
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
+
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 3:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 7));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 3:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 7));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 4:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 10));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 4:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 10));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 5:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 4));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 5:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 4));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 6:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 7));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 6:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 7));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 7:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 4));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 7:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 4));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
+						break;
+					case 8:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 7));
 
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
-				case 8:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 7));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, ItemStack.EMPTY);
+							chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 						}
-
-						chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
-					}
-					break;
+						break;
 				}
 			}
 		} else {

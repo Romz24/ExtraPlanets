@@ -94,18 +94,18 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 		BlockKepler22bMapleTreeLog.EnumType blockplanks$enumtype = state.getValue(VARIANT);
 
 		switch (state.getValue(LOG_AXIS)) {
-		case X:
-		case Z:
-		case NONE:
-		default:
-
-			switch (blockplanks$enumtype) {
+			case X:
+			case Z:
+			case NONE:
 			default:
-				return BlockKepler22bMapleTreeLog.EnumType.MAPLE_BLUE.func_181070_c();
-			}
 
-		case Y:
-			return blockplanks$enumtype.func_181070_c();
+				switch (blockplanks$enumtype) {
+					default:
+						return BlockKepler22bMapleTreeLog.EnumType.MAPLE_BLUE.func_181070_c();
+				}
+
+			case Y:
+				return blockplanks$enumtype.func_181070_c();
 		}
 	}
 
@@ -123,17 +123,17 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 		IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockKepler22bMapleTreeLog.EnumType.byMetadata((meta & 3) % 4));
 
 		switch (meta & 12) {
-		case 0:
-			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Y);
-			break;
-		case 4:
-			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.X);
-			break;
-		case 8:
-			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Z);
-			break;
-		default:
-			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.NONE);
+			case 0:
+				iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Y);
+				break;
+			case 4:
+				iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.X);
+				break;
+			case 8:
+				iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Z);
+				break;
+			default:
+				iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.NONE);
 		}
 
 		return iblockstate;
@@ -146,14 +146,14 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 		i = i | state.getValue(VARIANT).getMetadata();
 
 		switch (state.getValue(LOG_AXIS)) {
-		case X:
-			i |= 4;
-			break;
-		case Z:
-			i |= 8;
-			break;
-		case NONE:
-			i |= 12;
+			case X:
+				i |= 4;
+				break;
+			case Z:
+				i |= 8;
+				break;
+			case NONE:
+				i |= 12;
 		}
 
 		return i;

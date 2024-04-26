@@ -155,7 +155,7 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void initializeArmor() {
-		if(Config.MERCURY) {
+		if (Config.MERCURY) {
 			if (Config.ITEMS_MERCURY) {
 				MERCURY_HELMET = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("mercury_helmet");
 				MERCURY_CHEST = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("mercury_chest");
@@ -195,7 +195,7 @@ public class ExtraPlanets_Armor {
 			MAGNESIUM_LEGINGS = new MagnesiumArmor("magnesium", MAGNESIUM_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("magnesium_legings");
 			MAGNESIUM_BOOTS = new MagnesiumArmor("magnesium", MAGNESIUM_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("magnesium_boots");
 		}
-		if(Config.URANUS) {
+		if (Config.URANUS) {
 			if (Config.ITEMS_CRYSTAL) {
 				CRYSTAL_HELMET = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("crystal_helmet");
 				CRYSTAL_CHEST = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("crystal_chest");
@@ -210,7 +210,7 @@ public class ExtraPlanets_Armor {
 			}
 		}
 		if (Config.NEPTUNE) {
-			if(Config.ITEMS_ZINC) {
+			if (Config.ITEMS_ZINC) {
 				ZINC_HELMET = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("zinc_helmet");
 				ZINC_CHEST = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("zinc_chest");
 				ZINC_LEGINGS = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("zinc_legings");
@@ -292,7 +292,7 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void registerArmor() {
-		if(Config.MERCURY) {
+		if (Config.MERCURY) {
 			if (Config.ITEMS_MERCURY) {
 				RegisterUtilities.registerItem(MERCURY_HELMET, MERCURY_HELMET.getUnlocalizedName().substring(5));
 				RegisterUtilities.registerItem(MERCURY_CHEST, MERCURY_CHEST.getUnlocalizedName().substring(5));

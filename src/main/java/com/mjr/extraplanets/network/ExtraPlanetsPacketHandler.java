@@ -57,12 +57,12 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 		Queue<PacketPlayerPair> queue = getQueue(side, dimID);
 		while ((pair = queue.poll()) != null) {
 			switch (side) {
-			case CLIENT:
-				pair.getPacket().handleClientSide(pair.getPlayer());
-				break;
-			case SERVER:
-				pair.getPacket().handleServerSide(pair.getPlayer());
-				break;
+				case CLIENT:
+					pair.getPacket().handleClientSide(pair.getPlayer());
+					break;
+				case SERVER:
+					pair.getPacket().handleServerSide(pair.getPlayer());
+					break;
 			}
 		}
 	}

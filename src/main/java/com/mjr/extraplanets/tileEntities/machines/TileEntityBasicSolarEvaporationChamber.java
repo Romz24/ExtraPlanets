@@ -163,12 +163,12 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
-			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemCharged(itemstack);
+				case 1:
+					return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -178,12 +178,12 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
-			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
-			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
-			default:
-				return false;
+				case 0:
+					return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				case 2:
+					return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+				default:
+					return false;
 			}
 		}
 		return false;
@@ -192,12 +192,12 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		switch (slotID) {
-		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
-		case 1:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
-		case 2:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+			case 0:
+				return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			case 1:
+				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+			case 2:
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
 		}
 
 		return false;

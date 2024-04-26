@@ -134,19 +134,19 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	public boolean isValueable(IBlockState state) {
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-		case ORE_DENSE_COAL:
-		case ORE_BLUE_DIAMOND:
-		case ORE_RED_DIAMOND:
-		case ORE_PURPLE_DIAMOND:
-		case ORE_YELLOW_DIAMOND:
-		case ORE_GREEN_DIAMOND:
-		case ORE_PLATINUM:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+			case ORE_DENSE_COAL:
+			case ORE_BLUE_DIAMOND:
+			case ORE_RED_DIAMOND:
+			case ORE_PURPLE_DIAMOND:
+			case ORE_YELLOW_DIAMOND:
+			case ORE_GREEN_DIAMOND:
+			case ORE_PLATINUM:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -197,21 +197,21 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 2:
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-		case 10:
-		case 13:
-			return EnumSortCategoryBlock.ORE;
-		case 14:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
-		case 11:
-			return EnumSortCategoryBlock.BRICKS;
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 13:
+				return EnumSortCategoryBlock.ORE;
+			case 14:
+				return EnumSortCategoryBlock.INGOT_BLOCK;
+			case 11:
+				return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

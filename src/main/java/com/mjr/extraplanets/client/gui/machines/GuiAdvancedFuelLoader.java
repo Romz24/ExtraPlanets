@@ -40,9 +40,9 @@ public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	@Override
 	protected void actionPerformed(GuiButton button) {
 		switch (button.id) {
-		case 0:
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.tileEntity.getWorld()), new Object[] { this.tileEntity.getPos(), 0 }));
-			break;
+			case 0:
+				GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.tileEntity.getWorld()), new Object[] { this.tileEntity.getPos(), 0 }));
+				break;
 		}
 	}
 

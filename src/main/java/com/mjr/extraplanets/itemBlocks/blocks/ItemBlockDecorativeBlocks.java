@@ -21,72 +21,72 @@ public class ItemBlockDecorativeBlocks extends ItemBlock {
 		String name = "";
 
 		switch (itemstack.getItemDamage()) {
-		case 0: {
-			name = "marble";
-			break;
-		}
-		case 1: {
-			name = "marble_bricks";
-			break;
-		}
-		case 2: {
-			name = "snow_bricks";
-			break;
-		}
-		case 3: {
-			name = "ice_bricks";
-			break;
-		}
-		case 4: {
-			name = "fire_bricks";
-			break;
-		}
-		case 5: {
-			name = "black_white_floor";
-			break;
-		}
-		case 6: {
-			name = "marble_titled_floor";
-			break;
-		}
-		case 7: {
-			name = "marble_broken_titled_floor";
-			break;
-		}
-		case 8: {
-			name = "metal_mesh";
-			break;
-		}
-		case 9: {
-			name = "frozen_nitrogen_bricks";
-			break;
-		}
-		case 10: {
-			name = "volcanic_rock_bricks";
-			break;
-		}
-		case 11: {
-			name = "carbon_titled_floor";
-			break;
-		}
-		case 12: {
-			name = "carbon_broken_titled_floor";
-			break;
-		}
-		case 13: {
-			name = "magnesium_titled_floor";
-			break;
-		}
-		case 14: {
-			name = "magnesium_broken_titled_floor";
-			break;
-		}
-		case 15: {
-			name = "ash_bricks";
-			break;
-		}
-		default:
-			name = "null";
+			case 0: {
+				name = "marble";
+				break;
+			}
+			case 1: {
+				name = "marble_bricks";
+				break;
+			}
+			case 2: {
+				name = "snow_bricks";
+				break;
+			}
+			case 3: {
+				name = "ice_bricks";
+				break;
+			}
+			case 4: {
+				name = "fire_bricks";
+				break;
+			}
+			case 5: {
+				name = "black_white_floor";
+				break;
+			}
+			case 6: {
+				name = "marble_titled_floor";
+				break;
+			}
+			case 7: {
+				name = "marble_broken_titled_floor";
+				break;
+			}
+			case 8: {
+				name = "metal_mesh";
+				break;
+			}
+			case 9: {
+				name = "frozen_nitrogen_bricks";
+				break;
+			}
+			case 10: {
+				name = "volcanic_rock_bricks";
+				break;
+			}
+			case 11: {
+				name = "carbon_titled_floor";
+				break;
+			}
+			case 12: {
+				name = "carbon_broken_titled_floor";
+				break;
+			}
+			case 13: {
+				name = "magnesium_titled_floor";
+				break;
+			}
+			case 14: {
+				name = "magnesium_broken_titled_floor";
+				break;
+			}
+			case 15: {
+				name = "ash_bricks";
+				break;
+			}
+			default:
+				name = "null";
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + name;
