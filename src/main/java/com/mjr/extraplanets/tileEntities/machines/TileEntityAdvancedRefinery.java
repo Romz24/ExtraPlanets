@@ -5,16 +5,6 @@ import javax.annotation.Nullable;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
-import micdoodle8.mods.galacticraft.core.GCFluids;
-import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
-import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
-import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -25,6 +15,17 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.*;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
+
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
+import micdoodle8.mods.galacticraft.core.GCFluids;
+import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.FluidUtil;
+import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
+import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
+import micdoodle8.mods.miccore.Annotations.NetworkedField;
 
 public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper {
 	private final int tankCapacity = 24000 * 2;

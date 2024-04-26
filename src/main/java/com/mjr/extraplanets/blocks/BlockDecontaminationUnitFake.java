@@ -4,9 +4,6 @@ import java.util.Random;
 
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityBasicDecontaminationUnitFake;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
@@ -27,6 +24,9 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 
 public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements ITileEntityProvider {
 	public static final PropertyBool TOP = PropertyBool.create("top");

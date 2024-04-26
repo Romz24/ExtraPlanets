@@ -1,11 +1,10 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DirectionalPiece;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.gen.structure.template.TemplateManager;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public abstract class SizedPieceMercury extends DirectionalPieceMercury
 {

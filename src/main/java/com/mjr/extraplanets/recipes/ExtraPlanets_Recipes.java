@@ -12,6 +12,14 @@ import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.util.GCRecipeUtilities;
 import com.mjr.mjrlegendslib.util.RecipeUtilities;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.UniversalBucket;
+import net.minecraftforge.oredict.OreDictionary;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -20,13 +28,6 @@ import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.fluids.UniversalBucket;
-import net.minecraftforge.oredict.OreDictionary;
 
 @SuppressWarnings("unused")
 public class ExtraPlanets_Recipes {

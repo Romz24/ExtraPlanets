@@ -4,11 +4,12 @@ import javax.annotation.Nonnull;
 
 import com.google.common.collect.Lists;
 
+import net.minecraft.item.ItemStack;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-import net.minecraft.item.ItemStack;
 
 public class Tier5RocketRecipeWrapper extends BlankRecipeWrapper implements IRecipeWrapper {
 	@Nonnull

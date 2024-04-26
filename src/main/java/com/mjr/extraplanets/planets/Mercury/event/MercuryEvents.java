@@ -2,12 +2,12 @@ package com.mjr.extraplanets.planets.Mercury.event;
 
 import com.mjr.extraplanets.Config;
 
-import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
-import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
-
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
+import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
 
 public class MercuryEvents {
 	@SubscribeEvent

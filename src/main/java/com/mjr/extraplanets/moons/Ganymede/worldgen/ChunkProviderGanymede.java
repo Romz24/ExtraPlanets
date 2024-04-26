@@ -9,12 +9,13 @@ import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 
 public class ChunkProviderGanymede extends ChunkProviderSingleBiomeSpace {
 	private final BiomeDecoratorGanymede ceresBiomeDecorator = new BiomeDecoratorGanymede();

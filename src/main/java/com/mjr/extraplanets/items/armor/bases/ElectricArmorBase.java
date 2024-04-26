@@ -4,25 +4,13 @@ import java.util.List;
 
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import cofh.api.energy.IEnergyContainerItem;
-import ic2.api.item.IElectricItem;
-import ic2.api.item.IElectricItemManager;
-import ic2.api.item.ISpecialElectricItem;
-import mekanism.api.energy.IEnergizedItem;
-import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
-import micdoodle8.mods.galacticraft.api.item.IArmorCorrosionResistant;
-import micdoodle8.mods.galacticraft.api.item.IItemElectric;
-import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
-import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
-import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
-import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagDouble;
@@ -38,6 +26,21 @@ import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
+
+import cofh.api.energy.IEnergyContainerItem;
+import ic2.api.item.IElectricItem;
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
+import mekanism.api.energy.IEnergizedItem;
+import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
+import micdoodle8.mods.galacticraft.api.item.IArmorCorrosionResistant;
+import micdoodle8.mods.galacticraft.api.item.IItemElectric;
+import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
+import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
+import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
+import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
+import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 @InterfaceList({ @Optional.Interface(modid = "cofhcore", iface = "cofh.api.energy.IEnergyContainerItem"), @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem"),
 		@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem"), @Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem") })

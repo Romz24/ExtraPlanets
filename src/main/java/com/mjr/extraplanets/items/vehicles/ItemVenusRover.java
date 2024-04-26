@@ -7,9 +7,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,6 +22,10 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 public class ItemVenusRover extends Item implements IHoldableItem {
 	public ItemVenusRover(String name) {

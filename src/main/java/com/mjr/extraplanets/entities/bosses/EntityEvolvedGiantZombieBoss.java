@@ -6,12 +6,6 @@ import java.util.Random;
 import com.mjr.extraplanets.entities.bosses.ai.EntityAIBossZombieAttack;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
@@ -34,6 +28,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 
 public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.<Boolean> createKey(EntityZombie.class, DataSerializers.BOOLEAN);

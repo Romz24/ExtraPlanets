@@ -5,17 +5,17 @@ import java.util.Random;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomTreasureJupiterBase;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
+
+import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class RoomTreasureJupiter extends RoomTreasureJupiterBase {
 	public RoomTreasureJupiter() {

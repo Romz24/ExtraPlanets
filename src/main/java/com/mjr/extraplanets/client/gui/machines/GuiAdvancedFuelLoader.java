@@ -9,6 +9,10 @@ import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedFuelLoader;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -18,9 +22,6 @@ import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
 
 public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	private static final ResourceLocation fuelLoaderTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/fuel_loader.png");

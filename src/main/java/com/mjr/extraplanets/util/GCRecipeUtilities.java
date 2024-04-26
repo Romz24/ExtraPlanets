@@ -2,13 +2,14 @@ package com.mjr.extraplanets.util;
 
 import java.util.HashMap;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CircuitFabricatorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 
 public class GCRecipeUtilities {
 	public static void addSpaceStationRecipe(int spaceStationID, int planetID, HashMap<Object, Integer> obj) {

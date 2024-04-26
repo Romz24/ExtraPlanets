@@ -2,7 +2,6 @@ package com.mjr.extraplanets.items.thermalPadding;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -10,6 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 
 public class ItemThermalCloth extends Item {
 	public static String[] names = { "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth" };

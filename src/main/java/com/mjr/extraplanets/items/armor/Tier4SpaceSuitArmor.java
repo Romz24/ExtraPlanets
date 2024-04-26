@@ -17,10 +17,6 @@ import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
-import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
-import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.settings.GameSettings;
@@ -32,6 +28,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
+import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
+import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 public class Tier4SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor, ISensorGlassesArmor {
 	public static HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel> models = new HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel>();

@@ -7,17 +7,18 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockBasic;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 

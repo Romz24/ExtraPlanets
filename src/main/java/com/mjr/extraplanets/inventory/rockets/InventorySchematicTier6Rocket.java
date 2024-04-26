@@ -1,11 +1,12 @@
 package com.mjr.extraplanets.inventory.rockets;
 
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+
+import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 
 public class InventorySchematicTier6Rocket implements IInventoryDefaults {
 	public NonNullList<ItemStack> stacks;

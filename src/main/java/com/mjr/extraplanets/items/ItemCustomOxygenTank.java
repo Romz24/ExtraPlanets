@@ -5,10 +5,6 @@ import java.util.List;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -22,6 +18,11 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 
 public class ItemCustomOxygenTank extends ItemOxygenTank {
 	public ItemCustomOxygenTank(int tier, String name) {

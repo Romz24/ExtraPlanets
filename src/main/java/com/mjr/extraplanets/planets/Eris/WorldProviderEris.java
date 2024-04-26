@@ -11,14 +11,15 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.BiomeProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 
 public class WorldProviderEris extends WorldProviderRealisticSpace {
 

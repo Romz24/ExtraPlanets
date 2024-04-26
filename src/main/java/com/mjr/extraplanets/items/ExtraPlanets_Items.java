@@ -17,12 +17,13 @@ import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
 import com.mjr.extraplanets.items.vehicles.ItemVenusRover;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlockSpecial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 
 public class ExtraPlanets_Items {
 	public static Item TIER_4_ROCKET;

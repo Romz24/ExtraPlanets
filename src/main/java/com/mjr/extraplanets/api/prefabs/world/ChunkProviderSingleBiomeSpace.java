@@ -6,10 +6,6 @@ import java.util.Random;
 import com.mjr.mjrlegendslib.world.ChunkProviderBase;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
-import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
-import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.EnumCreatureType;
@@ -19,6 +15,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+
+import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
+import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 
 /*
  * Class from Galacticraft Core

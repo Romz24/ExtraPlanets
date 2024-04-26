@@ -1,18 +1,10 @@
 package com.mjr.extraplanets.planets.Kepler22b.spacestation;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
-
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
-import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
@@ -20,6 +12,13 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 
 public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	@Override

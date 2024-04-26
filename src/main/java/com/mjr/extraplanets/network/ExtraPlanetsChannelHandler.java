@@ -7,7 +7,7 @@ import com.mjr.mjrlegendslib.network.IPacket;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
+
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.FMLEmbeddedChannel;
@@ -15,6 +15,8 @@ import net.minecraftforge.fml.common.network.FMLIndexedMessageToMessageCodec;
 import net.minecraftforge.fml.common.network.FMLOutboundHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+
+import micdoodle8.mods.galacticraft.core.util.GCLog;
 
 public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<IPacket> {
 	private EnumMap<Side, FMLEmbeddedChannel> channels;

@@ -1,7 +1,8 @@
 package com.mjr.extraplanets.planets.Eris.worldgen;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.world.biome.Biome;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 
 public class ErisBiomes extends BiomeGenBaseGC {
 
