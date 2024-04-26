@@ -17,7 +17,7 @@ public class CustomCelestialGUIEvent extends Event {
 		public PreLoadingGalaxies() {
 		}
 	}
-	
+
 	public static class PreLoadingCelestialBodies extends CustomCelestialGUIEvent {
 		public final List<String> bodyUnlocalizedNamesToIgnore = new ArrayList<>();
 		public final List<String> bodyNamesToIgnore = new ArrayList<>();

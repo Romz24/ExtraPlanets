@@ -134,7 +134,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	public String getPlanetToOrbit() {
 		return "planet.Kepler22b";
 	}
-	
+
 	@Override
 	public int getPlanetIdToOrbit() {
 		return Config.KEPLER22B_ID;
@@ -190,7 +190,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.KEPLER22B_ORBIT;
 	}
-	
+
 	@Override
     @SideOnly(Side.CLIENT)
     public void setSpinDeltaPerTick(float angle)
@@ -206,18 +206,18 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
 		return skyProvider.spinAngle;
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void createSkyProvider()
     {
         this.setSkyRenderer(new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true, getSunSize()));
         this.setSpinDeltaPerTick(this.getSpinManager().getSpinRate());
-        
+
         if (this.getCloudRenderer() == null)
             this.setCloudRenderer(new CloudRenderer());
     }
-    
+
     public static float getSunSize() {
     	return 17.5F * (1.0F / ExtraPlanets_Planets.KEPLER22B.getRelativeDistanceFromCenter().unScaledDistance) * 4;
     }

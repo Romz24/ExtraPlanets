@@ -40,10 +40,10 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), 2, 0, 2, boundingBox);
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), this.sizeX - 2, 0, this.sizeZ - 2, boundingBox);
-			
+
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), 3, 0, 3, boundingBox);
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), this.sizeX - 3, 0, this.sizeZ - 3, boundingBox);
-			
+
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), 4, 0, 4, boundingBox);
 			this.setBlockState(worldIn, Blocks.MOB_SPAWNER.getDefaultState(), this.sizeX - 4, 0, this.sizeZ - 4, boundingBox);
 
@@ -83,7 +83,7 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 			if (spawner != null) {
 				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
 			}
-			
+
 			blockpos = new BlockPos(this.getXWithOffset(3, 3), this.getYWithOffset(0), this.getZWithOffset(3, 3));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
@@ -97,7 +97,7 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 			if (spawner != null) {
 				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
 			}
-			
+
 			blockpos = new BlockPos(this.getXWithOffset(4, 4), this.getYWithOffset(0), this.getZWithOffset(4, 4));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 

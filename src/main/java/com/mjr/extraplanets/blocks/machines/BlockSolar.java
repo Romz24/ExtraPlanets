@@ -87,7 +87,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 			for (int x = -1; x <= 1; x++) {
 				for (int z = -1; z <= 1; z++) {
 					BlockPos posAt = pos.add(y == 2 ? x : 0, y, y == 2 ? z : 0);
-					IBlockState bs = world.getBlockState(posAt); 
+					IBlockState bs = world.getBlockState(posAt);
 
                     if (bs.getMaterial() != Material.AIR && !bs.getBlock().isReplaceable(world, pos)){
 						return false;

@@ -51,7 +51,7 @@ public class ExtraPlanetsUtli {
 		}
 		return (int) (min + Math.random() * ((long) max - min + 1));
 	}
-	
+
 	public static boolean isClassAvailable(final String className) {
         try {
             final Class<?> clazz = Class.forName(className);

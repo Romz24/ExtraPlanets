@@ -61,7 +61,7 @@ public class Tier10ElectricRocketRecipes {
 				input.put(9, new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6));
 				input.put(10, new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6));
 				input.put(11, new ItemStack(ExtraPlanets_Items.TIER_10_ROCKET, 1, j));
-		
+
 				input.put(12, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1)); // Booster
 				input.put(13, new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 2)); // Fin
 				input.put(14, new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 2)); // Fin
@@ -73,43 +73,43 @@ public class Tier10ElectricRocketRecipes {
 				input.put(20, ItemStack.EMPTY);
 				input.put(21, ItemStack.EMPTY);
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 0), input));
-		
+
 				HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, new ItemStack(Blocks.CHEST));
 				input2.put(20, ItemStack.EMPTY);
 				input2.put(21, ItemStack.EMPTY);
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 1), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, ItemStack.EMPTY);
 				input2.put(20, new ItemStack(Blocks.CHEST));
 				input2.put(21, ItemStack.EMPTY);
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 1), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, ItemStack.EMPTY);
 				input2.put(20, ItemStack.EMPTY);
 				input2.put(21, new ItemStack(Blocks.CHEST));
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 1), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, new ItemStack(Blocks.CHEST));
 				input2.put(20, new ItemStack(Blocks.CHEST));
 				input2.put(21, ItemStack.EMPTY);
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 2), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, new ItemStack(Blocks.CHEST));
 				input2.put(20, ItemStack.EMPTY);
 				input2.put(21, new ItemStack(Blocks.CHEST));
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 2), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, ItemStack.EMPTY);
 				input2.put(20, new ItemStack(Blocks.CHEST));
 				input2.put(21, new ItemStack(Blocks.CHEST));
 				Tier10ElectricRocketRecipes.addTier10ElectricRocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, 2), input2));
-		
+
 				input2 = new HashMap<Integer, ItemStack>(input);
 				input2.put(19, new ItemStack(Blocks.CHEST));
 				input2.put(20, new ItemStack(Blocks.CHEST));

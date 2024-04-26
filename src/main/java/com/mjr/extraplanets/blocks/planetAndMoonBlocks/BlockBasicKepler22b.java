@@ -206,6 +206,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		return EnumSortCategoryBlock.GENERAL;
 	}
 
+	@Override
 	public SoundType getSoundType(IBlockState state, World world, BlockPos pos, @Nullable Entity entity) {
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT ? SoundType.PLANT : super.getSoundType(state, world, pos, entity);
 	}

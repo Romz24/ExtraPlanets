@@ -57,7 +57,7 @@ public class Tier0SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 			return null;
 		}
 	}
-	
+
 	@Override
 	public boolean isEnchantable(ItemStack stack) {
 		return false;

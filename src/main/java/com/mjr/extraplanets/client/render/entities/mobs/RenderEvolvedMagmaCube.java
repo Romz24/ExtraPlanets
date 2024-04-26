@@ -24,7 +24,8 @@ public class RenderEvolvedMagmaCube extends RenderLiving<EntityEvolvedMagmaCube>
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
-    protected ResourceLocation getEntityTexture(EntityEvolvedMagmaCube entity)
+    @Override
+	protected ResourceLocation getEntityTexture(EntityEvolvedMagmaCube entity)
     {
         return MAGMA_CUBE_TEXTURES;
     }
@@ -32,7 +33,8 @@ public class RenderEvolvedMagmaCube extends RenderLiving<EntityEvolvedMagmaCube>
     /**
      * Allows the render to do state modifications necessary before the model is rendered.
      */
-    protected void preRenderCallback(EntityEvolvedMagmaCube entitylivingbaseIn, float partialTickTime)
+    @Override
+	protected void preRenderCallback(EntityEvolvedMagmaCube entitylivingbaseIn, float partialTickTime)
     {
         int i = entitylivingbaseIn.getSlimeSize();
         float f = (entitylivingbaseIn.prevSquishFactor + (entitylivingbaseIn.squishFactor - entitylivingbaseIn.prevSquishFactor) * partialTickTime) / ((float)i * 0.5F + 1.0F);

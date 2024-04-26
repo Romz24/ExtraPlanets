@@ -88,7 +88,7 @@ public class ExtraPlanets_MachineRecipes {
 	public static ImmutableMap<ItemStack, ItemStack> getBlockSmasherRecipes() {
 		return ImmutableMap.copyOf(blockSmasherRecipes);
 	}
-	
+
 	public static boolean isBlockSmasherOutputKnown(ItemStack output) {
 		for(ItemStack item : blockSmasherSlotValidOutputItems) {
 			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
@@ -168,7 +168,7 @@ public class ExtraPlanets_MachineRecipes {
 	public static ImmutableMap<ItemStack, ItemStack> getSolarEvaporationChamberRecipes() {
 		return ImmutableMap.copyOf(solarEvaporationChamberRecipes);
 	}
-	
+
 	public static boolean isSolarEvaporationChamberOutputKnown(ItemStack output) {
 		for(ItemStack item : solarEvaporationChamberSlotValidOutputItems) {
 			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))

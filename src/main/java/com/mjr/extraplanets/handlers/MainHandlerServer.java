@@ -227,7 +227,7 @@ public class MainHandlerServer {
 	public boolean isInGlowstone(EntityPlayerMP player) {
 		return player.world.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.GLOWSTONE_MATERIAL);
 	}
-	
+
 	public boolean isInMagma(EntityPlayerMP player) {
 		return player.world.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.MAGMA_MATERIAL);
 	}
@@ -710,7 +710,7 @@ public class MainHandlerServer {
 			}
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onEntitySpawn(EntityJoinWorldEvent event) {
 		if (event.getEntity() instanceof EntityItem) {

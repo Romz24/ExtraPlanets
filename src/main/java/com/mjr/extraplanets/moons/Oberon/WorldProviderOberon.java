@@ -71,7 +71,7 @@ public class WorldProviderOberon extends WorldProviderRealisticMoon {
 		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Moons.OBERON);
 		return BiomeProviderOberon.class;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
