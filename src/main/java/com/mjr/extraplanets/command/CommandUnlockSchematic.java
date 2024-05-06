@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -64,7 +63,7 @@ public class CommandUnlockSchematic extends CommandBase {
 						SpaceRaceManager.teamUnlockSchematic(playerBase, stack);
 						GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_ADD_NEW_SCHEMATIC, playerToAddFor.world.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
-						List<String> tooltips = stack.getTooltip(playerToAddFor, ITooltipFlag.TooltipFlags.NORMAL);
+						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 						if (tooltips.size() >= 2)
 							name = tooltips.get(1);
 						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Unlocked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName()));
