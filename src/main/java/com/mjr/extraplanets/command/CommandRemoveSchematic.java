@@ -66,8 +66,8 @@ public class CommandRemoveSchematic extends CommandBase {
 						// Output
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
 						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
-						if (tooltips.size() >= 2)
-							name = tooltips.get(1);
+						if (tooltips.size() >= 1)
+							name = tooltips.get(0);
 						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 						playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 					}

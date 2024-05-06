@@ -64,8 +64,8 @@ public class CommandUnlockSchematic extends CommandBase {
 						GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_ADD_NEW_SCHEMATIC, playerToAddFor.world.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
 						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
-						if (tooltips.size() >= 2)
-							name = tooltips.get(1);
+						if (tooltips.size() >= 1)
+							name = tooltips.get(0);
 						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Unlocked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName()));
 						playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has given you Schematic: " + name));
 					}
