@@ -9,7 +9,6 @@ import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.SchematicsUtil;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -66,7 +65,7 @@ public class CommandRemoveSchematic extends CommandBase {
 
 						// Output
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
-						List<String> tooltips = stack.getTooltip(playerToAddFor, ITooltipFlag.TooltipFlags.NORMAL);
+						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 						if (tooltips.size() >= 2)
 							name = tooltips.get(1);
 						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
