@@ -19,7 +19,7 @@ public class RoomEmptyJupiter extends SizedPieceJupiter {
 
 	public RoomEmptyJupiter(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir, int chanceOfMagmaBlocks) {
 		super(configuration, sizeX, sizeY, sizeZ, entranceDir.getOpposite());
-        this.coordBaseMode = EnumFacing.SOUTH;
+		this.coordBaseMode = EnumFacing.SOUTH;
 		this.sizeX = sizeX;
 		this.sizeY = sizeY;
 		this.sizeZ = sizeZ;

@@ -27,7 +27,7 @@ public class WorldProviderEuropa extends WorldProviderRealisticMoon {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		if(Config.USE_REALISTIC_ATMOS)
+		if (Config.USE_REALISTIC_ATMOS)
 			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
 		else
 			return new Vector3(222F / 255F * f, 184F / 255F * f, 135F / 255F * f);
@@ -36,7 +36,7 @@ public class WorldProviderEuropa extends WorldProviderRealisticMoon {
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		if(Config.USE_REALISTIC_ATMOS)
+		if (Config.USE_REALISTIC_ATMOS)
 			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
 		else
 			return new Vector3(125 / 255.0F * f, 195 / 255.0F * f, 255 / 255.0F * f);

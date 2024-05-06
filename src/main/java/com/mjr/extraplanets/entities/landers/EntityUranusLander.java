@@ -118,24 +118,24 @@ public class EntityUranusLander extends EntityLanderBase implements IIgnoreShift
 		float angle = 45;
 
 		switch (key) {
-		case 0:
-			this.rotationPitch = Math.min(Math.max(this.rotationPitch - 0.5F * turnFactor, -angle), angle);
-			return true;
-		case 1:
-			this.rotationPitch = Math.min(Math.max(this.rotationPitch + 0.5F * turnFactor, -angle), angle);
-			return true;
-		case 2:
-			this.rotationYaw -= 0.5F * turnFactor;
-			return true;
-		case 3:
-			this.rotationYaw += 0.5F * turnFactor;
-			return true;
-		case 4:
-			this.motionY = Math.min(this.motionY + 0.03F, this.posY < 90 ? -0.15 : -1.0);
-			return true;
-		case 5:
-			this.motionY = Math.min(this.motionY - 0.022F, -1.0);
-			return true;
+			case 0:
+				this.rotationPitch = Math.min(Math.max(this.rotationPitch - 0.5F * turnFactor, -angle), angle);
+				return true;
+			case 1:
+				this.rotationPitch = Math.min(Math.max(this.rotationPitch + 0.5F * turnFactor, -angle), angle);
+				return true;
+			case 2:
+				this.rotationYaw -= 0.5F * turnFactor;
+				return true;
+			case 3:
+				this.rotationYaw += 0.5F * turnFactor;
+				return true;
+			case 4:
+				this.motionY = Math.min(this.motionY + 0.03F, this.posY < 90 ? -0.15 : -1.0);
+				return true;
+			case 5:
+				this.motionY = Math.min(this.motionY - 0.022F, -1.0);
+				return true;
 		}
 
 		return false;

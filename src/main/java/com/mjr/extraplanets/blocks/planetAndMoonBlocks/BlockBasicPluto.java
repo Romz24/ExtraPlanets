@@ -135,13 +135,13 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	public boolean isValueable(IBlockState state) {
 		EnumBlockBasic type = state.getValue(BASIC_TYPE);
 		switch (type) {
-		case ORE_IRON:
-		case ORE_TIN:
-		case ORE_COPPER:
-		case ORE_TUNGSTEN:
-			return true;
-		default:
-			return false;
+			case ORE_IRON:
+			case ORE_TIN:
+			case ORE_COPPER:
+			case ORE_TUNGSTEN:
+				return true;
+			default:
+				return false;
 		}
 	}
 
@@ -212,16 +212,16 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-			return EnumSortCategoryBlock.ORE;
-		case 7:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
-		case 8:
-		case 9:
-			return EnumSortCategoryBlock.BRICKS;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+				return EnumSortCategoryBlock.ORE;
+			case 7:
+				return EnumSortCategoryBlock.INGOT_BLOCK;
+			case 8:
+			case 9:
+				return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;
 	}

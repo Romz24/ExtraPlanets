@@ -87,16 +87,16 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 
 	public static ItemStack getContents(int slot) {
 		switch (slot) {
-		case 0:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_HELMET);
-		case 1:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_CHEST);
-		case 2:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_LEGINGS);
-		case 3:
-			return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_BOOTS);
-		default:
-			return null;
+			case 0:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_HELMET);
+			case 1:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_CHEST);
+			case 2:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_LEGINGS);
+			case 3:
+				return new ItemStack(ExtraPlanets_Armor.TIER_0_SPACE_SUIT_BOOTS);
+			default:
+				return null;
 		}
 	}
 

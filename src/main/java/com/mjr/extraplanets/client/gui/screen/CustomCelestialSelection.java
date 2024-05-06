@@ -216,12 +216,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}
 				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					if(body.getBodyIcon() != null) {
+					if (body.getBodyIcon() != null) {
 						this.mc.renderEngine.bindTexture(body.getBodyIcon());
 						this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 					}
@@ -1033,7 +1033,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.zoomTooltipPos = 0;
 		}
 		if (Loader.isModLoaded("planetprogression")) {
-			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS)- 20, ColorUtil.to32BitColor(255, 0, 0, 0));
+			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS) - 20, ColorUtil.to32BitColor(255, 0, 0, 0));
 			this.fontRendererObj.drawString("Important: Want to unlock/see more celestial bodies? Research them via PlanetProgressions Mod", LHS + 5, (height - LHS) - 15, RED);
 		}
 	}

@@ -34,6 +34,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	public enum EnumBlockMultiType implements IStringSerializable {
 		TIER_2_ROCKET_PAD(0, "tier2_rocket_pad"), TIER_3_ROCKET_PAD(1, "tier3_rocket_pad"), POWER_CHARGING_PAD(2, "powered_charging_pad"), ROCKET_POWER_CHARGING_PAD(3, "rocket_powered_charging_pad");
+
 		private final int meta;
 		private final String name;
 
@@ -216,8 +217,8 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		int renderType = 0;
 
 		switch (type) {
-		default:
-			break;
+			default:
+				break;
 		}
 
 		return state.withProperty(RENDER_TYPE, renderType);

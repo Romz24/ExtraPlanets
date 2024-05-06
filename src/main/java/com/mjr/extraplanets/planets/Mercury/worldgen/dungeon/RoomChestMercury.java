@@ -16,51 +16,43 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.planets.venus.world.gen.dungeon.RoomChestVenus;
 
-public class RoomChestMercury extends RoomEmptyMercury
-{
-    public RoomChestMercury()
-    {
-    }
+public class RoomChestMercury extends RoomEmptyMercury {
+	public RoomChestMercury() {
+	}
 
-    public RoomChestMercury(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir)
-    {
-        super(configuration, rand, blockPosX, blockPosZ, sizeX, sizeY, sizeZ, entranceDir);
-    }
+	public RoomChestMercury(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir) {
+		super(configuration, rand, blockPosX, blockPosZ, sizeX, sizeY, sizeZ, entranceDir);
+	}
 
-    @Override
-    public boolean addComponentParts(World worldIn, Random rand, StructureBoundingBox boundingBox)
-    {
-        if (super.addComponentParts(worldIn, rand, boundingBox))
-        {
-            int chestX = this.sizeX / 2;
-            int chestY = 1;
-            int chestZ = this.sizeZ / 2;
-            this.setBlockState(worldIn, Blocks.chest.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), chestX, chestY, chestZ, boundingBox);
+	@Override
+	public boolean addComponentParts(World worldIn, Random rand, StructureBoundingBox boundingBox) {
+		if (super.addComponentParts(worldIn, rand, boundingBox)) {
+			int chestX = this.sizeX / 2;
+			int chestY = 1;
+			int chestZ = this.sizeZ / 2;
+			this.setBlockState(worldIn, Blocks.chest.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), chestX, chestY, chestZ, boundingBox);
 
-            BlockPos blockpos = new BlockPos(this.getXWithOffset(chestX, chestZ), this.getYWithOffset(chestY), this.getZWithOffset(chestX, chestZ));
-            TileEntityChest chest = (TileEntityChest) worldIn.getTileEntity(blockpos);
+			BlockPos blockpos = new BlockPos(this.getXWithOffset(chestX, chestZ), this.getYWithOffset(chestY), this.getZWithOffset(chestX, chestZ));
+			TileEntityChest chest = (TileEntityChest) worldIn.getTileEntity(blockpos);
 
-            if (chest != null)
-            {
-                for (int i = 0; i < chest.getSizeInventory(); ++i)
-                {
-                    // Clear contents
-                    chest.setInventorySlotContents(i, null);
-                }
+			if (chest != null) {
+				for (int i = 0; i < chest.getSizeInventory(); ++i) {
+					// Clear contents
+					chest.setInventorySlotContents(i, null);
+				}
 
-                String chesttype = RoomChestVenus.VENUSCHEST;
-                if (worldIn.provider instanceof IGalacticraftWorldProvider)
-                {
-                    chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();
-                }
-                ChestGenHooks info = ChestGenHooks.getInfo(chesttype);
+				String chesttype = RoomChestVenus.VENUSCHEST;
+				if (worldIn.provider instanceof IGalacticraftWorldProvider) {
+					chesttype = ((IGalacticraftWorldProvider) worldIn.provider).getDungeonChestType();
+				}
+				ChestGenHooks info = ChestGenHooks.getInfo(chesttype);
 
-                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-            }
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+			}
 
-            return true;
-        }
+			return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 }

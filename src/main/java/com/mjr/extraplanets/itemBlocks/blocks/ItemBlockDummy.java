@@ -33,15 +33,15 @@ public class ItemBlockDummy extends ItemBlock {
 		String blockName = "";
 
 		switch (metadata) {
-		case 0:
-			blockName = "tier2LaunchPad";
-			break;
-		case 1:
-			blockName = "tier3LaunchPad";
-			break;
-		default:
-			blockName = null;
-			break;
+			case 0:
+				blockName = "tier2LaunchPad";
+				break;
+			case 1:
+				blockName = "tier3LaunchPad";
+				break;
+			default:
+				blockName = null;
+				break;
 		}
 
 		return this.getBlock().getUnlocalizedName() + "." + blockName;

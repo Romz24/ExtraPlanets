@@ -56,12 +56,12 @@ public class TeleportTypeIapetus implements ITeleportType {
 				}
 
 				EntityGeneralLander lander = new EntityGeneralLander(player);
-	            lander.setPosition(player.posX, player.posY, player.posZ);
+				lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;
 					newWorld.spawnEntityInWorld(lander);
-					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.IAPETUS_BLOCKS.getDefaultState().withProperty(BlockBasicIapetus.BASIC_TYPE, BlockBasicIapetus.EnumBlockBasic.STONE), false);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int) lander.posX, (int) lander.posZ, ExtraPlanets_Blocks.IAPETUS_BLOCKS.getDefaultState().withProperty(BlockBasicIapetus.BASIC_TYPE, BlockBasicIapetus.EnumBlockBasic.STONE), false);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}
 

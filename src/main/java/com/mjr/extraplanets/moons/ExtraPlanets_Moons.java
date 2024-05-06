@@ -87,7 +87,7 @@ public class ExtraPlanets_Moons {
 	}
 
 	public static void initializeUnReachableMoons() {
-		if(Config.GENERATE_UNREACHABLEMOONS) {
+		if (Config.GENERATE_UNREACHABLEMOONS) {
 			// Pluto Moons
 			CHARON = GCRegisterUtilities.registerUnreachableMoon("charon", ExtraPlanets_Planets.PLUTO);
 			if (CHARON != null)
@@ -109,7 +109,7 @@ public class ExtraPlanets_Moons {
 	}
 
 	private static Planet getParentPlanet(Planet possiablePlanet, String possiablePlanetName) {
-		if(possiablePlanet != null)
+		if (possiablePlanet != null)
 			return possiablePlanet;
 		else {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {

@@ -705,109 +705,109 @@ public class WorldGenBasicHideout extends WorldGenerator {
 					MessageUtilities.debugMessageToLog(Constants.modID, "Chest " + randChests);
 				TileEntityChest chest;
 				switch (randChests) {
-				case 1:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 1));
+					case 1:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 1));
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						break;
+					case 2:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 4));
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 2:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 4));
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 3:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 7));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 3:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 7));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 4:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 10));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 4:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 10));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 5:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 4));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 5:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 4));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 6:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 7));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 6:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 2, z + 7));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 7:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 4));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 7:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 4));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
+						break;
+					case 8:
+						chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 7));
 
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+						if (chest != null) {
+							for (int j = 0; j < chest.getSizeInventory(); j++) {
+								chest.setInventorySlotContents(j, null);
+							}
 
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
-				case 8:
-					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 3, z + 7));
+							ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-					if (chest != null) {
-						for (int j = 0; j < chest.getSizeInventory(); j++) {
-							chest.setInventorySlotContents(j, null);
+							WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 						}
-
-						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-
-						WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-					}
-					break;
+						break;
 				}
 			}
 		} else {

@@ -46,39 +46,39 @@ public abstract class StructureComponentVillage extends StructureComponent {
 
 	protected StructureComponent getNextComponentNN(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List<StructureComponent> par2List, Random par3Random, int par4, int par5) {
 		switch (this.coordBaseMode.getHorizontalIndex()) {
-		case 0:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
-					this.getComponentType());
-		case 1:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.minZ - 1, EnumFacing.getHorizontal(2),
-					this.getComponentType());
-		case 2:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
-					this.getComponentType());
-		case 3:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.minZ - 1, EnumFacing.getHorizontal(2),
-					this.getComponentType());
-		default:
-			return null;
+			case 0:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
+						this.getComponentType());
+			case 1:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.minZ - 1, EnumFacing.getHorizontal(2),
+						this.getComponentType());
+			case 2:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
+						this.getComponentType());
+			case 3:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.minZ - 1, EnumFacing.getHorizontal(2),
+						this.getComponentType());
+			default:
+				return null;
 		}
 	}
 
 	protected StructureComponent getNextComponentPP(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List<StructureComponent> par2List, Random par3Random, int par4, int par5) {
 		switch (this.coordBaseMode.getHorizontalIndex()) {
-		case 0:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),
-					this.getComponentType());
-		case 1:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.maxZ + 1, EnumFacing.getHorizontal(0),
-					this.getComponentType());
-		case 2:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),
-					this.getComponentType());
-		case 3:
-			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.maxZ + 1, EnumFacing.getHorizontal(0),
-					this.getComponentType());
-		default:
-			return null;
+			case 0:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),
+						this.getComponentType());
+			case 1:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.maxZ + 1, EnumFacing.getHorizontal(0),
+						this.getComponentType());
+			case 2:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),
+						this.getComponentType());
+			case 3:
+				return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX + par5, this.boundingBox.minY + par4, this.boundingBox.maxZ + 1, EnumFacing.getHorizontal(0),
+						this.getComponentType());
+			default:
+				return null;
 		}
 	}
 

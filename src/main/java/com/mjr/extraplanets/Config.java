@@ -411,9 +411,11 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Used for legacy save transftering (DONT TOUCH!)");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BIOME_IDS, "Change if a biome ID is causing conflicts!");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "For Advanced Users Only due to this will break a lot of recipes, and leave gameplay unreachable gaps for other content! Setting this option to false will remove the planet with all the related items/block/space stations!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS,
+				"For Advanced Users Only due to this will break a lot of recipes, and leave gameplay unreachable gaps for other content! Setting this option to false will remove the planet with all the related items/block/space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable options for dimension settings");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "For Advanced Users Only due to this will break a lot of recipes, and leave gameplay unreachable gaps for other content! Setting this option to false will remove the planet/moon with all the related items/block/space stations!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS,
+				"For Advanced Users Only due to this will break a lot of recipes, and leave gameplay unreachable gaps for other content! Setting this option to false will remove the planet/moon with all the related items/block/space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ITEMS,
@@ -492,8 +494,8 @@ public class Config {
 				.getBoolean(false);
 
 		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colous for Planets/Moons", "Use Realistic Atmosphere Sky Colours for Planets/Moons");
-		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colours for Planets/Moons", true, "Setting this option to true will disable Custom Atmospheres Sky Colours for Phobos, Deimos, Ceres, Io, Europa, Ganymede, Callisto, Rhea, Iapetus, Titania, Oberon, Triton, Ceres, Pluto, Eris!")
-				.getBoolean(true);
+		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colours for Planets/Moons", true,
+				"Setting this option to true will disable Custom Atmospheres Sky Colours for Phobos, Deimos, Ceres, Io, Europa, Ganymede, Callisto, Rhea, Iapetus, Titania, Oberon, Triton, Ceres, Pluto, Eris!").getBoolean(true);
 
 		GENERATE_KEPLER22B_DUNGEONS = config
 				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true, "Setting this option to false will disable & remove Vanilla Style Dungeons from generating on Kepler22b").getBoolean(true);
@@ -522,7 +524,8 @@ public class Config {
 		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanoes on Io", true, "Setting this option to false will disable & remove Volcanoes from generating on Io").getBoolean(true);
 
 		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", "Generate Frozen Nitrogen Piles on Neptune");
-		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrogen Piles on Neptune", true, "Setting this option to false will disable & remove Frozen Nitrogen Piles from generating on Neptune").getBoolean(true);
+		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrogen Piles on Neptune", true, "Setting this option to false will disable & remove Frozen Nitrogen Piles from generating on Neptune").getBoolean(true);
 		GENERATE_SATURN_NUCLEAR_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Nuclear Piles on Saturn", true, "Setting this option to false will disable & remove Nuclear Piles from generating on Saturn").getBoolean(true);
 		GENERATE_SATURN_SLIME_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Slime Trees on Saturn", true, "Setting this option to false will disable & remove Slime Trees from generating on Saturn").getBoolean(true);
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
@@ -535,14 +538,16 @@ public class Config {
 		GENERATE_EUROPA_IRON_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Iron Chunks under the surface of Europa", true, "Setting this option to false will disable & remove the Iron Chunks on Europa").getBoolean(true);
 
 		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter");
-		JUPITER_LIGHTING_CLIENT = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true, "Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
-		JUPITER_LIGHTING_SERVER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)").getBoolean(true);
+		JUPITER_LIGHTING_CLIENT = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true,
+				"Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
+		JUPITER_LIGHTING_SERVER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)")
+				.getBoolean(true);
 
 		JUPITER_CLOUDS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
 		JUPITER_CLOUDS_SPEED = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
-		if(JUPITER_CLOUDS_SPEED > 5)
+		if (JUPITER_CLOUDS_SPEED > 5)
 			JUPITER_CLOUDS_SPEED = 5;
-		else if(JUPITER_CLOUDS_SPEED < 1)
+		else if (JUPITER_CLOUDS_SPEED < 1)
 			JUPITER_CLOUDS_SPEED = 1;
 
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
@@ -601,7 +606,8 @@ public class Config {
 		KEPLER_SOLAR_SYSTEMS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "Setting this option to false will remove all Kepler Solar Systems and their Planets/Moons!").getBoolean(true);
 
 		config.renameProperty(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", "Unreachable moons on the Celestial Selection Screen");
-		GENERATE_UNREACHABLEMOONS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestial Selection Screen", true, "Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestial Selection Screen!").getBoolean(true);
+		GENERATE_UNREACHABLEMOONS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestial Selection Screen", true,
+				"Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestial Selection Screen!").getBoolean(true);
 
 		MERCURY_SPACE_STATION = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mercury SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
 		VENUS_SPACE_STATION = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Venus SpaceStation", true, "Setting this option to false will disable & remove the Venus Space Station").getBoolean(true);
@@ -680,8 +686,8 @@ public class Config {
 		TITANIA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titania Dimension ID Legacy (DONT TOUCH)", -42, "Used for internal migration of old Dimension Save folders to new ids").getInt();
 		IAPETUS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Iapetus Dimension ID Legacy (DONT TOUCH)", -43, "Used for internal migration of old Dimension Save folders to new ids").getInt();
 
-		MOVE_ID_DIMENSION_LEGACY = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Enable Legacy Dimension ID Migration", false, "Setting this option to true will move Legacy Dimensions with old ID's to new ID! Use if moon dimensions are stil using above Legacy (DONT TOUCH) ID's")
-				.getBoolean(false);
+		MOVE_ID_DIMENSION_LEGACY = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Enable Legacy Dimension ID Migration", false,
+				"Setting this option to true will move Legacy Dimensions with old ID's to new ID! Use if moon dimensions are stil using above Legacy (DONT TOUCH) ID's").getBoolean(false);
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// End
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -871,27 +877,16 @@ public class Config {
 		RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Decontamination Unit", 10, "[range: -2147483647 ~ 2147483647, default: 10]").getInt();
 		RADIATION_ANTI_RAD_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Anti Rad Drinks", 50, "[range: -2147483647 ~ 2147483647, default: 50]").getInt();
 
-		SPACE_SUIT_SUPPORTED_ARMOUR = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "List of armour items to be considered as a space suit", new String[] {
-				"ic2:nano_boots:2",
-				"ic2:nano_chestplate:2",
-				"ic2:nano_helmet:2",
-				"ic2:nano_leggings:2",
-				"ic2:quantum_boots:3",
-				"ic2:quantum_chestplate:3",
-				"ic2:quantum_helmet:3",
-				"ic2:quantum_leggings:3",
-				"galaxyspace:space_suit_head:1",
-				"galaxyspace:space_suit_chest:1",
-				"galaxyspace:space_suit_legs:1",
-				"galaxyspace:space_suit_feet:1"
+		SPACE_SUIT_SUPPORTED_ARMOUR = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "List of armour items to be considered as a space suit",
+				new String[] { "ic2:nano_boots:2", "ic2:nano_chestplate:2", "ic2:nano_helmet:2", "ic2:nano_leggings:2", "ic2:quantum_boots:3", "ic2:quantum_chestplate:3", "ic2:quantum_helmet:3", "ic2:quantum_leggings:3",
+						"galaxyspace:space_suit_head:1", "galaxyspace:space_suit_chest:1", "galaxyspace:space_suit_legs:1", "galaxyspace:space_suit_feet:1"
 
-		}, "Format: 'modID:item:tier' (tier = Space Suit Tier) | example: minecraft:iron_chestplate:4")
-				.getStringList();
+				}, "Format: 'modID:item:tier' (tier = Space Suit Tier) | example: minecraft:iron_chestplate:4").getStringList();
 
 		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
 
-		OTHER_ADDON_PLANET_MOON_RAD_VALUES = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", OTHER_ADDON_PLANET_MOON_RAD_VALUES, "Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 5) | example: planet.atheon:12")
-				.getStringList();
+		OTHER_ADDON_PLANET_MOON_RAD_VALUES = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", OTHER_ADDON_PLANET_MOON_RAD_VALUES,
+				"Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 5) | example: planet.atheon:12").getStringList();
 
 		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[0 = Disabled. range: 0 ~ 100, default: 25]").getInt();
 		VENUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Venus (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
@@ -1018,9 +1013,9 @@ public class Config {
 
 	public static void updateOtherModRadiationValues() {
 		OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.clear();
-		for(String line : OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
+		for (String line : OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
 			String[] parts = line.split(":");
-			if(Integer.parseInt(parts[1]) != 0)
+			if (Integer.parseInt(parts[1]) != 0)
 				OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.put(parts[0], Integer.parseInt(parts[1]));
 		}
 	}
