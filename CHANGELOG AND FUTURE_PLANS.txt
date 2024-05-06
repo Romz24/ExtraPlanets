@@ -6,6 +6,21 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.8
+*WIP: Added 3 new events for CustomCelestialSelection to allow api style support for ignoringCustom Galaxies, Celestial Body Events and Post Rendering Event
+*Fixed issue #773 - Keys Burning, Added IItemInvulnerable interface to api package so other mods can use this when ExtraPlanets is installed
+*Add Galaxy Space's Light SpaceSuit to the spacesuit list (Suggested in pull request https://github.com/MJRLegends/ExtraPlanets/pull/771/commits/0e359bd937ab3e71dff4aad909ca986ff742e0d9)
+*Fixed a rare chance of ConcurrentModificationException in Custom Celestial Selection Screen during rendering (GuiCelestialSelection#drawCircles) and updating bodiesToRender list (Fixes issue #767)
+*Fixed issue #756 - Unable to Craft Electric Rocket using Tier 10 Rockets that have storage applied
+*Fixed Venus Rover being registered as Mars Rover Instead (Somehow doesn't actually matter?)
+*Added 6 new commands
+	- /epGetRadiation <playerName> - Get Player's Radiation Level
+	- /epSetRadiation<playerName> - Set Radiation Level for Player
+	- /epGiveDungeonLoot <playerName> <0-100> - Give Player All Items for Loot Level specified
+	- /epGiveSpaceSuit<playerName> <0-4> - Give Players Space Suit for Level specified
+	- /epRemoveSchematic <playerName> <schematic> - Removed specified schematic from Player (Doesn't work fully when in a Space Race Team)
+	- /epUnlockSchematic <playerName> <schematic> - Adds specified schematic to Player
+
 v0.7.7
 *Fixed a possible issue that could teleport you to the incorrect place when getting to low on all planets space stations
 *Renamed Frozen Water to Icy Water
