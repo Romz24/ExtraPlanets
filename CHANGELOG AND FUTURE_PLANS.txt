@@ -5,6 +5,20 @@
 
 
 ===========================================Released Updates===========================================
+v1.1.2
+*WIP: Added 3 new events for CustomCelestialSelection to allow api style support for ignoringCustom Galaxies, Celestial Body Events and Post Rendering Event
+*Fixed a rare chance of ConcurrentModificationException in Custom Celestial Selection Screen during rendering (GuiCelestialSelection#drawCircles) and updating bodiesToRender list (Fixes issue #767)
+*Fixed issue #756 - Unable to Craft Electric Rocket using Tier 10 Rockets that have storage applied
+*Fixed Venus Rover being registered as Mars Rover Instead (Somehow doesn't actually matter?)
+*Removed unused ItemStack array instance in TileEntityBasicDecontaminationUnit
+*Added 6 new commands
+	- /epGetRadiation <playerName> - Get Player's Radiation Level
+	- /epSetRadiation<playerName> - Set Radiation Level for Player
+	- /epGiveDungeonLoot <playerName> <0-100> - Give Player All Items for Loot Level specified
+	- /epGiveSpaceSuit<playerName> <0-4> - Give Players Space Suit for Level specified
+	- /epRemoveSchematic <playerName> <schematic> - Removed specified schematic from Player (Doesn't work fully when in a Space Race Team)
+	- /epUnlockSchematic <playerName> <schematic> - Adds specified schematic to Player
+
 v1.1.1
 *Fixed a possible issue that could teleport you to the incorrect place when getting to low on all planets space stations
 *Renamed Frozen Water to Icy Water
