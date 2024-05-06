@@ -28,7 +28,7 @@ public class LanderUtil {
 	}
 
 	private static void makePlatform(World world, int x, int y, int z, IBlockState block, boolean clearAbovePlatform) {
-		boolean isLiquidSpawn = world.getBlockState(world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z))).getMaterial().isLiquid();
+		boolean isLiquidSpawn = world.getBlockState(world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z))).getBlock().getMaterial().isLiquid();
 		if (clearAbovePlatform) {
 			if (!isLiquidSpawn)
 				y = world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z)).getY() - 1;
@@ -41,7 +41,7 @@ public class LanderUtil {
 						if (xx == 3 && (zz == -5 || zz == 3)) {
 							continue;
 						}
-						doBlock(world, x + xx, yy, z + zz, Blocks.AIR.getDefaultState());
+						doBlock(world, x + xx, yy, z + zz, Blocks.air.getDefaultState());
 					}
 				}
 			}

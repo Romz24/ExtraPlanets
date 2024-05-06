@@ -15,8 +15,8 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -41,7 +41,7 @@ public class CommandRemoveSchematic extends CommandBase {
 	}
 
 	@Override
-	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
+	public void processCommand(ICommandSender sender, String[] args) throws CommandException {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayerUsername(sender.getName(), true);
 		if (playerBase == null) {
 			return;
@@ -51,9 +51,9 @@ public class CommandRemoveSchematic extends CommandBase {
 			EntityPlayerMP playerToAddFor;
 
 			if (args[0].startsWith("@") || args[0].contains("-"))
-				playerToAddFor = getPlayer(server, sender, args[0]);
+				playerToAddFor = getPlayer(sender, args[0]);
 			else
-				playerToAddFor = PlayerUtilties.getPlayerFromUUID(server.getPlayerProfileCache().getGameProfileForUsername(username).getId());
+				playerToAddFor = PlayerUtilties.getPlayerFromUUID(MinecraftServer.getServer().getPlayerProfileCache().getGameProfileForUsername(username).getId());
 
 			try {
 				for (ItemStack stack : SchematicRegistry.schematicItems) {
@@ -61,15 +61,15 @@ public class CommandRemoveSchematic extends CommandBase {
 						final ISchematicPage page = SchematicRegistry.getMatchingRecipeForItemStack(stack);
 						SchematicsUtil.lockSchematic(playerBase, page);
 						// SpaceRaceManager.teamUnlockSchematic(playerBase, stack); TODO this
-						ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_REMOVE_SCHEMATIC, playerToAddFor.worldObj.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
+						ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_REMOVE_SCHEMATIC, playerToAddFor.worldObj.provider.getDimensionId(), new Object[] { page.getPageID() }), playerBase);
 
 						// Output
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
 						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 						if (tooltips.size() >= 2)
 							name = tooltips.get(1);
-						playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
-						playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
+						playerBase.addChatMessage(new ChatComponentText(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
+						playerToAddFor.addChatMessage(new ChatComponentText(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 					}
 				}
 			} catch (final Exception var6) {
@@ -80,13 +80,13 @@ public class CommandRemoveSchematic extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+	public List<String> addTabCompletionOptions(ICommandSender sender, String[] args, BlockPos pos) {
 		List<String> schematics = new ArrayList<>(100);
 
 		for (ItemStack stack : SchematicRegistry.schematicItems)
 			schematics.add(stack.getItem().getRegistryName().toString() + ":" + stack.getItemDamage());
 
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? schematics : null);
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, MinecraftServer.getServer().getAllUsernames()) : (args.length == 2 ? schematics : null);
 	}
 
 	@Override

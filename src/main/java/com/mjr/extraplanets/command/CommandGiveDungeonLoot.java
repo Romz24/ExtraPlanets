@@ -11,8 +11,8 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
@@ -44,7 +44,7 @@ public class CommandGiveDungeonLoot extends CommandBase {
 	}
 
 	@Override
-	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
+	public void processCommand(ICommandSender sender, String[] args) throws CommandException {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayerUsername(sender.getName(), true);
 		if (playerBase == null) {
 			return;
@@ -54,16 +54,16 @@ public class CommandGiveDungeonLoot extends CommandBase {
 			EntityPlayerMP playerToAddFor;
 
 			if (args[0].startsWith("@") || args[0].contains("-"))
-				playerToAddFor = getPlayer(server, sender, args[0]);
+				playerToAddFor = getPlayer(sender, args[0]);
 			else
-				playerToAddFor = PlayerUtilties.getPlayerFromUUID(server.getPlayerProfileCache().getGameProfileForUsername(username).getId());
+				playerToAddFor = PlayerUtilties.getPlayerFromUUID(MinecraftServer.getServer().getPlayerProfileCache().getGameProfileForUsername(username).getId());
 
 			try {
 				List<ItemStack> stacks = GalacticraftRegistry.getDungeonLoot(Integer.parseInt(args[1]));
 				for (ItemStack stack : stacks)
 					ItemHandlerHelper.giveItemToPlayer(playerToAddFor, new ItemStack(stack.getItem()));
-				playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " all possible dungeon loot for tier: " + args[1]));
-				playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " give you all possible dungeon loot for tier:" + args[1]));
+				playerBase.addChatMessage(new ChatComponentText(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " all possible dungeon loot for tier: " + args[1]));
+				playerToAddFor.addChatMessage(new ChatComponentText(EnumColor.AQUA + playerBase.getName() + " give you all possible dungeon loot for tier:" + args[1]));
 			} catch (final Exception var6) {
 				throw new CommandException(var6.getMessage(), new Object[0]);
 			}
@@ -72,8 +72,8 @@ public class CommandGiveDungeonLoot extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? numberList : null);
+	public List<String> addTabCompletionOptions(ICommandSender sender, String[] args, BlockPos pos) {
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, MinecraftServer.getServer().getAllUsernames()) : (args.length == 2 ? numberList : null);
 	}
 
 	@Override

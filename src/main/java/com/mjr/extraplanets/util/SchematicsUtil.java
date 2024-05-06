@@ -29,7 +29,7 @@ public class SchematicsUtil {
 			stats.getUnlockedSchematics().remove(pageToLock);
 			Collections.sort(stats.getUnlockedSchematics());
 
-			if (player != null && player.connection != null) {
+			if (player != null && player.playerNetServerHandler != null) {
 				Integer[] iArray = new Integer[stats.getUnlockedSchematics().size()];
 
 				for (int i = 0; i < iArray.length; i++) {
