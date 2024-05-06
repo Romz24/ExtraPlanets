@@ -37,7 +37,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	private static Object itemManagerIC2;
 	public float transferMax = 200;
-	private static final int DAMAGE_RANGE = 100;
+	public static final int DAMAGE_RANGE = 100;
 
 	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, int placement) {
 		super(materialIn, renderIndexIn, placement);
