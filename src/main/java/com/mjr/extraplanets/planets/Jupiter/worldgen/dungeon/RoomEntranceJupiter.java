@@ -12,7 +12,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class RoomEntranceJupiter extends SizedPieceJupiter {
-    
+
     private final int range = 4;
 
     public RoomEntranceJupiter()

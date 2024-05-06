@@ -45,7 +45,7 @@ public class RoomSpawnerMercury extends RoomEmptyMercury
 
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), 2, 0, 2, boundingBox);
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), this.sizeX - 2, 0, this.sizeZ - 2, boundingBox);
-            
+
             for(int i = 1; i < 7; i++)
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), 1, i, 1, boundingBox);
             for(int i = 1; i < 7; i++)
@@ -54,7 +54,7 @@ public class RoomSpawnerMercury extends RoomEmptyMercury
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), 2, i, 2, boundingBox);
             for(int i = 1; i < 7; i++)
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), this.sizeX - 2, i, this.sizeZ - 2, boundingBox);
-            
+
             BlockPos blockpos = new BlockPos(this.getXWithOffset(2, 2), this.getYWithOffset(0), this.getZWithOffset(2, 2));
             TileEntityMobSpawner spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 

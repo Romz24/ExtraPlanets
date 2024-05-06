@@ -51,7 +51,7 @@ public class CelestialBodyMaterialRegistry {
 	public static List<MaterialData> getMaterialDataByCelestialBody(CelestialBody celestialBody) {
 		return bodies.get(celestialBody);
 	}
-	
+
 	public static List<String> getTextOutputByCelestialBody(CelestialBody celestialBody) {
 		List<MaterialData> materials = bodies.get(celestialBody);
 		List<String> output = new ArrayList<String>();

@@ -143,7 +143,7 @@ public class ItemModelRocketT7 extends ModelTransformWrapper {
 			ret.mul(mul);
 			return ret;
 		}
-		
+
 		if (cameraTransformType == TransformType.FIXED) {
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);

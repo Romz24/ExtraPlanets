@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.ChunkProviderServer;
 
 public class LanderUtil {
-	
+
     public static void makeSmallLandingSpot(World world, int x, int z, IBlockState block, boolean clearAbovePlatform)
     {
         loadChunksAround(x, z, -1, (ChunkProviderServer) world.getChunkProvider());
@@ -71,7 +71,7 @@ public class LanderUtil {
 	                doBlock(world, x + xx, y, z + zz, block);
 	            }
 	        }
-	        
+
 	        for (int xx = -2; xx < 2; xx++)
 	        {
 	            for (int zz = -2; zz < 2; zz++)
@@ -85,7 +85,7 @@ public class LanderUtil {
 	        doBlock(world, x, y - 2, z - 1, block);
 		}
     }
-    
+
     private static void doBlock(World world, int x, int y, int z, IBlockState block)
     {
     	world.setBlockState(new BlockPos(x, y, z), block, 3);

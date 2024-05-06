@@ -244,6 +244,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		return this.getSlimeSize() > 1;
 	}
 
+	@Override
 	public boolean isBurning() {
 		return false;
 	}

@@ -20,7 +20,8 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
         this.isImmuneToFire = true;
     }
 
-    protected void applyEntityAttributes()
+    @Override
+	protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D * 2);
@@ -29,7 +30,8 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Checks if the entity's current position is a valid location to spawn this entity.
      */
-    public boolean getCanSpawnHere()
+    @Override
+	public boolean getCanSpawnHere()
     {
         return this.worldObj.getDifficulty() != EnumDifficulty.PEACEFUL;
     }
@@ -37,11 +39,12 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Checks that the entity is not colliding with any blocks / liquids
      */
-    public boolean isNotColliding()
+    @Override
+	public boolean isNotColliding()
     {
         return this.worldObj.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.worldObj.getCollidingBoundingBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.worldObj.isAnyLiquid(this.getEntityBoundingBox());
     }
-    
+
     public void setSlimeSizePublic(int size, float resetHealth)
     {
         this.setSize(size, resetHealth);
@@ -67,17 +70,20 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
         return 1.0F;
     }
 
-    protected EnumParticleTypes getParticleType()
+    @Override
+	protected EnumParticleTypes getParticleType()
     {
         return EnumParticleTypes.FLAME;
     }
 
-    protected EntitySlime createInstance()
+    @Override
+	protected EntitySlime createInstance()
     {
         return new EntityEvolvedAncientMagmaCube(this.worldObj);
     }
 
-    protected Item getDropItem()
+    @Override
+	protected Item getDropItem()
     {
         return Items.magma_cream;
     }
@@ -85,11 +91,12 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
      */
-    public boolean isBurning()
+    @Override
+	public boolean isBurning()
     {
         return false;
     }
-    
+
     /**
      * Sets the Entity inside a web block.
      */
@@ -101,12 +108,14 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Gets the amount of time the slime needs to wait between jumps.
      */
-    protected int getJumpDelay()
+    @Override
+	protected int getJumpDelay()
     {
         return super.getJumpDelay() * 2;
     }
 
-    protected void alterSquishAmount()
+    @Override
+	protected void alterSquishAmount()
     {
         this.squishAmount *= 0.9F;
     }
@@ -114,27 +123,31 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Causes this entity to do an upwards motion (jumping).
      */
-    protected void jump()
+    @Override
+	protected void jump()
     {
         this.motionY = (double)(0.42F + (float)this.getSlimeSize() * 0.1F);
         this.isAirBorne = true;
         net.minecraftforge.common.ForgeHooks.onLivingJump(this);
     }
 
-    protected void handleJumpLava()
+    @Override
+	protected void handleJumpLava()
     {
         this.motionY = (double)(0.22F + (float)this.getSlimeSize() * 0.05F);
         this.isAirBorne = true;
     }
 
-    public void fall(float distance, float damageMultiplier)
+    @Override
+	public void fall(float distance, float damageMultiplier)
     {
     }
 
     /**
      * Indicates weather the slime is able to damage the player (based upon the slime's size)
      */
-    protected boolean canDamagePlayer()
+    @Override
+	protected boolean canDamagePlayer()
     {
         return true;
     }
@@ -142,12 +155,14 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     /**
      * Gets the amount of damage dealt to the player when "attacked" by the slime.
      */
-    protected int getAttackStrength()
+    @Override
+	protected int getAttackStrength()
     {
         return super.getAttackStrength() + 7;
     }
 
-    protected String getJumpSound()
+    @Override
+	protected String getJumpSound()
     {
         return this.getSlimeSize() > 1 ? "mob.magmacube.big" : "mob.magmacube.small";
     }

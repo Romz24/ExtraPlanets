@@ -118,7 +118,7 @@ public class ExtraPlanets_Armor {
 	public static Item TIER_0_SPACE_SUIT_CHEST;
 	public static Item TIER_0_SPACE_SUIT_LEGINGS;
 	public static Item TIER_0_SPACE_SUIT_BOOTS;
-	
+
 	public static Item TIER_1_SPACE_SUIT_HELMET;
 	public static Item TIER_1_SPACE_SUIT_CHEST;
 	public static Item TIER_1_SPACE_SUIT_JETPACK_CHEST;
@@ -258,7 +258,7 @@ public class ExtraPlanets_Armor {
 			TIER_0_SPACE_SUIT_CHEST = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier0_space_suit_chest");
 			TIER_0_SPACE_SUIT_LEGINGS = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, 2).setUnlocalizedName("tier0_space_suit_legings");
 			TIER_0_SPACE_SUIT_BOOTS = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier0_space_suit_boots");
-			
+
 			TIER_1_SPACE_SUIT_HELMET = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, 0).setUnlocalizedName("tier1_space_suit_helmet");
 			TIER_1_SPACE_SUIT_CHEST = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier1_space_suit_chest");
 			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier1SpaceSuitArmorJetpack("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier1_space_suit_jetpack_chest");
@@ -395,7 +395,7 @@ public class ExtraPlanets_Armor {
 			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_CHEST, TIER_0_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_LEGINGS, TIER_0_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_BOOTS, TIER_0_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_HELMET, TIER_1_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_CHEST, TIER_1_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_JETPACK_CHEST, TIER_1_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));

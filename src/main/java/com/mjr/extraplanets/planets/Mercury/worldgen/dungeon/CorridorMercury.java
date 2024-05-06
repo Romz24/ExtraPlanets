@@ -141,7 +141,7 @@ public class CorridorMercury extends SizedPieceMercury
             	int randomChoice = rand.nextInt(4);
 
             	int toAdd = randomChoice == 0 || randomChoice == 3 ? 12 : randomChoice == 2 ? 16 : 6;
-            	
+
                 StructureBoundingBox extension = getExtension(this.getDirection(), rand.nextInt(4) + toAdd, rand.nextInt(4) + toAdd);
 
                 if (startPiece.checkIntersection(extension))

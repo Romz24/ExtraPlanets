@@ -12,7 +12,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class RoomEntranceMercury extends SizedPieceMercury {
-    
+
     private final int range = 4;
 
     public RoomEntranceMercury()

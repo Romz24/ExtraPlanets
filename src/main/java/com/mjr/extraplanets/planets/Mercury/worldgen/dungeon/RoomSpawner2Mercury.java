@@ -45,10 +45,10 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
 
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), 3, 0, 3, boundingBox);
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), this.sizeX - 3, 0, this.sizeZ - 3, boundingBox);
-            
+
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), 2, 0, 2, boundingBox);
             this.setBlockState(worldIn, Blocks.mob_spawner.getDefaultState(), this.sizeX - 2, 0, this.sizeZ - 2, boundingBox);
-            
+
             for(int i = 1; i < 7; i++)
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), 1, i, 1, boundingBox);
             for(int i = 1; i < 7; i++)
@@ -57,7 +57,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), 2, i, 2, boundingBox);
             for(int i = 1; i < 7; i++)
             	this.setBlockState(worldIn, Blocks.lava.getDefaultState(), this.sizeX - 2, i, this.sizeZ - 2, boundingBox);
-            
+
             BlockPos blockpos = new BlockPos(this.getXWithOffset(3, 3), this.getYWithOffset(0), this.getZWithOffset(3, 3));
             TileEntityMobSpawner spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
@@ -73,7 +73,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
             {
                 spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
-            
+
             blockpos = new BlockPos(this.getXWithOffset(2, 2), this.getYWithOffset(0), this.getZWithOffset(2, 2));
             spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
@@ -81,7 +81,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
             {
                 spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
-            
+
             blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 2, this.sizeZ - 2), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 2, this.sizeZ - 2));
             spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 

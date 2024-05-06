@@ -141,7 +141,7 @@ public class CorridorJupiter extends SizedPieceJupiter
             	int randomChoice = rand.nextInt(4);
 
             	int toAdd = randomChoice == 0 || randomChoice == 3 || randomChoice == 4 ? ExtraPlanetsUtli.getRandom(10, 16) : ExtraPlanetsUtli.getRandom(6, 10);
-            	
+
                 StructureBoundingBox extension = getExtension(this.getDirection(), rand.nextInt(4) + toAdd, rand.nextInt(4) + toAdd);
 
                 if (startPiece.checkIntersection(extension))

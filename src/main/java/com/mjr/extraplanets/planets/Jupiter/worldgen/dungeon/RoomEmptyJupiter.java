@@ -13,7 +13,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public class RoomEmptyJupiter extends SizedPieceJupiter {
 	private int chanceOfMagmaBlocks = 0;
-	
+
 	public RoomEmptyJupiter() {
 	}
 

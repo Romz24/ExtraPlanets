@@ -308,7 +308,7 @@ public class ExtraPlanets {
 			for(String current : Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
 				entries.add(current);
 			}
-			
+
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				if(planet.getUnlocalizedName().contains("overworld") || planet.atmosphere.isBreathable())
 					continue;
