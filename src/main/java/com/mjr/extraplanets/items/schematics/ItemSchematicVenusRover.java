@@ -98,7 +98,7 @@ public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchem
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.VENUS_ROVER_SCHEMATIC));
 	}
 
 	/**
