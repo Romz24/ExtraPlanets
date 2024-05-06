@@ -29,8 +29,8 @@ public class CommandGiveDungeonLoot extends CommandBase {
 	}
 
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player> <0-100>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player> <0-100>";
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class CommandGiveDungeonLoot extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epGiveDungeonLoot";
 	}
 
@@ -62,8 +62,8 @@ public class CommandGiveDungeonLoot extends CommandBase {
 				List<ItemStack> stacks = GalacticraftRegistry.getDungeonLoot(Integer.parseInt(args[1]));
 				for (ItemStack stack : stacks)
 					ItemHandlerHelper.giveItemToPlayer(playerToAddFor, new ItemStack(stack.getItem()));
-				playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " all possible dungeon loot for tier: " + args[1]));
-				playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " give you all possible dungeon loot for tier:" + args[1]));
+				playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " all possible dungeon loot for tier: " + args[1]));
+				playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " give you all possible dungeon loot for tier:" + args[1]));
 			} catch (final Exception var6) {
 				throw new CommandException(var6.getMessage(), new Object[0]);
 			}
@@ -72,8 +72,8 @@ public class CommandGiveDungeonLoot extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : (args.length == 2 ? numberList : null);
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? numberList : null);
 	}
 
 	@Override

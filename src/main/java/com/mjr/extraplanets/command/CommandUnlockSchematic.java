@@ -26,8 +26,8 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 public class CommandUnlockSchematic extends CommandBase {
 
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player> <schematic>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player> <schematic>";
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class CommandUnlockSchematic extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epUnlockSchematic";
 	}
 
@@ -61,13 +61,13 @@ public class CommandUnlockSchematic extends CommandBase {
 						final ISchematicPage page = SchematicRegistry.getMatchingRecipeForItemStack(stack);
 						SchematicRegistry.unlockNewPage(playerBase, stack);
 						SpaceRaceManager.teamUnlockSchematic(playerBase, stack);
-						GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_ADD_NEW_SCHEMATIC, playerToAddFor.world.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
+						GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_ADD_NEW_SCHEMATIC, playerToAddFor.worldObj.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
 						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 						if (tooltips.size() >= 2)
 							name = tooltips.get(1);
-						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Unlocked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName()));
-						playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has given you Schematic: " + name));
+						playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Unlocked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName()));
+						playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has given you Schematic: " + name));
 					}
 				}
 			} catch (final Exception var6) {
@@ -78,13 +78,13 @@ public class CommandUnlockSchematic extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
 		List<String> schematics = new ArrayList<>(100);
 
 		for (ItemStack stack : SchematicRegistry.schematicItems)
 			schematics.add(stack.getItem().getRegistryName().toString() + ":" + stack.getItemDamage());
 
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : (args.length == 2 ? schematics : null);
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? schematics : null);
 	}
 
 	@Override

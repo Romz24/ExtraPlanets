@@ -30,8 +30,8 @@ public class CommandGiveSpaceSuit extends CommandBase {
 	}
 
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player> <0-4>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player> <0-4>";
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class CommandGiveSpaceSuit extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epGiveSpaceSuit";
 	}
 
@@ -93,8 +93,8 @@ public class CommandGiveSpaceSuit extends CommandBase {
 						break;
 				}
 
-				playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " a set of SpaceSuit tier: " + args[1]));
-				playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " give you a set of SpaceSuit tier:" + args[1]));
+				playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Gave : " + playerToAddFor.getName() + " a set of SpaceSuit tier: " + args[1]));
+				playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " give you a set of SpaceSuit tier:" + args[1]));
 			} catch (final Exception var6) {
 				throw new CommandException(var6.getMessage(), new Object[0]);
 			}
@@ -103,8 +103,8 @@ public class CommandGiveSpaceSuit extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : (args.length == 2 ? numberList : null);
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? numberList : null);
 	}
 
 	@Override

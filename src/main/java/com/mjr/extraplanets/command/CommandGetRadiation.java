@@ -19,8 +19,8 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 
 public class CommandGetRadiation extends CommandBase {
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player>";
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class CommandGetRadiation extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epGetRadiation";
 	}
 
@@ -52,7 +52,7 @@ public class CommandGetRadiation extends CommandBase {
 				if (playerToAddFor != null) {
 					stats = playerToAddFor.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
-				playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Radiation Level for: " + playerToAddFor.getName() + " is " + stats.getRadiationLevel() + "/100"));
+				playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Radiation Level for: " + playerToAddFor.getName() + " is " + stats.getRadiationLevel() + "/100"));
 			} catch (final Exception var6) {
 				throw new CommandException(var6.getMessage(), new Object[0]);
 			}
@@ -60,8 +60,8 @@ public class CommandGetRadiation extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : null;
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : null;
 	}
 
 	@Override

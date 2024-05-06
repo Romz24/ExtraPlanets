@@ -28,8 +28,8 @@ public class CommandSetRadiation extends CommandBase {
 	}
 
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player> <0-100>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player> <0-100>";
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class CommandSetRadiation extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epSetRadiation";
 	}
 
@@ -67,8 +67,8 @@ public class CommandSetRadiation extends CommandBase {
 				else if (amount < 0)
 					amount = 0.0;
 				stats.setRadiationLevel(amount);
-				playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Updated Radiation Level for: " + playerToAddFor.getName() + " to " + args[1] + "/100"));
-				playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has updated your Radiation Level to " + args[1] + "/100"));
+				playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Updated Radiation Level for: " + playerToAddFor.getName() + " to " + args[1] + "/100"));
+				playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has updated your Radiation Level to " + args[1] + "/100"));
 			} catch (final Exception var6) {
 				throw new CommandException(var6.getMessage(), new Object[0]);
 			}
@@ -76,8 +76,8 @@ public class CommandSetRadiation extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : (args.length == 2 ? numberList : null);
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? numberList : null);
 	}
 
 	@Override

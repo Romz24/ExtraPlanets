@@ -40,7 +40,7 @@ public class SchematicsUtil {
 				List<Object> objList = new ArrayList<Object>();
 				objList.add(iArray);
 
-				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SCHEMATIC_LIST, GCCoreUtil.getDimensionID(player.world), objList), player);
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SCHEMATIC_LIST, GCCoreUtil.getDimensionID(player.worldObj), objList), player);
 			}
 		}
 	}

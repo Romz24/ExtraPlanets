@@ -26,8 +26,8 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 public class CommandRemoveSchematic extends CommandBase {
 
 	@Override
-	public String getUsage(ICommandSender var1) {
-		return "/" + this.getName() + " <player> <schematic>";
+	public String getCommandUsage(ICommandSender var1) {
+		return "/" + this.getCommandName() + " <player> <schematic>";
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class CommandRemoveSchematic extends CommandBase {
 	}
 
 	@Override
-	public String getName() {
+	public String getCommandName() {
 		return "epRemoveSchematic";
 	}
 
@@ -61,15 +61,15 @@ public class CommandRemoveSchematic extends CommandBase {
 						final ISchematicPage page = SchematicRegistry.getMatchingRecipeForItemStack(stack);
 						SchematicsUtil.lockSchematic(playerBase, page);
 						// SpaceRaceManager.teamUnlockSchematic(playerBase, stack); TODO this
-						ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_REMOVE_SCHEMATIC, playerToAddFor.world.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
+						ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_REMOVE_SCHEMATIC, playerToAddFor.worldObj.provider.getDimension(), new Object[] { page.getPageID() }), playerBase);
 
 						// Output
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
 						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 						if (tooltips.size() >= 2)
 							name = tooltips.get(1);
-						playerBase.sendMessage(new TextComponentString(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
-						playerToAddFor.sendMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
+						playerBase.addChatMessage(new TextComponentString(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
+						playerToAddFor.addChatMessage(new TextComponentString(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 					}
 				}
 			} catch (final Exception var6) {
@@ -80,13 +80,13 @@ public class CommandRemoveSchematic extends CommandBase {
 	}
 
 	@Override
-	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
+	public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {
 		List<String> schematics = new ArrayList<>(100);
 
 		for (ItemStack stack : SchematicRegistry.schematicItems)
 			schematics.add(stack.getItem().getRegistryName().toString() + ":" + stack.getItemDamage());
 
-		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : (args.length == 2 ? schematics : null);
+		return args.length == 1 ? getListOfStringsMatchingLastWord(args, server.getAllUsernames()) : (args.length == 2 ? schematics : null);
 	}
 
 	@Override
