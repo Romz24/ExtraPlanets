@@ -9,6 +9,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.command.*;
 import com.mjr.extraplanets.compatibility.ExtremeReactorsCompatibility;
 import com.mjr.extraplanets.compatibility.MCMultiPartCompatibility;
 import com.mjr.extraplanets.compatibility.MorePlanetsCompatibility;
@@ -516,6 +517,16 @@ public class ExtraPlanets {
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
 			else
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedGiantZombieBoss.class, "EvolvedGiantZombieBoss", 894731, 0);
+	}
+
+	@EventHandler
+	public void onServerStarting(FMLServerStartingEvent event) {
+		event.registerServerCommand(new CommandSetRadiation());
+		event.registerServerCommand(new CommandGetRadiation());
+		event.registerServerCommand(new CommandGiveSpaceSuit());
+		event.registerServerCommand(new CommandGiveDungeonLoot());
+		event.registerServerCommand(new CommandUnlockSchematic());
+		event.registerServerCommand(new CommandRemoveSchematic());
 	}
 
 	private void registerFluidSubmergedTextures() {

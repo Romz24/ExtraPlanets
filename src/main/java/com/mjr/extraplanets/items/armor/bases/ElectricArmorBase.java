@@ -45,7 +45,7 @@ import micdoodle8.mods.galacticraft.core.util.EnumColor;
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem, ISpecialElectricItem, IArmorCorrosionResistant {
 	private static Object itemManagerIC2;
 	public float transferMax = 200;
-	private static final int DAMAGE_RANGE = 100;
+	public static final int DAMAGE_RANGE = 100;
 
 	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);

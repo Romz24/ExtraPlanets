@@ -2,6 +2,7 @@ package com.mjr.extraplanets.network;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import com.mjr.extraplanets.Constants;
@@ -41,9 +42,12 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
+import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
+import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
@@ -58,7 +62,7 @@ public class PacketSimpleEP extends PacketSimpleBase {
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
-				Integer.class, Integer.class), C_MOVE_PLAYER(Side.CLIENT, BlockPos.class);
+				Integer.class, Integer.class), C_MOVE_PLAYER(Side.CLIENT, BlockPos.class), C_REMOVE_SCHEMATIC(Side.CLIENT, Integer.class), C_UPDATE_SCHEMATIC_LIST(Side.CLIENT, Integer[].class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -179,6 +183,40 @@ public class PacketSimpleEP extends PacketSimpleBase {
 			case C_MOVE_PLAYER:
 				BlockPos pos = (BlockPos) this.data.get(0);
 				playerBaseClient.setPosition(pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
+				break;
+			case C_REMOVE_SCHEMATIC:
+				final ISchematicPage page = SchematicRegistry.getMatchingRecipeForID((Integer) this.data.get(0));
+				GCPlayerStatsClient gcStats = null;
+
+				if (player instanceof EntityPlayerSP) {
+					playerBaseClient = (EntityPlayerSP) player;
+					gcStats = GCPlayerStatsClient.get(playerBaseClient);
+				} else
+					return;
+				if (gcStats.getUnlockedSchematics().contains(page)) {
+					gcStats.getUnlockedSchematics().remove(page);
+				}
+				break;
+			case C_UPDATE_SCHEMATIC_LIST:
+				for (Object o : this.data) {
+					Integer schematicID = (Integer) o;
+
+					gcStats = null;
+					if (player instanceof EntityPlayerSP) {
+						playerBaseClient = (EntityPlayerSP) player;
+						gcStats = GCPlayerStatsClient.get(playerBaseClient);
+					} else
+						return;
+
+					if (schematicID != -2) {
+						Collections.sort(gcStats.getUnlockedSchematics());
+
+						if (!gcStats.getUnlockedSchematics().contains(SchematicRegistry.getMatchingRecipeForID(schematicID))) {
+							gcStats.getUnlockedSchematics().add(SchematicRegistry.getMatchingRecipeForID(schematicID));
+						} else
+							gcStats.getUnlockedSchematics().remove(SchematicRegistry.getMatchingRecipeForID(schematicID));
+					}
+				}
 				break;
 			default:
 				break;
