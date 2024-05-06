@@ -39,7 +39,6 @@ import micdoodle8.mods.miccore.Annotations.NetworkedField;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, ISidedInventory {
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
-	private ItemStack[] containingItems = new ItemStack[1];
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
