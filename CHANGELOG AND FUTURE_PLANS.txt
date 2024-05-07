@@ -1,11 +1,13 @@
 ﻿========================================Not Released Updates==========================================
 
-
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+v0.7.9
+*Fixed issue #777 - Crash on dedicated server with Unlock & Remove Schematic Commands due to client code not found
+
 v0.7.8
 *WIP: Added 3 new events for CustomCelestialSelection to allow api style support for ignoringCustom Galaxies, Celestial Body Events and Post Rendering Event
 *Fixed issue #773 - Keys Burning, Added IItemInvulnerable interface to api package so other mods can use this when ExtraPlanets is installed
