@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.8
+*Fixed output msg for schematic name when using unlock or remove schematics commands for MC 1.11.2 & below
+*Fixed issue #777 - Crash on dedicated server with Unlock & Remove Schematic Commands due to client code not found
+
 v1.4.7
 *WIP: Added 3 new events for CustomCelestialSelection to allow api style support for ignoringCustom Galaxies, Celestial Body Events and Post Rendering Event
 *Fixed a rare chance of ConcurrentModificationException in Custom Celestial Selection Screen during rendering (GuiCelestialSelection#drawCircles) and updating bodiesToRender list (Fixes issue #767)
