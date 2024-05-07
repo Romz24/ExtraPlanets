@@ -83,7 +83,7 @@ public class CommandRemoveSchematic extends CommandBase {
 
 	@SideOnly(Side.CLIENT)
 	public String getClientSchematicName(ItemStack stack, EntityPlayerMP playerToAddFor) {
-		List<String> tooltips = stack.getTooltip(playerToAddFor, ITooltipFlag.TooltipFlags.NORMAL);
+		List<String> tooltips = stack.getTooltip(playerToAddFor, false);
 		if (tooltips.size() >= 2)
 			return tooltips.get(1);
 		return null;
