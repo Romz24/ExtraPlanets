@@ -17,6 +17,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -65,9 +67,9 @@ public class CommandRemoveSchematic extends CommandBase {
 
 						// Output
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
-						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
-						if (tooltips.size() >= 1)
-							name = tooltips.get(0);
+						String clientName = getClientSchematicName(stack, playerToAddFor);
+						if (clientName != null)
+							name = clientName;
 						playerBase.addChatMessage(new ChatComponentText(EnumColor.AQUA + "Locked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName() + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 						playerToAddFor.addChatMessage(new ChatComponentText(EnumColor.AQUA + playerBase.getName() + " has taken away Schematic: " + name + EnumColor.RED + " (Note: Doesnt update if part of Space Race!)"));
 					}
@@ -77,6 +79,14 @@ public class CommandRemoveSchematic extends CommandBase {
 			}
 		}
 
+	}
+
+	@SideOnly(Side.CLIENT)
+	public String getClientSchematicName(ItemStack stack, EntityPlayerMP playerToAddFor) {
+		List<String> tooltips = stack.getTooltip(playerToAddFor, false);
+		if (tooltips.size() >= 2)
+			return tooltips.get(1);
+		return null;
 	}
 
 	@Override

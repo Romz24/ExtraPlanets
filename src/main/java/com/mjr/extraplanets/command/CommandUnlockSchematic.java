@@ -13,6 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -63,9 +65,9 @@ public class CommandUnlockSchematic extends CommandBase {
 						SpaceRaceManager.teamUnlockSchematic(playerBase, stack);
 						GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_ADD_NEW_SCHEMATIC, playerToAddFor.worldObj.provider.getDimensionId(), new Object[] { page.getPageID() }), playerBase);
 						String name = stack.getUnlocalizedName() + ":" + stack.getItemDamage();
-						List<String> tooltips = stack.getTooltip(playerToAddFor, false);
-						if (tooltips.size() >= 1)
-							name = tooltips.get(0);
+						String clientName = getClientSchematicName(stack, playerToAddFor);
+						if (clientName != null)
+							name = clientName;
 						playerBase.addChatMessage(new ChatComponentText(EnumColor.AQUA + "Unlocked Schematic: " + name + EnumColor.AQUA + " for " + playerToAddFor.getName()));
 						playerToAddFor.addChatMessage(new ChatComponentText(EnumColor.AQUA + playerBase.getName() + " has given you Schematic: " + name));
 					}
@@ -75,6 +77,14 @@ public class CommandUnlockSchematic extends CommandBase {
 			}
 		}
 
+	}
+
+	@SideOnly(Side.CLIENT)
+	public String getClientSchematicName(ItemStack stack, EntityPlayerMP playerToAddFor) {
+		List<String> tooltips = stack.getTooltip(playerToAddFor, false);
+		if (tooltips.size() >= 2)
+			return tooltips.get(1);
+		return null;
 	}
 
 	@Override
