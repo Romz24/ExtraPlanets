@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.0
+*Fixed moons still be visible in the selection list when hiding a moon via CustomCelestialGUIEvent.PreLoadingCelestialBodies event
+
 v0.7.9
 *Fixed issue #777 - Crash on dedicated server with Unlock & Remove Schematic Commands due to client code not found
 
