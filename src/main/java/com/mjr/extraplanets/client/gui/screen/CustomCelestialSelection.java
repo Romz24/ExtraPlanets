@@ -198,7 +198,13 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								}
 							}
 						} else {
-							bodyList.addAll(moons);
+							for (Moon moon : moons) {
+								if (preEvent.bodyUnlocalizedNamesToIgnore.contains(moon.getUnlocalizedName()))
+									continue;
+								if (preEvent.bodyNamesToIgnore.contains(moon.getName()))
+									continue;
+								bodyList.add(moon);
+							}
 						}
 					}
 				}
