@@ -1397,6 +1397,7 @@ entity.extraplanets.EvolvedRedCreeper.name=Эволюционировавший 
 entity.extraplanets.EvolvedPowerSkeleton.name=Эволюционировавший мощный скелет
 entity.extraplanets.EvolvedGiantSpider.name=Эволюционировавший гигантский паук
 entity.extraplanets.EvolvedMiniEnderman.name=Эволюционировавший мини эндермен
+entity.extraplanets.EvolvedAncientMagmaCube.name=Эволюционировавший древний адский слизень
 
 #Achievements
 achievement.mercury_planet=Приземлитесь на Меркурий!
